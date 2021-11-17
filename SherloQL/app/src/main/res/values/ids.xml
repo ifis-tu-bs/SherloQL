@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Google Play game services IDs. Save this file as res/values/games-ids.xml in your project.-->
+<resources>
+    <!--app_id-->
+    <string name="app_id" translatable="false">85292484064</string>
+    <!--package_name-->
+    <string name="package_name" translatable="false"></string>
+    <!--achievement bla-->
+    <string name="achievement_bla" translatable="false">CgkI4IvQ3r0CEAIQAA</string>
+</resources>
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <resources>
+        <item name="insert_into" type="id" />
+        <item name="992171811353" type="app_id" />
+    </resources>
+    -->

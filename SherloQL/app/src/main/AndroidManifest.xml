@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="de.sep.sherloql">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo_neu"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".story.ImageFullscreen"></activity>
+
+        <receiver
+            android:name=".bin.GeofenceBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".uiraetsel.Raetselsammlung" />
+        <activity android:name=".uiraetsel.RaetselActivity" />
+        <activity android:name=".bin.ItemviewinActivity" />
+        <activity android:name=".uiraetsel.Allgemeines" />
+        <activity android:name=".uiraetsel.Braunschweig" />
+        <activity android:name=".uiraetsel.Geographie" />
+        <activity android:name=".uiraetsel.Informatik" />
+        <activity android:name=".uiraetsel.Logik" />
+        <activity android:name=".uiraetsel.Mathematik" />
+        <activity android:name=".uiraetsel.Sprache" />
+        <activity android:name=".database.database_activitys.ActivityDiagram" />
+        <activity android:name=".database.database_activitys.ActivitySet" />
+        <activity android:name=".database.database_activitys.ActivityValues" />
+        <activity android:name=".database.database_activitys.DeleteSelect" />
+        <activity android:name=".bin.Pinboard" />
+        <activity
+            android:name=".bin.HowToPlay.HowToPlay1"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".bin.HowToPlay.HowToPlay2"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".bin.HowToPlay.HowToPlay3"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".bin.HowToPlay.HowToPlay4"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".bin.HowToPlay.HowToPlay5"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".bin.HowToPlay.HowToPlay6"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".bin.HowToPlay.HowToPlay7"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".bin.HowToPlay.HowToPlay8"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".bin.HowToPlay.EngHowToPlay1"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".bin.HowToPlay.EngHowToPlay2"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".bin.HowToPlay.EngHowToPlay3"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".bin.HowToPlay.EngHowToPlay4"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".bin.HowToPlay.EngHowToPlay5"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".bin.HowToPlay.EngHowToPlay6"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".bin.HowToPlay.EngHowToPlay7"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".bin.HowToPlay.EngHowToPlay8"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".bin.HowToPlay.HowToPlaySQLnoSQL"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".bin.HowToPlay.HowToPlayNoSQL"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".bin.HowToPlay.EngHowToPlaySQLnoSQL"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".bin.HowToPlay.EngHowToPlayNoSQL"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".bin.HowToPlay.HowToPlay1Language"
+            android:screenOrientation="landscape" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- Stuff for Achievements and upload to google play -->
+
+        <meta-data android:name="com.google.android.gms.games.APP_ID"
+            android:value="@string/app_id" />
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+
+        <!-- EO Stuff for Achievements -->
+
+        <activity
+            android:name=".bin.Map"
+            android:label="@string/title_activity_map" />
+        <activity android:name=".bin.Tutorial" />
+        <activity android:name=".bin.TutorialActivity" />
+        <activity android:name=".bin.Settings" />
+        <activity android:name=".bin.Database" />
+        <activity
+            android:name=".database.database_activitys.ActivityQuery"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".database.database_activitys.ActivityDML"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".database.database_activitys.ActivityDelete"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".database.database_activitys.ActivityDDL"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".database.database_activitys.ActivityInsert"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".database.database_activitys.ActivityUpdate"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".database.database_activitys.ActivityJoin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".database.database_activitys.DeleteJoin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".database.database_activitys.ActivityWhere"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".database.database_activitys.ActivitySubquery"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".database.database_activitys.DeleteWhere"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".database.database_activitys.ActivitySelect"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".database.database_activitys.ActivityGroupBy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".database.database_activitys.DeleteGroupBy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".database.database_activitys.DeleteSelect"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".bin.MainActivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

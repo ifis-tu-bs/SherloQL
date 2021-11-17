@@ -1,0 +1,5165 @@
+{"Story": [
+    {
+        "chapter": "Kapitel 0",
+        "image": "",
+        "flag": "0",
+        "question": "Gib deinen Namen ein.",
+        "dependency": [],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Gib deinen Username ein."
+            },
+            {
+                "cost": "2",
+                "hint": "Gib deinen Username ein."
+            },
+            {
+                "cost": "3",
+                "hint": "Gib deinen Username ein."
+            }
+        ],
+        "latitude": "52.27305856594336",
+        "artefact": ["intro"],
+        "type": "answer",
+        "TTL": [],
+        "answer": "",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Guten Morgen, da bist Du ja!",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Mein Name ist Barton und ich begleite Dich durch deinen ersten Kriminalfall in Braunschweig.",
+                "position": "103"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Da Du neu hier bist, werde ich dir einige Sehenswürdigkeiten zeigen und nebenher wirst Du die Sprache SQL näher kennenlernen.",
+                "position": "104"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Dazu habe ich bereits eine Datenbank angelegt, mit der Du Dich im Laufe des Spiels auseinandersetzen kannst.",
+                "position": "105"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Detektiv",
+                "text": "Ich kenne leider Deinen Namen noch nicht. Magst Du ihn mir verraten?",
+                "position": "106"
+            },
+            {
+                "image": "Rsurprised",
+                "person": "Detektiv",
+                "text": "Alles klar {$USER$}, dann wollen wir mal direkt anfangen!",
+                "position": "201"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Detektiv",
+                "text": "Heute Morgen um 5:32 Uhr wurde hier im Gaußberg Park eine Leiche gefunden.",
+                "position": "202"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Da wir gerade hier sind, erzähle ich dir kurz etwas über den Park.",
+                "position": "203"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Der Park ist eine kleine Grünanlage von 1,38 Hektar Fläche, er ist 1831 entstanden.",
+                "position": "204"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Von seinem Plateau ergeben sich zahlreiche Aussichtsmöglichkeiten auf die umgebenden Wallstraßen, die Oker und den Platz vor dem Wendentor.",
+                "position": "205"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Detektiv",
+                "text": "Lass uns nun zum Tatort gehen, die Polizei ist bereits dort.",
+                "position": "206"
+            }
+        ],
+        "place": "Informatik Zentrum",
+        "longitude": "10.524859033659743"
+    },
+    {
+        "chapter": "Kapitel 1",
+        "image": "",
+        "flag": "0",
+        "question": "Finde mit der Tabelle \"personen\" die Telefon-Nr. von Moritz heraus. Die ID von ihm sollte mit dem Lebensalter von Gauß übereinstimmen. Im hinteren Bereich des Parks findest Du dafür ein Denkmal mit Informationen.",
+        "dependency": ["intro"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Die Lebensdaten stehen auf dem Denkmal."
+            },
+            {
+                "cost": "2",
+                "hint": "1777-1855"
+            },
+            {
+                "cost": "3",
+                "hint": "77 Jahre"
+            }
+        ],
+        "latitude": "52.27212148362936",
+        "artefact": [
+            "?terminkalender",
+            "?kinoticket",
+            "?abschiedsbrief"
+        ],
+        "type": "sql",
+        "TTL": [],
+        "answer": "015733567813",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Polizist",
+                "text": "Morgen, Herr Detektiv.",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Schönen Guten Morgen. Wie weit sind Sie mit Ihren Ermittlungen?",
+                "position": "102"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Polizist",
+                "text": "Wie bereits erwähnt, hat eine Zeugin heute Morgen um 5.32 Uhr eine männliche Leiche am Flussufer entdeckt.",
+                "position": "103"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Polizist",
+                "text": "Bei der Leiche handelt es sich um den 24-jährigen Doktoranden Moritz Mayer.",
+                "position": "104"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Polizist",
+                "text": "Nach ersten Untersuchungen ertrank das Opfer bereits am gestrigen Abend. Es gibt keinerlei Hinweise auf äußerliche Einwirkungen.",
+                "position": "105"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Polizist",
+                "text": "In der Nähe wurden außerdem ein Abschiedsbrief des Opfers, ein Kino-Ticket, sowie sein Terminplaner gefunden. Wir gehen von Selbstmord aus.",
+                "position": "106"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Detektiv",
+                "text": "Wie sieht es mit der Zeugin aus?",
+                "position": "107"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Polizist",
+                "text": "Unsere Zeugin ist die 37-jährige Gärtnerin Frau Arianne Baumgarten. Sie fand die Leiche heute Morgen bei ihrem Rundgang im Gaußberg Park.",
+                "position": "108"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Polizist",
+                "text": "Sie befindet sich derzeit in psychologischer Betreuung.",
+                "position": "109"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Detektiv",
+                "text": "Wurden bereits weitere Personen befragt?",
+                "position": "110"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Polizist",
+                "text": "Ja, Sie finden die Liste aller vernommenen Personen, sowie die Beweismaterialien bei einem meiner Kollegen.",
+                "position": "111"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Polizist",
+                "text": "Er sollte sich noch im Gaußberg Park aufhalten.",
+                "position": "112"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Alles klar. Vielen Dank. Bitte lassen Sie uns wissen, falls sich etwas Neues ergibt.",
+                "position": "113"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Polizist",
+                "text": "Sehr wohl, Herr Detektiv. Ihnen viel Erfolg bei den weiteren Ermittlungen.",
+                "position": "114"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Auf Wiedersehen. Ich wünsche Ihnen noch einen schönen Tag.",
+                "position": "115"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Detektiv",
+                "text": "Klingt nach einem einfachen Fall. Lass uns diesen Kollegen finden. Vielleicht sagen uns die Beweismittel ja mehr.",
+                "position": "116"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Detektiv",
+                "text": "Aber halt. Suche nach der Telefonnummer von dem Opfer. Damit können wir vielleicht mehr über Ihn heraus finden!",
+                "position": "117"
+            },
+            {
+                "image": "Rsurprised",
+                "person": "Detektiv",
+                "text": "Gute Arbeit.",
+                "position": "201"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Detektiv",
+                "text": "Wie es aussieht hatte das Opfer am Tag vor seinem Tod noch Kontakt zu einigen Personen. Wir sollten mit allen mal reden.",
+                "position": "202"
+            }
+        ],
+        "place": "Gaussberg Park",
+        "longitude": "10.522789432050589"
+    },
+    {
+        "chapter": "Vernehmung Professor",
+        "image": "",
+        "flag": "0",
+        "question": "Finde mit der Tabelle \"terminkalender\" heraus, ob der Professor tatsächlich abends (ab 17 Uhr) ein Meeting hatte. Das Format für Zeiten ist \"hhmm\".",
+        "dependency": ["?terminkalender"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Wähle Tabelle \"terminkalender\" aus"
+            },
+            {
+                "cost": "2",
+                "hint": "Benutze >= auf den Beginn der Termine"
+            },
+            {
+                "cost": "3",
+                "hint": "SELECT tk_taetigkeit FROM terminkalender WHERE tk_begin >= 1700"
+            }
+        ],
+        "latitude": "52.2734275073803",
+        "artefact": ["professor"],
+        "type": "sql",
+        "TTL": [
+            "gaertnerin",
+            "!professor"
+        ],
+        "answer": "Präsentation Paper \"modern security breaches\".",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Da sind wir auch schon!",
+                "position": "101"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Die Technische Universität Carolo-Wilhelmina wurde im Jahr 1745 gegründet.",
+                "position": "102"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Mit nahezu 20000 Studierenden und 71 Studiengängen gehört sie zu einer der bedeutsamsten Hochschulen Deutschlands.",
+                "position": "103"
+            },
+            {
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text": "Zudem ist die Universität ein Teil der neun führenden Technischen Hochschulen Deutschlands (TU9).",
+                "position": "104"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ah, da vorne sehe ich den Professor schon, sprechen wir ihn gleich mal an.",
+                "position": "105"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Guten Tag. Sind wir hier richtig bei Professor Thomas Münch?",
+                "position": "106"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Ja da sind Sie bei mir richtig.",
+                "position": "107"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Professor",
+                "text": "Ich nehme an, dass Sie wegen Moritz Mayer hier sind.",
+                "position": "108"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Korrekt. Wie Ihnen bestimmt schon bekannt ist, wurde er tot aufgefunden.",
+                "position": "109"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Sie stehen bei ihm im Terminplaner, erzählen Sie uns, was Sie mit ihm zu tun hatten.",
+                "position": "110"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Professor",
+                "text": "Ich war sein Betreuer und auch Ansprechpartner seines Startups.",
+                "position": "111"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Welches Startup?",
+                "position": "112"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Moritz Mayer und Rico Weiß haben zusammen ein Startup gegründet. Ich habe Sie dabei unterstützt.",
+                "position": "113"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Die im Startup entwickelte Datenbank ist eine Sammlung von Patientenakten.",
+                "position": "114"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Darin befinden sich Informationen von Bürgern Deutschlands.",
+                "position": "115"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Ihre Adressen, Impfausweise, Medikationspläne, Allergien, und vieles mehr.",
+                "position": "116"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Das heißt, wer darauf Zugriff hat, hat auch Zugriff auf eine Menge Informationen.",
+                "position": "117"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Informationen, die man verkaufen oder benutzen kann, um Leute zu erpressen oder für Identitätsdiebstahl.",
+                "position": "118"
+            },
+            {
+                "image": "Rsurprised",
+                "person": "Professor",
+                "text": "Genauer gesagt, vermute ich, dass dies ein mögliches Mordmotiv sein könnte.",
+                "position": "119"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Wo waren Sie gestern anschließend noch?",
+                "position": "120"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Ich war in einem Meeting. Meine Sekretärin kann Ihnen das bestätigen.",
+                "position": "121"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Gibt es noch etwas, was Sie an Moritz bemerkt haben, eventuell an den Tagen bevor er gestorben ist?",
+                "position": "122"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Wir wissen, dass Sie sich mit ihm getroffen haben.",
+                "position": "123"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Professor",
+                "text": "Wir haben uns getroffen, weil er ein paar Fragen an mich hatte.",
+                "position": "124"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Da das Projekt größer geworden ist, wollte er die Sicherheit des Projekts erhöhen.",
+                "position": "125"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Professor",
+                "text": "Ach, noch was. Kurze nach unserem Treffen ist seine Freundin vorbeigekommen. Sie hat nach Moritz gefragt.",
+                "position": "126"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Wissen Sie, wie sie heißt?",
+                "position": "127"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Sie heißt Viktoria Kästner, auch sie ist einer meiner Mentee.",
+                "position": "128"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Professor",
+                "text": "Ich weiß, dass sie gerne an dem Startup teilhaben wollte.",
+                "position": "129"
+            },
+            {
+                "image": "Rsurprised",
+                "person": "Professor",
+                "text": "Moritz war sehr streng dagegen, warum weiß ich leider nicht.",
+                "position": "130"
+            },
+            {
+                "image": "Rsurprised",
+                "person": "Professor",
+                "text": "Mir schien es, als ob er ziemlich skeptisch gegenüber ihr war.",
+                "position": "131"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Vielen Dank Herr Professor. Ihre Aussagen waren sehr hilfreich.",
+                "position": "132"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Es ist ein bisschen klarer geworden, was genau geschehen ist.",
+                "position": "133"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Kein Problem Herr Detektiv. Ich hoffe, Sie können bald Moritz Fall aufklären.",
+                "position": "134"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Er war ein sehr intelligenter und netter Junge. Ich wünsche Ihnen noch einen schönen Tag.",
+                "position": "135"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Aber da hat er uns ja doch was zum Nachdenken gegeben.",
+                "position": "136"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Er hatte eine Viktoria Kästner erwähnt. Vielleicht sollten wir auch bei ihr nochmal genauer nachfragen.",
+                "position": "137"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Aber zuerst prüfen wir mal sein Alibi.",
+                "position": "138"
+            }
+        ],
+        "place": "Universitaetsplatz",
+        "longitude": "10.529241533208864"
+    },
+    {
+        "chapter": "Vernehmung Psychologin",
+        "image": "",
+        "flag": "0",
+        "question": "Finde mittels einer geeigneten SQL Anfrage die genaue Etage, in der die Psychologin arbeitet, heraus. Ihre ID ist die 714. Nutze dazu Tabellenjoins.",
+        "dependency": ["?terminkalender"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Es ist mindestens ein Join nötig."
+            },
+            {
+                "cost": "2",
+                "hint": "Joine \"person_in_abteilung\" und \"abteilung\" über den Namen und filtere über die ID der Psychologin."
+            },
+            {
+                "cost": "3",
+                "hint": "SELECT abt_etage FROM abteilung JOIN person_in_abteilung ON abt_name = pia_abteilung WHERE person_id = 714"
+            }
+        ],
+        "latitude": "52.265731",
+        "artefact": ["pastor", "yvonne"],
+        "type": "sql",
+        "TTL": [
+            "gaertnerin",
+            "!yvonne"
+        ],
+        "answer": "2",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "So da wären wir, hier sollte die Psychologin arbeiten.",
+                "position": "101"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wir müssen erstmal herausfinden, in welcher Etage wir sie finden.",
+                "position": "102"
+            },
+            {
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text": "Stimmt, danke dir, dann gehen wir da mal schnell hin.",
+                "position": "201"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Guten Tag, wie kann ich Ihnen helfen?",
+                "position": "202"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Schönen Guten Tag, ich bin Detektiv Barton und das hier ist mein Assistent {$USER$}.",
+                "position": "203"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wir sind hier aufgrund von Moritz Mayer und wollten gerne mit seiner Psychologin sprechen.",
+                "position": "204"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wissen Sie, wer unser Ansprechpartner ist?",
+                "position": "205"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Das wäre ich. Mein Name ist Yvonne Beyer. Kommen Sie bitte mit in mein Sprechzimmer.",
+                "position": "206"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Danke. Wie Sie sicherlich wissen, ist Moritz Mayer heute Morgen tot aufgefunden worden.",
+                "position": "207"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Wir hätten diesbezüglich einige Fragen an Sie.",
+                "position": "208"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Können Sie mehr über Herrn Mayer erzählen?",
+                "position": "209"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Ja, sehr gerne. Ich beriet Herrn Mayer in seinem Startup seit Anfang des Jahres.",
+                "position": "210"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Ich hatte ihm hinsichtlich des Inhalts von Patientenakten geholfen.",
+                "position": "211"
+            },
+            {
+                "image": "Rsurprised",
+                "person": "Yvonne",
+                "text": "Ich bin ziemlich erschüttert von seinem Tod.",
+                "position": "212"
+            },
+            {
+                "image": "Rsurprised",
+                "person": "Yvonne",
+                "text": "Ich hatte nicht den Eindruck, dass er sich das Leben nehmen würde.",
+                "position": "213"
+            },
+            {
+                "image": "Rsurprised",
+                "person": "Yvonne",
+                "text": "Er war ein sehr intelligenter, pfiffiger und fleißiger junger Mann.",
+                "position": "214"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Wann haben Sie Herrn Mayer das letzte Mal gesehen?",
+                "position": "215"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Yvonne",
+                "text": "Wir hatten gestern um 10:00 Uhr ein kurzes Treffen.",
+                "position": "216"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Yvonne",
+                "text": "Das war das letzte Mal, dass ich ihn gesehen habe.",
+                "position": "217"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Ist Ihnen etwas an seinem Verhalten aufgefallen?",
+                "position": "218"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Yvonne",
+                "text": "Nicht unbedingt. Mir ist nur aufgefallen, dass er etwas besorgt aussah.",
+                "position": "219"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Darüber hatte ich mir keine weiteren Gedanken gemacht.",
+                "position": "220"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Ich dachte, dass es vielleicht mit dem Startup zusammenhängt.",
+                "position": "221"
+            },
+            {
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text": "Wo waren Sie gestern anschließend noch?",
+                "position": "222"
+            },
+            {
+                "image": "Rsurprised",
+                "person": "Yvonne",
+                "text": "Lassen Sie mich überlegen. Ich war beim Gottesdienst im Braunschweiger Dom.",
+                "position": "223"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Kann das jemand bezeugen?",
+                "position": "224"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Yvonne",
+                "text": "Ja, nach dem Gottesdienst habe ich mit dem Pastor David gesprochen.",
+                "position": "225"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Vielen Dank Frau Beyer, das war erstmal alles.",
+                "position": "226"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wir bitten Sie für weitere Fragen bereit zustehen.",
+                "position": "227"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Geben Sie uns Bescheid, wenn Ihnen noch etwas einfallen sollte.",
+                "position": "228"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Das werde ich Herr Detektiv, vielen Dank.",
+                "position": "229"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Stichpunkt Startup! Darüber sollten wir uns nochmal schlau machen.",
+                "position": "230"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Machen wir erstmal eine Pause.",
+                "position": "231"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Danach gehen wir am Braunschweiger Dom vorbei.",
+                "position": "232"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Mal sehen, ob der Pastor das Alibi bezeugen kann.",
+                "position": "233"
+            }
+        ],
+        "place": "Studentenwerk",
+        "longitude": "10.527609"
+    },
+	{
+		"chapter": "Vernehmung Pastor",
+        "image": "",
+        "flag": "0",
+        "question": "Finde heraus, an welchem Gottesdienst die Psychologin teilgenommen hat. Sie hat die ID 714. Relevante Tabellen sind \"gottesdienste\" und \"teilnahme_an_gottesdienst\".",
+        "dependency": ["pastor"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Tabellen-Joins sind hilfreich."
+            },
+            {
+                "cost": "2",
+                "hint": "2 Tabellen"
+            },
+            {
+                "cost": "3",
+                "hint": "SELECT gd_id FROM gottesdienste JOIN teilnahme_gottesdienst ON gd_id = tag_gd_id WHERE tag_person = 714"
+            }
+        ],
+        "latitude": "52.26446347384392",
+        "artefact": ["Alibi"],
+        "type": "sql",
+        "TTL": [],
+        "answer": "4",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Endlich sind wir am Braunschweiger Dom angekommen. Bevor wir reingehen, erzähle ich dir etwas darüber.",
+                "position": "101"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Der Dom ist eine Bischofskirche der Evangelische-Lutherischen Landeskirche in Braunschweig.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Er wurde von Heinrich dem Löwen nach Rückkehr von seiner Palästina-Fahrt in den Jahren 1173 bis 1195 gebaut.",
+                "position": "103"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Dieser Dom gilt als Grabstätte von Heinrich dem Löwen und seiner Familie.",
+                "position": "104"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Seither wurde er mehrfach umgebaut, erweitert und rekonstruiert.",
+                "position": "105"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Perfektes Timing, der Gottesdienst ist gerade beendet. Lass uns mit dem Pastor sprechen.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Guten Abend, könnten Sie uns vielleicht weiterhelfen. Wir suchen den Pastor David.",
+                "position": "107"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Pastor",
+                "text": "Guten Abend, ja da sind Sie bei mir richtig, ich bin Pastor David. Wie kann ich Ihnen weiterhelfen?",
+                "position": "108"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ich bin Detektiv Barton und das ist mein Assistent {$USER$}.",
+                "position": "109"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Wir arbeiten an einem Fall und wollten wissen, ob eine Frau Beyer am gestrigen Gottesdienst teilgenommen hat.",
+                "position": "110"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Pastor",
+                "text": "Frau Beyer. Der Name sagt mir etwas. Lassen Sie mich mal in meine Liste reinschauen.",
+                "position": "111"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Pastor",
+                "text": "Frau Beyer hatte gestern Abend an unserem Gottesdienst teilgenommen und anschließend Fragen an mich gehabt.",
+                "position": "112"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Pastor",
+                "text": "Ich hoffe, dass alles in Ordnung ist.",
+                "position": "113"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Keine Sorge, Frau Beyer geht es soweit gut.",
+                "position": "114"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Wir ermitteln gerade in einem Fall, wo ein junger Mann heute Morgen im Gaußberg Park tot aufgefunden wurde.",
+                "position": "115"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Pastor",
+                "text": "Ruhe er in Frieden. Ich hoffe, ich konnte Ihnen helfen.",
+                "position": "116"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ja, das haben Sie. Vielen Dank, ich wünsche Ihnen noch einen schönen Abend.",
+                "position": "117"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "{$USER$}, schau mal bitte in der Liste des Pastors nach, ob das auch die Frau Beyer ist, die wir suchen. Sie befindet sich bereits in der Datenbank.",
+                "position": "118"
+            },
+			{
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text": "Damit ist ihr Alibi bestätigt. Lass uns morgen weiter machen, es ist recht spät.",
+                "position": "201"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ruhe Dich aus, Du hast heute schon viel geleistet. Wir sehen uns morgen.",
+                "position": "202"
+            }
+			
+		],
+		"place": "Dom",
+        "longitude": "10.523414015794136"
+	},
+	{
+		"chapter": "Vernehmung Rico",
+        "image": "",
+        "flag": "0",
+        "question": "An der Pinnwand befindet sich das Kinoticket, welches Moritz mit sich geführt hat. Finde für den auf dem Kinoticket abgebildeten Film den Wochentag an dem er lief. Nutze die Tabelle \"filme\".",
+        "dependency": ["?terminkalender"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Nutze die Informationen von dem Kinoticket."
+            },
+            {
+                "cost": "2",
+                "hint": "Nutze zum vergleichen \"LIKE\" und das zugehörige \"%\"."
+            },
+            {
+                "cost": "3",
+                "hint": "SELECT film_wochentag FROM filme WHERE film_name like 'Sherlock%'"
+            }
+        ],
+        "latitude": "52.26678923591834",
+        "artefact": ["rico"],
+        "type": "sql",
+        "TTL": [
+            "gaertnerin",
+            "!rico"
+        ],
+        "answer": "Montag",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Gut, dass Du da bist, {$USER$}.",
+                "position": "101"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wir befinden uns hier am Astor Filmtheater Braunschweig, dem wohl bekanntesten Kino Braunschweigs.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Es ist Platz für insgesamt 2573 Filmbegeisterte verteilt auf 8 Säle.",
+                "position": "103"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Regelmäßig hat man auch die Möglichkeit, alte Klassiker, die mithilfe der Braunschweiger Zeitung angeboten werden, anzugucken.",
+                "position": "104"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Da wir schon hier sind, erinnere ich mich an ein Beweismittel, das auf der Liste stand: eine verwaschene Kino Karte.",
+                "position": "105"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Wir sollten herausfinden, wann Moritz diesen Film hier gesehen hat, vielleicht hilft uns das weiter.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ich habe mir über Umwege einen Auszug der letzten Filme, die hier gezeigt wurden, besorgt und in die Datenbank geschrieben.",
+                "position": "107"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Super. Ich nehme an, dass da vorne Herr Weiß steht, lass uns dahin gehen.",
+                "position": "201"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Guten Tag. Sie müssen Henrik Weiß sein. Schön, dass Sie sich für uns Zeit genommen haben.",
+                "position": "202"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Hallo! Sie können mich gerne Rico nennen. Wie kann ich Ihnen denn helfen?",
+                "position": "203"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Ich muss Ihnen leider mitteilen, dass Ihr Freund Moritz Mayer heute Morgen tot im Gaußberg Park aufgefunden wurde.",
+                "position": "204"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Unseres Wissens hat es sich wohl um einen Selbstmord gehandelt.",
+                "position": "205"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Rico",
+                "text": "Wie bitte. Nein, Moritz würde sich nicht umbringen. Wir hatten noch ein Treffen für heute Abend abgemacht.",
+                "position": "206"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Dieses kannst Du wohl absagen. Wie standen Sie zu Moritz?",
+                "position": "207"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Rico",
+                "text": "Ich muss das erstmal verarbeiten. Er war einer meiner besten Freunde.",
+                "position": "208"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Können Sie uns etwas über ihn erzählen. Wie war er so?",
+                "position": "209"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Ist Ihnen in letzter Zeit etwas aufgefallen, was zu sowas führen konnte?",
+                "position": "210"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Rico",
+                "text": "So wie ich, war auch er Informatikstudent.",
+                "position": "211"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Rico",
+                "text": "Er hatte in letzter Zeit viel Arbeit in unser Startup gesteckt, aber er wirkte nicht suizidal veranlagt.",
+                "position": "212"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Sie erwähnten ein Startup. Wollen Sie mehr darüber erzählen?",
+                "position": "213"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Wir haben zusammen ein Startup gegründet. Sie soll Patientenakten sammeln.",
+                "position": "214"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Rico",
+                "text": "Also eine Sammlung der Adressen, Allergien und anderer Informationen über deutsche Bürger, um die Arbeit von Ärzten zu erleichtern.",
+                "position": "215"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Das klingt nach einer sehr nützlichen Datenbank.",
+                "position": "216"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Auf der anderen Seite kann damit in den falschen Händen viel Unsinn gemacht werden.",
+                "position": "217"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Rico",
+                "text": "Wollen Sie damit sagen, dass das ein Mordmotiv sein könnte.",
+                "position": "218"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Ich will sagen, dass ich glaube, dass sSie ihn umgebracht haben.",
+                "position": "219"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Rico",
+                "text": "Ich weiß nicht, wie Sie so plötzlich darauf kommen?",
+                "position": "220"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Rico",
+                "text": "Das meinen Sie doch nicht im Ernst?",
+                "position": "221"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Rico",
+                "text": "Ich bin doch schon Teilhaber des Startips was habe ich denn davon meinen besten Freund umzubringen?",
+                "position": "222"
+            },
+			{
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text": "Ich muss leider alle Möglichkeiten in Betracht ziehen.",
+                "position": "223"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Rico",
+                "text": "Es tut mir Leid. Ich kann es leider noch nicht glauben. Sie machen ja auch nur Ihren Job.",
+                "position": "224"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Ich merke schon, Sie sind etwas aufgewühlt.",
+                "position": "225"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Vielleicht sollten Sie erstmal eine Nacht darüber schlafen, wir bleiben in Kontakt.",
+                "position": "226"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Sollten Sie Hilfe brauchen steht Ihnen zu jeder Zeit die psychologische Betreuung der Polizei zur Verfügung.",
+                "position": "227"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Ok, danke für ihr Verständnis. Einen schönen Tag wünsche ich.",
+                "position": "228"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Vielen Dank, das wünsche ich Ihnen auch. Ruhen Sie sich gut aus.",
+                "position": "229"
+            }
+		],
+		"place": "Kino",
+        "longitude": "10.517396248261711"
+	},
+	{
+		"chapter": "Vernehmung Viktoria (Rico)",
+        "image": "",
+        "flag": "0",
+        "question": "Lösche den Eintrag mit der Personen ID 819. Die Person hat mit Sicherheit nichts mit dem Mord zu tun. *wink*",
+        "dependency": ["rico"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Nutze für die Aufgabe die Data Manipulation Language (DML)."
+            },
+            {
+                "cost": "2",
+                "hint": "Spezifiziere die zu löschende ID in der Query."
+            },
+            {
+                "cost": "3",
+                "hint": "DELETE FROM personen WHERE person_id=819;"
+            }
+        ],
+        "latitude": "52.26615541291471",
+        "artefact": ["akt1", "viktoria"],
+        "type": "sql-delete",
+        "TTL": [],
+        "answer": "personen,person_id,819",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wir befinden uns hier am Neustadtrathaus, auch bekannt als das DAX.",
+                "position": "101"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Über die Jahre wurde das Neustadtrathaus für verschiedene Zwecke genutzt.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Seit dem 13. Jahrhundert diente das Rathaus im Mittelalter als zentrales Rathaus für ein gemeinsames Gremium.",
+                "position": "103"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Von 1671 bis 1830 der Sitz der Stadtverwaltung des Weichbilds Neustadt und im 19. und 20. Jahrhundert Archiv und Museum.",
+                "position": "104"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ab dem 26. September 1913 diente das Gebäude als ein städtisches Schulmuseum, in dem Ausstellungen, Vorträge und Experimentalunterricht stattfanden.",
+                "position": "105"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Durch zahlreiche Bombenangriffe des Zweiten Weltkriegs wurde der Bau teilweise zerstört und 1974 wieder aufgebaut.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Heute befindet sich hier die Bierbörse Dax. Es ist immer einen Besuch wert.",
+                "position": "107"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Ich habe neulich gesehen, dass in der Datenbank ein alter, nicht relevanter Eintrag vorhanden ist. Löschst Du ihn bitte für mich?",
+                "position": "108"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "So viel dazu. Lass uns jetzt mit unserer Arbeit weitermachen.",
+                "position": "201"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Hallo. Sie müssen Viktoria Kästner sein.",
+                "position": "202"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Viktoria",
+                "text": "Guten Tag. Ich habe schon von Moritz gehört, traurige Geschichte.",
+                "position": "203"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wir haben mitbekommen, dass Sie Moritz auch kannten. Wie standen sie zueinander?",
+                "position": "204"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "Ich war seine beste Freundin und auch Kommilitonin.",
+                "position": "205"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ich verstehe. Ist Ihnen vielleicht in letzter Zeit etwas Merkwürdiges an ihm aufgefallen?",
+                "position": "206"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Hat er sich anders verhalten?",
+                "position": "207"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "Ich habe bemerkt, dass er gestresst war, aber so war er immer.",
+                "position": "208"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wissen Sie, warum er gestresst war?",
+                "position": "209"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Viktoria",
+                "text": "Vielleicht haben Sie schon von seinem Startup gehört.",
+                "position": "210"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ja, davon war bereits die Rede.",
+                "position": "211"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "Ich habe gedacht, dass er deshalb gestresst war. Jemand hatte ihnen angeboten, ihr Projekt zu unterstützen.",
+                "position": "212"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "\"Ihnen\". Sie sind nicht ein Teil des Startups?",
+                "position": "213"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "Leider nicht. Aber das ist eine ganz andere Geschichte.",
+                "position": "214"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Nun, wir haben Zeit.",
+                "position": "215"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Viktoria",
+                "text": "Was wollen Sie dazu wissen?",
+                "position": "216"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "Ich wollte daran mitarbeiten, beide hatten mir dies allerdings nicht erlaubt, keine Ahnung warum.",
+                "position": "217"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "Mehr gibt es dazu aber auch nicht zu erzählen.",
+                "position": "218"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Nun, okay.",
+                "position": "219"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Könnten Sie mir einmal mitteilen, was Sie in der Nacht seines Todes gemacht hast.",
+                "position": "220"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "Das ist nicht euer Ernst. Werde ich jetzt verdächtigt?",
+                "position": "221"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Bitte beruhigen Sie sich, das ist Routine, die wir bei jedem durchführen.",
+                "position": "222"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "Ich war in einer Disko feiern. Ich darf ja wohl Spaß haben, wenn ich es möchte.",
+                "position": "223"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ganz allein?",
+                "position": "224"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "Ja natürlich, alle anderen, mit denen ich normalerweise dorthin gehe, hatten keine Zeit.",
+                "position": "225"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "Gibt es ein Problem damit?",
+                "position": "226"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Nein, vielen Dank für Ihre Zeit. Wir wünschen Ihnen noch einen schönen Tag?",
+                "position": "227"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "Ihnen auch, tschüss.",
+                "position": "228"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Mhm. Scheinbar beschäftigt sie der Tod von Moritz sehr. Ich sehe keine Gründe, weshalb Viktoria ein Motiv gehabt hätte. Was denkst Du darüber, {$USER$}?",
+                "position": "229"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ruh Dich etwas aus, wir haben noch viel vor uns.",
+                "position": "230"
+            }
+		],
+		"place": "Neustadtrathaus",
+        "longitude": "10.522089313871277"
+	},
+	{
+		"chapter": "Vernehmung Viktoria (Prof)",
+        "image": "",
+        "flag": "0",
+        "question": "Lösche den Eintrag mit der Personen ID 819. Die Person hat mit Sicherheit nichts mit dem Mord zu tun. *wink*",
+        "dependency": ["professor"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Nutze für die Aufgabe die Data Manipulation Language (DML)."
+            },
+            {
+                "cost": "2",
+                "hint": "Spezifiziere die zu löschende ID in der Query."
+            },
+            {
+                "cost": "3",
+                "hint": "DELETE FROM personen WHERE person_id=819;"
+            }
+        ],
+        "latitude": "52.26615541291471",
+        "artefact": ["akt1", "viktoria"],
+        "type": "sql-delete",
+        "TTL": ["rico"],
+        "answer": "personen,person_id,819",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wir befinden uns hier am Neustadtrathaus, auch bekannt als das DAX.",
+                "position": "101"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Über die Jahre wurde das Neustadtrathaus für verschiedene Zwecke genutzt.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Seit dem 13. Jahrhundert diente das Rathaus im Mittelalter als zentrales Rathaus für ein gemeinsames Gremium.",
+                "position": "103"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Von 1671 bis 1830 der Sitz der Stadtverwaltung des Weichbilds Neustadt und im 19. und 20. Jahrhundert Archiv und Museum.",
+                "position": "104"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ab dem 26. September 1913 diente das Gebäude als ein städtisches Schulmuseum, in dem Ausstellungen, Vorträge und Experimentalunterricht stattfanden.",
+                "position": "105"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Durch zahlreiche Bombenangriffe des Zweiten Weltkriegs wurde der Bau Teilweise zerstört und 1974 wieder aufgebaut.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Heute befindet sich hier die Bierbörse Dax. Es ist immer einen Besuch wert.",
+                "position": "107"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Ich habe neulich gesehen, dass in der Datenbank ein alter, nicht relevanter Eintrag vorhanden ist. Löschst Du ihn bitte für mich?",
+                "position": "108"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "So viel dazu. Lass uns jetzt mit unserer Arbeit weitermachen.",
+                "position": "201"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Hallo. Sie müssen Viktoria Kästner sein.",
+                "position": "202"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Viktoria",
+                "text": "Guten Tag. Ich habe schon von Moritz gehört, traurige Geschichte.",
+                "position": "203"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wir haben mitbekommen, dass Sie Moritz auch kannten. Wie standen sie zueinander?",
+                "position": "204"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "Ich war seine beste Freundin und auch Kommilitonin.",
+                "position": "205"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ich verstehe. Ist Ihnen vielleicht in letzter Zeit etwas Merkwürdiges an ihm aufgefallen?",
+                "position": "206"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Hat er sich anders verhalten?",
+                "position": "207"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "Ich habe bemerkt, dass er gestresst war, aber so war er immer.",
+                "position": "208"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wissen Sie, warum er gestresst war?",
+                "position": "209"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Viktoria",
+                "text": "Vielleicht haben Sie schon von seinem Startup gehört.",
+                "position": "210"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ja, davon war bereits die Rede.",
+                "position": "211"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "Ich habe gedacht, dass er deshalb gestresst war. Jemand hatte ihnen angeboten, ihr Projekt zu unterstützen.",
+                "position": "212"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "\"Ihnen\". Sie sind nicht ein Teil des Startups?",
+                "position": "213"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "Leider nicht. Aber das ist eine ganz andere Geschichte.",
+                "position": "214"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Nun, wir haben Zeit.",
+                "position": "215"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Viktoria",
+                "text": "Was wollen Sie dazu wissen?",
+                "position": "216"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "Ich wollte daran mitarbeiten, beide hatten mir dies allerdings nicht erlaubt, keine Ahnung warum.",
+                "position": "217"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "Mehr gibt es dazu aber auch nicht zu erzählen.",
+                "position": "218"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Nun, okay.",
+                "position": "219"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Könnten Sie mir einmal mitteilen, was Sie in der Nacht seines Todes gemacht hast.",
+                "position": "220"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "Das ist nicht euer Ernst. Werde ich jetzt verdächtigt?",
+                "position": "221"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Bitte beruhigen Sie sich, das ist Routine, die wir bei jedem durchführen.",
+                "position": "222"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "Ich war in einer Disko feiern. Ich darf ja wohl Spaß haben, wenn ich es möchte.",
+                "position": "223"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ganz allein?",
+                "position": "224"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "Ja natürlich, alle anderen, mit denen ich normalerweise dorthin gehe, hatten keine Zeit.",
+                "position": "225"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "Gibt es ein Problem damit?",
+                "position": "226"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Nein, vielen Dank für Ihre Zeit. Wir wünschen Ihnen noch einen schönen Tag.",
+                "position": "227"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "Ihnen auch, tschüss.",
+                "position": "228"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Mhm. Scheinbar beschäftigt sie der Tod von Moritz sehr. Ich sehe keine Gründe, weshalb Viktoria ein Motiv gehabt hätte. Was denkst Du darüber, {$USER$}?",
+                "position": "229"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ruh Dich etwas aus, wir haben noch viel vor uns.",
+                "position": "230"
+            }
+		],
+		"place": "Neustadtrathaus",
+        "longitude": "10.522089313871277"
+	},
+	{
+		"chapter": "Vernehmung Gärtnerin",
+        "image": "",
+        "flag": "0",
+        "question": "Zähle, wie oft die Gärtnerin in der Tabelle \"arbeitsplan\" steht. Ihre ID ist die 3.",
+        "dependency": ["akt1"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Nutze die Aggregatsfunktionen."
+            },
+            {
+                "cost": "2",
+                "hint": "Nutze COUNT."
+            },
+            {
+                "cost": "3",
+                "hint": "SELECT COUNT(ap_person) FROM arbeitsplan WHERE ap_person = 3"
+            }
+        ],
+        "latitude": "52.262420349287815",
+        "artefact": ["gaertnerin","?obduktionsbericht"],
+        "type": "sql",
+        "TTL": [],
+        "answer": "2",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ich wurde gerade von der Polizei informiert, dass die Gärtnerin wieder aus der psychologischen Behandlung entlassen wurde und wieder am Arbeiten ist.",
+                "position": "101"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Ihren Arbeitsplan hab ich eben schon in unsere Datenbank gespeichert. Den hatte sie der Polizei gegeben.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ich habe mit ihr einen Termin am Kohlmarkt ausgemacht.",
+                "position": "103"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Während wir auf sie warten, kann ich dir etwas interessantes über den Kohlmarkt erzählen.",
+                "position": "104"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wusstest du, dass der Name des Kohlmarkts nichts mit dem Gemüse zu tun hat?",
+                "position": "105"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ursprünglich hieß der Platz Kohlenmarkt, weil Kohle hier gelagert und verkauft wurde.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Heute ist der Platz ein zentraler Treffpunkt, auf dem viele Cafés und Restaurants zu finden sind.",
+                "position": "107"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Der Platz bietet auch vielfältige Veranstaltungen. Gucke Dich ruhig ein bisschen um.",
+                "position": "108"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Da hinten scheint die Frau Baumgärtner bereits zu kommen, sehr gut!",
+                "position": "109"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Guten Tag!",
+                "position": "110"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Mein Name ist Barton, das ist mein Mitarbeiter {$USER$}, wir ermitteln im Fall des Todes von Moritz Mayer, dessen Leiche Sie am Anfang der Woche gefunden haben.",
+                "position": "111"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Arianne",
+                "text": "Oh, Guten Tag. Ja, das ist richtig, ich habe den Jungen am Morgen gefunden.",
+                "position": "112"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Das kann warten! Erzählen Sie nun nochmal ganz detailliert, was passiert ist.",
+                "position": "113"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Arianne",
+                "text": "Ich bin morgens angekommen und dann habe ich den Jungen bewusstlos aufgefunden.",
+                "position": "114"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Arianne",
+                "text": "Natürlich habe ich sofort die Polizei gerufen.",
+                "position": "115"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Schau mal in der Datenbank nach, ob sie am Zeitpunkt des Mordes arbeiten musste.",
+                "position": "116"
+            },
+			{
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text": "Komisch, dass Sie laut Ihrem Arbeitsplan eigentlich gar nicht hätte arbeiten müssen?",
+                "position": "201"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Arianne",
+                "text": "Ich bin doch nur eingesprungen, weil meine Kollegin...Woher wissen Sie das?",
+                "position": "202"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Nun, ich mache eben meine Arbeit. Ich muss alles über die möglichen Täter wissen.",
+                "position": "203"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Arianne",
+                "text": "Na gut. Jedenfalls wollte ich Ihnen nur noch sagen, dass der Abschiedsbrief vorher nicht da war, wo die Polizei ihn gefunden hatte.",
+                "position": "204"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Arianne",
+                "text": "Entschuldigen Sie mich, ich brauche noch etwas Zeit, um das alles zu verkraften. Guten Tag.",
+                "position": "205"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Schönen Tag wünsche ich!",
+                "position": "206"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Ihre Art ist mir suspekt. Irgendetwas stimmt mit ihr nicht. Wir sollten sie auf jeden Fall im Auge behalten.",
+                "position": "207"
+            }
+		],
+		"place": "Kohlmarkt",
+        "longitude": "10.520019944565053"
+	},
+	{
+		"chapter": "Gespräch Polizei",
+        "image": "notizzettel",
+        "flag": "0",
+        "question": "Setze die Fetzen wieder sinnvoll zusammen, indem Du die Zahlenreihenfolge (in bekannter Schreibrichtung) angibst.",
+        "dependency": ["gaertnerin"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Prüfe auf Übereinstimmung von Rissen an den Kanten."
+            },
+            {
+                "cost": "2",
+                "hint": "Das Resultat sollte ein sinnvolles Wort ergeben."
+            },
+            {
+                "cost": "3",
+                "hint": "SHERLOCK"
+            }
+        ],
+        "latitude": "52.26496582024375",
+        "artefact": ["gaertnerintod", "notizzettel"],
+        "type": "answer",
+        "TTL": [],
+        "answer": "SHERLOCK",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Gut das Du hier bist, {$USER$}. Wir befinden uns hier im Museumspark.",
+                "position": "101"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Er liegt im Osten der Innenstadt von Braunschweig, die durch die Umflutgraben der Oker umschlossen wird.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Die Fläche ist circa 4,81 Hektar groß. Zur Veranschaulichung: dies sind gute 6 Fußballfelder.",
+                "position": "103"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Der heutige Park wurde durch den Bau des Herzog-Anton-Ulrich-Museums im Jahr 1883 verkleinert und erhielt durch das Museum seinen Namen.",
+                "position": "104"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Polizist",
+                "text": "Ah, Guten Tag.",
+                "position": "105"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Polizist",
+                "text": "Wie ich Ihnen bereits am Telefon gesagt habe, hat ein Passant die Leiche von Arianne Baumgarten aufgefunden.",
+                "position": "106"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Gibt es sonstige Zeugen?",
+                "position": "107"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Polizist",
+                "text": "Abgesehen von der Person, die die Leiche gefunden hat, gibt es keine Zeugen.",
+                "position": "108"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Polizist",
+                "text": "Diese befindet sich in psychologischer Betreuung.",
+                "position": "109"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Gibt es sonstige Beweismittel?",
+                "position": "110"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Polizist",
+                "text": "Tatsächlich haben wir neben der Leiche einen zerrissenen Notizzettel gefunden.",
+                "position": "111"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Polizist",
+                "text": "Ich habe Ihnen beiden bereits Kopien anfertigen lassen.",
+                "position": "112"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Danke dafür. Ich wünsche Ihnen noch viel Erfolg bei der weiteren Ermittlungsarbeit. Schönen Tag noch.",
+                "position": "113"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Polizist",
+                "text": "Danke gleichfalls. Auf Wiedersehen.",
+                "position": "114"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Die Tote weist dieselben Spuren auf, wie Moritz Leiche. Das kann kein Zufall sein. Was denkst du dazu, {$USER$}?",
+                "position": "115"
+            },
+			{
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text": "Es scheint so, als ob Moritz Tod möglicherweise doch kein einfacher Selbstmord sei. Das würde auch bedeuten, dass jemand den Abschiedsbrief von Moritz gefälscht hat. Wenn wir die Person finden, die den Abschiedsbrief geschreiben hat, finden wir bestimmt auch den Mörder.",
+                "position": "116"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wir sollten den Notizzettel so schnell wie möglich wieder zusammenfügen, schaffst Du das alleine? Ich telefoniere solange!",
+                "position": "117"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Gute Arbeit! Was hat der Zettel nur zu bedeuten? ",
+                "position": "201"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Weißt Du was, {$USER$}, lass uns nochmal mit allen Verdächtigen reden. Ich denke, jemand hat uns noch nicht die ganze Wahrheit gesagt.",
+                "position": "202"
+            }
+		],
+		"place": "Museumspark",
+        "longitude": "10.533103864472105"
+	},
+	{
+		"chapter": "Vernehmung Yvonne und Prof Thomas #1",
+        "image": "",
+        "flag": "0",
+        "question": "Schaue in der Tabelle \"terminkalender\" nach, ob der Professor tatsächlich abends (ab 17 Uhr) ein Meeting hatte. Beachte das Zeitformat \"hhmm\".",
+        "dependency": ["gaertnerintod", "!professor", "!yvonne"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Suche in der Datenbank."
+            },
+            {
+                "cost": "2",
+                "hint": "Wähle Tabelle \"terminkalender\" aus."
+            },
+            {
+                "cost": "3",
+                "hint": "SELECT tk_taetigkeit FROM terminkalender WHERE tk_begin >= 1700"
+            }
+        ],
+        "latitude": "52.2597077849014",
+        "artefact": ["?schriftprobe_yvonne", "?schriftprobe_professor", "pastor"],
+        "type": "sql",
+        "TTL": [],
+        "answer": "Präsentation Paper \"modern security breaches\".",
+        "dialogue": [
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Hallo {$USER$}, habe ich mich vertan oder sind wir zu früh?",
+                "position": "101"
+            },
+			{
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text": "Naja, da wir noch Zeit haben, erzähle ich dir ein bisschen über den Obelisk.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Der Obelisk wurde 1823 als Denkmal errichtet, als die Braunschweiger Herzöge Karl Wilhelm Ferdinand und Friedrich Wilhelm im Kampf gegen Napoleon gefallen waren.",
+                "position": "103"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Das Denkmal spiegelt Gedenken, Dank und Verehrung.",
+                "position": "104"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Die Begriffe “Vaterland” und “Deutschland” zielten auf eine Stärkung des Patriotismus ab.",
+                "position": "105"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Oh, da hinten kommen sie schon.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Guten Tag die Dame, der Herr.",
+                "position": "107"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Sie kennen uns beide noch nicht, ich bin Detektiv Barton, das ist mein Assistent {$USER$}.",
+                "position": "108"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Ich grüße Sie. Ich bin Professor Münch.",
+                "position": "109"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Hallo. Sie hatten mich angerufen, richtig.",
+                "position": "110"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ja richtig. Vielen Dank, dass Sie so kurzfristig Zeit hatten.",
+                "position": "111"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Und zwar geht es um den Mord eines jungen Mannes, Moritz Mayer.",
+                "position": "112"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Außerdem wurde am gestrigen Tag die Frau, die den Jungen damals tot aufgefunden hatte, ebenfalls bewusstlos vorgefunden.",
+                "position": "113"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Das ist ja schrecklich.",
+                "position": "114"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Die Sache mit Moritz hatten wir traurigerweise bereits mitbekommen.",
+                "position": "115"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Könnten Sie kurz jeweils erklären, was Sie beide mit dem ersten Opfer Moritz zu tun hatten.",
+                "position": "116"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Fangen Sie bitte an, Frau Beyer.",
+                "position": "117"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Ich habe Moritz als auch Rico bei ihren Startup betreut, selbstverständlich nicht psychologisch, sondern mit Informationen rund um die Medizin und dem Inhalt von Patientenakten.",
+                "position": "118"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Okay. Nur Routine halber: was haben Sie am Abend gemacht, als Moritz ermordet wurde?",
+                "position": "119"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wann haben Sie ihn das letzte Mal gesprochen?",
+                "position": "120"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Am Donnerstagabend hatte ich an einem Gottesdienst am Braunschweiger Dom bei dem Herrn Pastor David teilgenommen.",
+                "position": "121"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Ich nehme an, er kann dies bezeugen, ich war nach der Veranstaltung noch kurz bei ihm.",
+                "position": "122"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Gesehen habe ich Moritz am Tag vor seinem Tod, er hatte noch einige Fragen zu den Patientenakten, die ich ihm beantwortet habe.",
+                "position": "123"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ich denke das reicht uns. Jetzt zu Ihnen, Herr Professor, woher kannten Sie Moritz?",
+                "position": "124"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Ich war sein Betreuer und habe Moritz und Rico mit der Datenbank bei ihrem Startup unterstützt.",
+                "position": "125"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Die Datenbank ist eine Sammlung von Patientenakten, darin befinden sich Informationen von Bürgern Deutschlands.",
+                "position": "126"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Ihre Adressen, Informationen über ihrer Verwandtschaft, Impfausweise, Medikationspläne, Allergien, und vieles mehr.",
+                "position": "127"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Das klingt interessant. Wann haben Sie Moritz zum letzten Mal gesehen? Ist Ihnen etwas an Ihm aufgefallen?",
+                "position": "128"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Wir haben uns vor einigen Tagen getroffen, weil er ein paar Fragen an mich hatte.",
+                "position": "129"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Er wollte die Sicherheitsmechanismen des Projekts verbessern.",
+                "position": "130"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Da fällt mir noch ein: Kurze Zeit später, nach unserem Treffen, ist seine Freundin vorbeigekommen.",
+                "position": "131"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Sie hat nach ihm gefragt.",
+                "position": "132"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Meinen Sie mit Freundin, Frau Viktoria Kästner?",
+                "position": "133"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Ja genau. Sie ist einer meiner Mentee.",
+                "position": "134"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Sie wollte auch gerne am Startup teilnehmen, jedoch war Moritz sehr streng dagegen.",
+                "position": "135"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Die Gründe dagegen weiß ich leider nicht.",
+                "position": "136"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wo waren Sie denn am Abend vor Moritz Tod?",
+                "position": "137"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Soweit ich mich recht entsinne, hatte ich zu dem Zeitpunkt ein Meeting, meine Sekretärin kann dies bestätigen.",
+                "position": "138"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Das können wir ja kurz verifizieren. {$USER$}, guckst Du kurz in der Datenbank nach?",
+                "position": "139"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Stimmt wohl so. Frau Arianne Baumgarten, eine Gärtnerin, die wie bereits gesagt, Moritz tot aufgefunden hatte, wurde am vergangenen Tag ebenfalls tot aufgefunden.",
+                "position": "201"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Haben Sie zu der Zeit ein Alibi?",
+                "position": "202"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Jene Nacht habe ich zusammen mit Yvonne verbracht. Wir hatten etwas zu feiern.",
+                "position": "203"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Das kann ich so bestätigen.",
+                "position": "204"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Kann das sonst noch irgendwer bezeugen?",
+                "position": "205"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Leider nicht, nein.",
+                "position": "206"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Verstehe.",
+                "position": "207"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Eins noch, falls wir nochmal Kontakt zu Ihnen brauchen, könnten Sie jeweils bitte nochmal ihre Kontaktdaten auf dem Blatt hier aufschreiben.",
+                "position": "208"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Dann danke ich Ihnen beiden für Ihre Zeit.",
+                "position": "209"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ich wünsche Ihnen noch einen schönen Tag.",
+                "position": "210"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Sehr gerne. Ich wünsche Ihnen noch viel Erfolg. Hoffentlich fassen Sie den Mörder.",
+                "position": "211"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Viel Glück Herr Detektiv. Ich wünsche Ihnen ebenfalls noch einen schönen Tag.",
+                "position": "212"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "{$USER$}, jetzt wo die beiden weg sind, kann ich dir sagen, wofür wir die Kontaktdaten wirklich brauchen.",
+                "position": "213"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wir können nun deren Handschriften mit der des Abschiedsbriefes vergleichen. Vielleicht finden wir so den Mörder.",
+                "position": "214"
+            }
+		],
+		"place": "Loewenwall",
+        "longitude": "10.530907003109151"
+	},
+	{
+		"chapter": "Vernehmung Yvonne und Prof Thomas #2",
+        "image": "",
+        "flag": "0",
+        "question": "Schaue in der Tabelle \"terminkalender\" nach, ob der Professor tatsächlich abends (ab 17 Uhr) ein Meeting hatte. Beachte das Zeitformat \"hhmm\".",
+        "dependency": ["gaertnerintod", "yvonne", "!professor"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Suche in der Datenbank."
+            },
+            {
+                "cost": "2",
+                "hint": "Wähle Tabelle \"terminkalender\" aus."
+            },
+            {
+                "cost": "3",
+                "hint": "SELECT tk_taetigkeit FROM terminkalender WHERE tk_begin >= 1700"
+            }
+        ],
+        "latitude": "52.2597077849014",
+        "artefact": ["?schriftprobe_yvonne", "?schriftprobe_professor"],
+        "type": "sql",
+        "TTL": [],
+        "answer": "Präsentation Paper \"modern security breaches\".",
+        "dialogue": [
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Hallo {$USER$}, habe ich mich vertan oder sind wir zu früh?",
+                "position": "101"
+            },
+			{
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text": "Naja, da wir noch Zeit haben, erzähle ich Dir ein bisschen über den Obelisk.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Der Obelisk wurde 1823 als Denkmal errichtet, als die Braunschweiger Herzöge Karl Wilhelm Ferdinand und Friedrich Wilhelm im Kampf gegen Napoleon gefallen waren.",
+                "position": "103"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Das Denkmal spiegelt Gedenken, Dank und Verehrung.",
+                "position": "104"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Die Begriffe “Vaterland” und “Deutschland” zielten auf eine Stärkung des Patriotismus und die Kriegs- und Opferbereitschaft für nationale Ziele ab.",
+                "position": "105"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Oh, da hinten kommen sie schon.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Guten Tag die Dame, der Herr.",
+                "position": "107"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Ah guten Tag. Wir kennen uns ja schon.",
+                "position": "108"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Guten Tag, ich bin Professor Münch.",
+                "position": "109"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Mein Name ist Barton, ich ermittle mit {$USER$} im Fall des Mordes an Moritz Mayer und Arianne Baumgarten.",
+                "position": "110"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Sie müssten Moritz bereits kennen.",
+                "position": "111"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Sie sind doch derselbe Professor Münch der auch im Terminplaner von Moritz verzeichnet war, richtig?",
+                "position": "112"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Yvonne",
+                "text": "Moment Mord? Ich dachte es war Selbstmord.",
+                "position": "113"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ja, leider.",
+                "position": "114"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Unseren neuesten Erkenntnissen nach sind sowohl Herr Mayer, als auch Frau Baumgarten Opfer eines Mordes geworden.",
+                "position": "115"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Oh mein Gott wie schrecklich.",
+                "position": "116"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Herr Mayer ist mir durchaus bekannt.",
+                "position": "117"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Es ist eine Tragödie was ihm zugestoßen ist. Aber mir ist leider keine Arianne Baumgarten bekannt.",
+                "position": "118"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Verstehe. Was können Sie uns denn zunächst über Herrn Mayer erzählen?",
+                "position": "119"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Herr Mayer war einer meiner Doktoranden und Mitbegründer eines Startups, von dem ich Anteilseigner bin.",
+                "position": "120"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Ein sehr aufgeweckter junger Mann.",
+                "position": "121"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Können Sie uns ein wenig mehr über das Startup erzählen?",
+                "position": "122"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Im Startup wurde eine zentrale Datenbank entwickelt, welche als Sammlung von Patientenakten dient.",
+                "position": "123"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Darin befinden sich Informationen von Bürgern Deutschlands.",
+                "position": "124"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Ihre Adressen, Informationen über ihrer Verwandtschaft, Impfausweise, Medikationspläne, Allergien, und vieles mehr.",
+                "position": "125"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Das heißt, wer darauf Zugriff hat, hat auch Zugriff auf eine Menge Informationen.",
+                "position": "126"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Informationen, die man verkaufen oder benutzen kann, um Leute zu erpressen oder für Identitätsdiebstahl.",
+                "position": "127"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Das ist soweit korrekt und absolut möglich, ja.",
+                "position": "128"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wo waren Sie denn in der Tatnacht?",
+                "position": "129"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Ich war in einem Meeting. Meine Sekretärin kann Ihnen das bestätigen.",
+                "position": "130"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "{$USER$}, guckst Du das kurz in der Datenbank nach. Danke Dir!",
+                "position": "131"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Gibt es noch etwas, was Sie an Moritz bemerkt haben, eventuell an den Tagen bevor er gestorben ist?",
+                "position": "201"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wir wissen, dass Sie sich mit ihm getroffen haben.",
+                "position": "202"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Wir haben uns getroffen, weil er ein paar Fragen an mich hatte.",
+                "position": "203"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Da das Projekt größer geworden ist, wollte er die Sicherheitsmechanismen des Projekts verbessern.",
+                "position": "204"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Ach, noch etwas. Kurze Zeit später, nach unserem Treffen, ist seine Freundin vorbeigekommen.",
+                "position": "205"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Sie hat nach Moritz gefragt.",
+                "position": "206"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wissen sie, wie sie heißt?",
+                "position": "207"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Sie heißt Viktoria Kästner, auch sie ist einer meiner Mentee.",
+                "position": "208"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Ich weiß, dass sie gerne an dem Startup teilhaben wollte, jedoch war Moritz sehr streng dagegen, warum weiß ich leider nicht.",
+                "position": "209"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Mir schien es, als ob er ziemlich skeptisch gegenüber ihr war.",
+                "position": "210"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Und wie sieht es mit der Tatnacht der Gärtnerin aus?",
+                "position": "211"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Die habe ich mit Yvonne verbracht.",
+                "position": "212"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Das kann ich so bestätigen.",
+                "position": "213"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Kann das sonst noch irgendwer bezeugen?",
+                "position": "214"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Leider nicht, nein.",
+                "position": "215"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Verstehe. Eins noch. Wir benötigen nochmal ihre Kontaktdaten.",
+                "position": "216"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Können Sie uns diese nochmal schnell hier aufschreiben.",
+                "position": "217"
+            },	
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Natürlich. Hier bitte.",
+                "position": "218"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Selbstverständlich. Bitte schön.",
+                "position": "219"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Vielen Dank. Ihre Aussagen waren sehr hilfreich. Das wars auch schon.",
+                "position": "220"
+            },	
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Sollte sich noch etwas ergeben, melden wir uns wieder bei Ihnen.",
+                "position": "221"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Sehr gerne. Ich wünsche Ihnen noch viel Erfolg. Hoffentlich fassen Sie den Mörder.",
+                "position": "222"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Viel Glück Herr Detektiv. Ich wünsche noch einen schönen Tag.",
+                "position": "223"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ihnen beiden auch noch einen schönen Tag.",
+                "position": "224"
+            }
+            ,
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "{$USER$}, jetzt wo die beiden weg sind, kann ich dir sagen, wofür wir die Kontaktdaten wirklich brauchen.",
+                "position": "225"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wir können nun deren Handschriften mit der des Abschiedsbriefes vergleichen. Vielleicht finden wir so den Mörder.",
+                "position": "226"
+            }
+		],
+		"place": "Loewenwall",
+        "longitude": "10.530907003109151"
+	},
+	{
+		"chapter": "Vernehmung Yvonne und Prof Thomas #3",
+        "image": "",
+        "flag": "0",
+        "question": "Finde in der Tabelle \"kreditkartenabrechnung\" die Kombination TTMM, an dem die \"Prepaid-Karte\" gekauft wurde. Die hinterlassene Bemerkung lautet \"Prepaid-Karte\".",
+        "dependency": ["gaertnerintod", "professor", "!yvonne"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Nutze die WHERE oder LIKE Klausel."
+            },
+            {
+                "cost": "2",
+                "hint": "Es sind keine JOINs mit anderen Tabellen nötig."
+            },
+            {
+                "cost": "3",
+                "hint": "SELECT kka_datum FROM kreditkartenabrechnung WHERE kka_bemerkung = 'Prepaid-Karte'"
+            }
+        ],
+        "latitude": "52.2597077849014",
+        "artefact": ["?schriftprobe_yvonne", "?schriftprobe_professor", "pastor"],
+        "type": "sql",
+        "TTL": [],
+        "answer": "1231",
+        "dialogue": [
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Hallo {$USER$}, habe ich mich vertan oder sind wir zu früh?",
+                "position": "101"
+            },
+			{
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text": "Naja, da wir noch Zeit haben, erzähle ich dir ein bisschen über den Obelisk.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Der Obelisk wurde 1823 als Denkmal errichtet, als die Braunschweiger Herzöge Karl Wilhelm Ferdinand und Friedrich Wilhelm im Kampf gegen Napoleon gefallen waren.",
+                "position": "103"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Das Denkmal spiegelt Gedenken, Dank und Verehrung.",
+                "position": "104"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Die Begriffe “Vaterland” und “Deutschland” zielten auf eine Stärkung des Patriotismus und die Kriegs- und Opferbereitschaft für nationale Ziele ab.",
+                "position": "105"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Oh, da hinten kommen sie schon.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Guten Tag die Dame, der Herr.",
+                "position": "107"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Ah guten Tag.",
+                "position": "108"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Guten Tag Herr Barton und {$USER$}.",
+                "position": "109"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wir ermitteln im Fall Mordes an Moritz Mayer und Arianne Baumgarten.",
+                "position": "110"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Moment Mord. Ich dachte es war Selbstmord?",
+                "position": "111"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Unseren neuesten Erkenntnissen nach sind sowohl Herr Mayer, als auch Frau Baumgarten Opfer eines Mordes geworden.",
+                "position": "112"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Oh mein Gott, das ist eine schreckliche Nachricht.",
+                "position": "113"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Es ist eine Tragödie was ihm zugestoßen ist. Aber mir ist leider keine Arianne Baumgarten bekannt.",
+                "position": "114"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Verstehe. Was können Sie, Frau Beyer, uns denn zunächst über Herrn Mayer erzählen?",
+                "position": "115"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Ich habe Moritz als auch Rico bei ihren Startup betreut, selbstverständlich nicht psychologisch, sondern mit Informationen rund um die Medizin und dem Inhalt von Patientenakten.",
+                "position": "116"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Nun gut. Nur Routine halber: was haben Sie am Abend gemacht, als Moritz ermordet wurde?",
+                "position": "117"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wann haben Sie den Jungen das letzte Mal gesprochen?",
+                "position": "118"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Am Donnerstagabend hatte ich an einem Gottesdienst am Braunschweiger Dom bei dem Herrn Pastor David teilgenommen.",
+                "position": "119"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Ich nehme an, er kann dies bezeugen, ich war nach der Veranstaltung noch kurz bei ihm.",
+                "position": "120"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Gesehen habe ich Moritz am Tag vor seinem Tod, er hatte noch einige Fragen zu den Patientenakten, die ich ihm beantwortet habe.",
+                "position": "121"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Und wie sieht es bei Ihnen beiden mit der Tatnacht von Frau Baumgärtner aus, was haben Sie an diesem Tag gemacht?",
+                "position": "122"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Den habe ich mit Yvonne zusammen verbracht.",
+                "position": "123"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Das kann ich bestätigen.",
+                "position": "124"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Kann das sonst noch irgendwer bezeugen?",
+                "position": "125"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Leider nicht.",
+                "position": "126"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Verstehe. Eins noch. Wir benötigen nochmal ihre Kontaktdaten.",
+                "position": "127"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Können Sie uns diese nochmal schnell hier aufschreiben.",
+                "position": "128"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Selbstverständlich. Bitte schön.",
+                "position": "129"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Natürlich. Hier bitte.",
+                "position": "130"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Vielen Dank. Ihre Aussagen waren sehr hilfreich. Das wars auch schon.",
+                "position": "131"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Sollte sich noch etwas ergeben, melden wir uns wieder bei Ihnen.",
+                "position": "132"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Sehr gerne. Ich wünsche Ihnen noch viel Erfolg. Hoffentlich fassen Sie den Mörder.",
+                "position": "133"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Viel Glück Herr Detektiv. Ich wünsche noch einen schönen Tag.",
+                "position": "134"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ihnen beiden auch noch einen schönen Tag.",
+                "position": "135"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "{$USER$}, jetzt wo die beiden weg sind, kann ich dir sagen, wofür wir die Kontaktdaten wirklich brauchen.",
+                "position": "136"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wir können nun deren Handschriften mit der des Abschiedsbriefes vergleichen. Vielleicht finden wir so den Mörder.",
+                "position": "137"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Verdammt, jetzt wollte ich schauen, wie der schnellste Weg zum Dom ist, um mit dem Pastor zu sprechen, aber ich habe doch tatsächlich meine PIN vergessen.",
+                "position": "138"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wenn ich mich recht entsinne, dann sollte sie mit dem Tag/Monat des Kaufdatums übereinstimmen. (TTMM)",
+                "position": "139"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Du hast mich gerettet, danke! Was würde ich nur ohne Dich tun. Wir sehen uns!",
+                "position": "201"
+            }
+		],
+		"place": "Loewenwall",
+        "longitude": "10.530907003109151"
+	},
+	{
+		"chapter": "Vernehmung Yvonne und Prof Thomas #4",
+        "image": "",
+        "flag": "0",
+        "question": "Finde in der Tabelle \"kreditkartenabrechnung\" die Kombination TTMM, an dem die \"Prepaid-Karte\" gekauft wurde. Die hinterlassene Bemerkung lautet \"Prepaid-Karte\".",
+        "dependency": ["gaertnerintod", "professor", "yvonne"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Nutze die WHERE oder LIKE Klausel."
+            },
+            {
+                "cost": "2",
+                "hint": "Es sind keine JOINs nötig."
+            },
+            {
+                "cost": "3",
+                "hint": "SELECT kka_datum FROM kreditkartenabrechnung WHERE kka_bemerkung = 'Prepaid-Karte'"
+            }
+        ],
+        "latitude": "52.2597077849014",
+        "artefact": ["?schriftprobe_yvonne", "?schriftprobe_professor"],
+        "type": "sql",
+        "TTL": [],
+        "answer": "1231",
+        "dialogue": [
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Habe ich mich vertan oder sind wir zu früh?",
+                "position": "101"
+            },
+			{
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text": "Naja, da wir noch Zeit haben, erzähle ich dir ein bisschen über den Obelisk.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Der Obelisk wurde 1823 als Denkmal errichtet, als die Braunschweiger Herzöge Karl Wilhelm Ferdinand und Friedrich Wilhelm im Kampf gegen Napoleon gefallen waren.",
+                "position": "103"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Das Denkmal spiegelt Gedenken, Dank und Verehrung.",
+                "position": "104"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Die Begriffe “Vaterland” und “Deutschland” zielten auf eine Stärkung des Patriotismus und die Kriegs- und Opferbereitschaft für nationale Ziele ab.",
+                "position": "105"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Oh, da hinten kommen sie schon.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Guten Tag Frau Beyer, Herr Münch. Schön Sie wiederzusehen.",
+                "position": "107"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Guten Tag, Herr Barton.",
+                "position": "108"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Guten Tag {$USER$}, Herr Barton.",
+                "position": "109"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wir wollten Sie nochmal sprechen, da zu dem Fall des Mordes an Moritz ein weiterer Mord geschehen ist.",
+                "position": "110"
+            },
+			{
+			    "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Moment Mord? Ich dachte es war Selbstmord.",
+                "position": "111"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ja, leider.",
+                "position": "112"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Unseren neuesten Erkenntnissen nach sind sowohl Herr Mayer, als auch Frau Baumgarten Opfer eines Mordes geworden.",
+                "position": "113"
+            },
+			{
+			    "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Oh mein Gott wie schrecklich.",
+                "position": "114"
+            },
+			{
+			    "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Inwiefern steht sie denn mit Moritz Tod in Verbindung?",
+                "position": "115"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Arianne Baumgarten war die Gärtnerin im Gaußberg Park und hatte daher Moritz Leiche als erste gefunden.",
+                "position": "116"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ihre Informationen waren für unsere Ermittlungen sehr wichtig.",
+                "position": "117"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wir vermuten, dass sie genau aus diesem Grund gestorben ist.",
+                "position": "118"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Daher würden wir gerne nochmal mit allen Beteiligten des ersten Mordes sprechen.",
+                "position": "119"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Verstehe. Mir ist aber leider keine Frau Baumgarten bekannt.",
+                "position": "120"
+            },
+			{
+			    "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Mir leider auch nicht.",
+                "position": "121"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Sie haben uns ja bereits geschildert, wie Sie die Todesnacht von Moritz verbracht haben, aber wie sieht es mit der Tatnacht der Gärtnerin aus?",
+                "position": "122"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Die habe ich zusammen mit Yvonne verbracht.",
+                "position": "123"
+            },
+			{
+			    "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Das kann ich bestätigen.",
+                "position": "124"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Kann das sonst noch irgendwer bezeugen?",
+                "position": "125"
+            },
+			{
+			    "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Leider nicht.",
+                "position": "126"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Verstehe. Eins noch. Wir benötigen nochmal ihre Kontaktdaten.",
+                "position": "127"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Können Sie uns diese nochmal schnell hier aufschreiben.",
+                "position": "128"
+            },
+			{
+			    "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Natürlich. Hier bitte.",
+                "position": "129"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Selbstverständlich. Bitte schön.",
+                "position": "130"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Vielen Dank. Das wars auch schon. Sollte sich noch etwas ergeben, melden wir uns wieder bei Ihnen.",
+                "position": "131"
+            },
+			{
+			    "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Sehr gerne. Ich wünsche Ihnen noch viel Erfolg. Hoffentlich fassen Sie den Mörder.",
+                "position": "132"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Viel Glück Herr Detektiv. Ich wünsche noch einen schönen Tag.",
+                "position": "133"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ihnen beiden auch noch einen schönen Tag.",
+                "position": "134"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "{$USER$}, jetzt wo die beiden weg sind, kann ich dir sagen, wofür wir die Kontaktdaten wirklich brauchen.",
+                "position": "135"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wir können nun deren Handschriften mit der des Abschiedsbriefes vergleichen. Vielleicht finden wir so den Mörder.",
+                "position": "136"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Verdammt, jetzt wollte ich schauen, wie der schnellste Weg zum Dom ist, um mit dem Pastor zu sprechen, aber ich habe doch tatsächlich meine PIN vergessen.",
+                "position": "137"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wenn ich mich recht entsinne, dann sollte sie mit dem Tag/Monat des Kaufdatums übereinstimmen. (TTMM)",
+                "position": "138"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Du hast mich gerettet, danke! Was würde ich nur ohne Dich tun. Wir sehen uns!",
+                "position": "201"
+            }
+		],
+		"place": "Loewenwall",
+        "longitude": "10.530907003109151"
+	},
+	{
+		"chapter": "Vernehmung Rico #1",
+        "image": "",
+        "flag": "0",
+        "question": "Lösche in der Tabelle \"personen\" die Gärtnerin, da sie nicht mehr als Tatverdächtige in Frage kommt. Ihre ID ist die 3.",
+        "dependency": ["gaertnerintod", "!rico"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Nutze die Data Manipulation Language (DML)."
+            },
+            {
+                "cost": "2",
+                "hint": "Spezifiziere die zu löschende ID in der Query."
+            },
+            {
+                "cost": "3",
+                "hint": "DELETE FROM personen WHERE person_id=3"
+            }
+        ],
+        "latitude": "52.26226963537403",
+        "artefact": ["?schriftprobe_rico"],
+        "type": "sql-delete",
+        "TTL": [],
+        "answer": "personen,person_id,3",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Hallo {$USER$}. Wir befinden uns hier am Happy Rizzi Haus. Das wohl gewöhnungsbedürftigste Gebäude in Braunschweig.",
+                "position": "101"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Entworfen wurde es von dem US-amerikanischen Künstler James Rizzi und gebaut vom Braunschweiger Architekten Konrad Kloster.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Das Haus ist im Jahr 1997 entstanden und dient bis heute als Bürogebäude.",
+                "position": "103"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Die Fassade ist mit Pop-Art Malereien gestaltet.",
+                "position": "104"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Das häufigste Motiv daran sind die fröhlichen Gesichter, es finden sich aber auch andere Motive wieder wie Herzen, Augen Sterne und Vögel.",
+                "position": "105"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Da wir gerade noch warten, könntest Du fix noch Frau Baumgarten aus der Tabelle der verdächtigen Personen löschen, sie kommt wohl nicht mehr in Frage.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Danke. Da vorne muss bereits unser Termin warten.",
+                "position": "201"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Guten Tag. Sie müssen Henrik Weiß sein. Schön, dass Sie sich für uns Zeit genommen haben.",
+                "position": "202"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Guten Tag, Sie können mich Rico nennen. Wie kann ich Ihnen denn helfen?",
+                "position": "203"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Sie wissen sicherlich vom Tod von Moritz Mayer. Können Sie uns etwas von ihm erzählen?",
+                "position": "204"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Ich wurde darüber informiert. So wie ich, war auch er Informatik-Student.",
+                "position": "205"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Er hatte in letzter Zeit viel Arbeit in unser Startup gesteckt, aber wie jemand, der sich das Leben nehmen wollte, wirkte er nie.",
+                "position": "206"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Sie erwähnten ein Startup. Wollen Sie mehr darüber erzählen?",
+                "position": "207"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Wir haben zusammen ein Startup gegründet. Dieses beschäftigt sich mit der elektronischen Speicherung von Patientenakten.",
+                "position": "208"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Also eine Sammlung der Adressen, Allergien und anderer Informationen über deutsche Bürger um die Arbeit von Ärzten zu erleichtern.",
+                "position": "209"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Das klingt nach einer sehr nützlichen Datenbank.",
+                "position": "210"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Auf der anderen Seite kann damit viel Unsinn getrieben werden, nicht wahr?",
+                "position": "211"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Wollen Sie damit sagen, dass das ein Mordmotiv sein könnte?",
+                "position": "212"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Nun ja, theoretisch kann es sogar sein, dass Sie ihn umgebracht haben!",
+                "position": "213"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Das meinen Sie doch nicht Ernst?",
+                "position": "214"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Ich bin doch schon Teilhaber des Startups was habe ich denn davon meinen besten Freund umzubringen?",
+                "position": "215"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ich muss leider alle Möglichkeiten in Betracht ziehen.",
+                "position": "216"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Es hat sich nämlich herausgestellt, dass es sich bei Moritz Tod tatsächlich um einen Mord handelt.",
+                "position": "217"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Wie bitte? Ich dachte es war Selbstmord. Ich wüsste aber nicht, dass Moritz irgendwelche Feinde gehabt hat.",
+                "position": "218"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Das war leider noch nicht alles. Unsere Hauptzeugin Arianne Baumgarten wurde ebenfalls tot aufgefunden.",
+                "position": "219"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Sie war eine Gärtnerin im Gaußberg Park und diejenige, die Moritz Leichnam gefunden hatte.",
+                "position": "220"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wir würden daher gerne wissen, was Sie in den Tatnächten getan haben.",
+                "position": "221"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Ich musste an beiden Tagen bis zu später Stunde im Institut arbeiten.",
+                "position": "222"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Gibt es dafür Zeugen?",
+                "position": "223"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Leider nicht. Ich war zu der Uhrzeit der letzte im Institut.",
+                "position": "224"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Verstehe. Eins noch. Wir benötigen noch Ihre Kontaktdaten.",
+                "position": "225"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Können Sie uns diese schnell hier aufschreiben.",
+                "position": "226"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Natürlich. Einen Augenblick.",
+                "position": "227"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Vielen Dank. Wir werden dann nochmal auf Sie zurückkommen, sollten Fragen aufkommen.",
+                "position": "228"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Sehr gerne. Ich wünsche Ihnen noch einen schönen Tag und viel Erfolg.",
+                "position": "229"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Danke. Ihnen auch einen schönen Tag.",
+                "position": "230"
+            }
+		],
+		"place": "Happy Rizzi Haus",
+        "longitude": "10.528715864247056"
+	},
+	{
+		"chapter": "Vernehmung Rico #2",
+        "image": "",
+        "flag": "0",
+        "question": "Lösche in der Tabelle \"personen\" die Gärtnerin, da sie nicht mehr als Tatverdächtige in Frage kommt. Ihre ID ist die 3.",
+        "dependency": ["gaertnerintod", "rico"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Nutze die Data Manipulation Language (DML)."
+            },
+            {
+                "cost": "2",
+                "hint": "Spezifiziere die zu löschende ID in der Query."
+            },
+            {
+                "cost": "3",
+                "hint": "DELETE FROM personen WHERE person_id=3"
+            }
+        ],
+        "latitude": "52.26226963537403",
+        "artefact": ["?schriftprobe_rico"],
+        "type": "sql-delete",
+        "TTL": [],
+        "answer": "personen,person_id,3",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Hallo du. Wir befinden uns hier am Happy Rizzi Haus. Dem wohl gewöhnungsbedürftigsten Gebäude in Braunschweig.",
+                "position": "101"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Entworfen wurde es von dem US-amerikanischen Künstler James Rizzi und gebaut vom Braunschweiger Architekten Konrad Kloster.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Das Haus ist im Jahr 1997 entstanden und dient bis heute als Bürogebäude.",
+                "position": "103"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Die Fassade ist mit Pop-Art Malereien gestaltet.",
+                "position": "104"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Das häufigste Motiv daran sind die fröhlichen Gesichter, es finden sich aber auch andere Motive wieder wie Herzen, Augen Sterne und Vögel.",
+                "position": "105"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Da wir gerade noch warten, könntest Du fix noch Frau Baumgarten aus der Tabelle der Verdächtigen Personen löschen, sie kommt wohl nicht mehr in Frage.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Großartig. Da vorne muss bereits unser Termin warten.",
+                "position": "201"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Guten Tag Herr Weiß sein. Schön, dass Sie sich für uns nochmals Zeit genommen haben.",
+                "position": "202"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ich hoffe es geht Ihnen nun besser.",
+                "position": "203"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Guten Tag. Vielen Dank für die Nachfrage. Ich kann es immer noch nicht ganz fassen, aber es geht mir besser.",
+                "position": "204"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Wie kann ich Ihnen denn helfen?",
+                "position": "205"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Es hat sich leider herausgestellt, dass es sich bei Moritz Tod um einen Mord handelt.",
+                "position": "206"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Wie bitte? Oh mein Gott wie schrecklich, Mord? Aber wer würde ihn denn töten wollen?",
+                "position": "207"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Das war leider noch nicht alles. Unsere Hauptzeugin Arianne Baumgarten wurde ebenfalls tot aufgefunden.",
+                "position": "208"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Sie war eine Gärtnerin im Gaußberg Park und diejenige, die Moritz Leichnam gefunden hatte.",
+                "position": "209"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wir würden daher gerne wissen, was Sie in den Tatnächten getan haben?",
+                "position": "210"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Ich musste an beiden Tagen bis zu später Stunde im Institut arbeiten.",
+                "position": "211"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Kann das irgendwer bestätigen?",
+                "position": "212"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Leider nicht. Ich war zu der Uhrzeit der letzte im Institut.",
+                "position": "213"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Verstehe. Eins noch. Wir benötigen noch Ihre Kontaktdaten.",
+                "position": "214"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Können Sie uns diese schnell hier aufschreiben.",
+                "position": "215"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Natürlich. Einen Augenblick.",
+                "position": "216"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Vielen Dank. Wir werden dann nochmal auf Sie zurückkommen, sollten Fragen aufkommen.",
+                "position": "217"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Sehr gerne. Ich wünsche Ihnen noch einen schönen Tag und viel Erfolg.",
+                "position": "218"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Danke. Ihnen auch einen schönen Tag.",
+                "position": "219"
+            }
+		],
+		"place": "Happy Rizzi Haus",
+        "longitude": "10.528715864247056"
+	},
+	{
+		"chapter": "Vernehmung Viktoria #1",
+        "image": "",
+        "flag": "0",
+        "question": "Finde heraus, wie viele Einträge in \"personen\" den Vornamen Wilhelm besitzen.",
+        "dependency": ["gaertnerintod"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Nutze Aggregatfunktionen."
+            },
+            {
+                "cost": "2",
+                "hint": "Nutze COUNT."
+            },
+            {
+                "cost": "3",
+                "hint": "SELECT COUNT(vorname) FROM personen WHERE vorname = 'Wilhelm'"
+            }
+        ],
+        "latitude": "52.263397159373426",
+        "artefact": ["?schriftprobe_viktoria"],
+        "type": "sql",
+        "TTL": [],
+        "answer": "3",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Guten Tag, Frau Kästner. Schön Sie wiederzusehen.",
+                "position": "101"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "Ja ja schönen Tag. Was gibt es dieses Mal?",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Im Fall von Moritz Tod gibt es Neuigkeiten. Moritz wurde ermordet.",
+                "position": "103"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "Ach was. Aber wie sind Sie darauf gekommen? Ich dachte es wär Selbstmord gewesen.",
+                "position": "104"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Unsere Hauptzeugin Arianne Baumgarten wurde ebenfalls tot aufgefunden.",
+                "position": "105"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Da sie wichtige Informationen für uns zum Fall hatte, gehen wir davon aus, dass sie dafür sterben musste.",
+                "position": "106"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "Ok und was hat das jetzt mit mir zu tun?",
+                "position": "107"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Wir würden gerne wissen, was Sie zu dem Tatzeitpunkt getan haben?",
+                "position": "108"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "An dem Abend habe ich Bewerbungen geschrieben.",
+                "position": "109"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Und es kann wieder keiner bezeugen?",
+                "position": "110"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "Ja, na und. Ich muss nicht immer mit wem rumhängen, oder?",
+                "position": "111"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Natürlich müssen Sie das nicht. Es war nur eine Routinefrage.",
+                "position": "112"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "Also wenn Sie nichts mehr von mir brauchen, geh ich jetzt.",
+                "position": "113"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Eins noch. Können Sie uns Ihre Kontaktdaten mitteilen?",
+                "position": "114"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Wenn Sie uns diese hier aufschreiben könnten.",
+                "position": "115"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Viktoria",
+                "text": "Hier, bitte sehr. War es das jetzt?",
+                "position": "116"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ja, das war es tatsächlich schon von unserer Seite. Vielen Dank für Ihre Mitarbeit.",
+                "position": "117"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ich wünsche Ihnen noch einen schönen Tag.",
+                "position": "118"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Viktoria",
+                "text": "Schönen Tag.",
+                "position": "119"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Hey {$USER$}, wenn wir schon hier sind, dann lass mich dir noch kurz etwas über das Schloss erzählen.",
+                "position": "120"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Das Schloss diente von 1753 bis zum 1918 als die Residenz der Braunschweigischen Herzöge aus dem Hause der Welfen.",
+                "position": "121"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Das Original wurde zwischen 1831 bis 1841 errichtet.",
+                "position": "122"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Es wurde durch schwere Luftangriffe während des Zweiten Weltkrieges stark beschädigt und schließlich 1960 endgültig abgerissen.",
+                "position": "123"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Das jetzige Gebäude wurde von 2005 bis 2007 rekonstruiert und dient heute als Einkaufszentrum, Bibliothek und Museum.",
+                "position": "124"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Auf dem Portikus (Dach) des rekonstruierten Schlosses steht die größte Quadriga Europas, die von der Stadtgöttin Brunonia gelenkt wird.",
+                "position": "125"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Die aus dem Schlossplatz stehenden Reiterstandbilder der Herzöge Karl Wilhelm Ferdinand und Friedrich Wilhelm wurden 1874 aufgestellt.",
+                "position": "126"
+            }
+		],
+		"place": "Schloss",
+        "longitude": "10.527201534020358"
+	},
+	{
+		"chapter": "Spezial Kapitel",
+        "image": "",
+        "flag": "1",
+        "question": "An der Pinnwand finden sich jetzt alle nötigen Beweismittel, mit denen wir den Täter identifizieren können.\n\nVergleiche die Schriftproben mit diesen und schreibe den Tatverdächtigen in die Eingabe.",
+        "dependency": ["?schriftprobe_professor", "?schriftprobe_rico", "?schriftprobe_viktoria", "?schriftprobe_yvonne"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Schaue dir alle Beweismittel auf der Pinnwand noch einmal genau an."
+            },
+            {
+                "cost": "100",
+                "hint": "Vergleiche alle Handschriften die du bekommen hast."
+            },
+            {
+                "cost": "100",
+                "hint": "Alle Namen, die befragt wurden, sind unter anderem valide."
+            }
+        ],
+        "latitude": "52.26584545426154",
+        "artefact": ["{$Killer$}", "spezKapitel"],
+        "type": "sql",
+        "TTL": [],
+        "answer": "",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Da bist Du ja, {$USER$}. Das Gebäude mittig auf dem Platz ist das Staatstheater Braunschweigs.",
+                "position": "101"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Dabei handelt es sich um ein Fünfspartenhaus.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Das heißt es finden dort Schauspiele, Musiktheater, Tanz, Kinder- und Jugendtheater und Staatsorchester in dieser Stadt statt.",
+                "position": "103"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Es wurde 1690 von Herzog Anton Ulrich von Braunschweig-Lüneburg eröffnet.",
+                "position": "104"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Mit dem Theater am Hagenmarkt ist es eines der ersten, öffentlich zugänglichen Theater im deutschsprachigen Raum.",
+                "position": "105"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Es wurde zunächst nur für den reinen Opernbetrieb genutzt, führt jedoch seit Mitte des 18. Jahrhunderts regelmäßig Schauspielaufführungen auf.",
+                "position": "106"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Die bedeutendsten Aufführungen waren hierbei wohl die Uraufführungen Emilia Galottis und Fausts.",
+                "position": "107"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Das Gebäude wurde im Zweiten Weltkrieg zum größten Teil zerstört und drei Jahre danach, in 1948, wieder aufgebaut.",
+                "position": "108"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Seitdem gilt es als eines der ersten Theater der Nachkriegszeit in Deutschland.",
+                "position": "109"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Aber zurück zum Thema. Wir haben es jetzt soweit geschafft.",
+                "position": "110"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Du hast dir sicherlich von allen potenziellen Verdächtigen die Schriftproben angeschaut, oder? Falls nicht, tu dies jetzt!",
+                "position": "111"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Nun solltest Du auf dieser Basis den Täter aufschreiben und Dir dabei sicher sein. Wir wollen ja keinen Unschuldigen verhaften.",
+                "position": "112"
+            }
+		],
+		"place": "Staatstheater",
+        "longitude": "10.531372964288343"
+	},
+	{
+		"chapter": "Verhaftung Professor",
+        "image": "",
+        "flag": "2",
+        "question": "",
+        "dependency": ["spezKapitel", "tProfessor"],
+        "hints": [
+            {
+                "cost": "100",
+                "hint": ""
+            },
+            {
+                "cost": "100",
+                "hint": ""
+            },
+            {
+                "cost": "100",
+                "hint": ""
+            }
+        ],
+        "latitude": "52.26584545426154",
+        "artefact": [],
+        "type": "",
+        "TTL": [],
+        "answer": "",
+        "dialogue": [
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Ich dachte mir schon, dass Du den Professor wählen würdest.",
+                "position": "101"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Deshalb habe ich schonmal die Polizei gerufen, damit er direkt abgeführt werden kann.",
+                "position": "102"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Ich denke, die Beweislage ist erdrückend.",
+                "position": "103"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Professor",
+                "text": "Sie begehen einen großen Fehler.",
+                "position": "104"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Professor",
+                "text": "Ich weiß nicht, was Sie gegen mich in der Hand haben, aber das sind nichts als Lügen.",
+                "position": "105"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Professor",
+                "text": "Ich werde alles erdenkliche tun, um diese Verschwörung aufzudecken.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Beachte diesen Mörder nicht. Ich danke Dir, dass Du mir geholfen hast, diesen komplizierten Fall zu lösen.",
+                "position": "107"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "*Klopft Dir auf die Schulter*",
+                "position": "108"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "*Dir wird schwarz vor Augen. Du wurdest vergiftet.*",
+                "position": "109"
+            }
+		],
+		"place": "Staatstheater",
+        "longitude": "10.531372964288343"
+	},
+	{
+		"chapter": "Verhaftung Psychologin",
+        "image": "",
+        "flag": "2",
+        "question": "",
+        "dependency": ["spezKapitel", "tYvonne"],
+        "hints": [
+            {
+                "cost": "100",
+                "hint": ""
+            },
+            {
+                "cost": "100",
+                "hint": ""
+            },
+            {
+                "cost": "100",
+                "hint": ""
+            }
+        ],
+        "latitude": "52.26584545426154",
+        "artefact": [],
+        "type": "",
+        "TTL": [],
+        "answer": "",
+        "dialogue": [
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Ich dachte mir schon, dass Du die Psychologin wählen würdest.",
+                "position": "101"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Deshalb habe ich schonmal die Polizei gerufen, damit sie direkt abgeführt werden kann.",
+                "position": "102"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Ich denke, die Beweislage ist erdrückend.",
+                "position": "103"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Yvonne",
+                "text": "Sie begehen einen großen Fehler.",
+                "position": "104"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Yvonne",
+                "text": "Ich weiß nicht, was Die gegen mich in der Hand haben, aber das sind nichts als Lügen.",
+                "position": "105"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Yvonne",
+                "text": "Ich werde alles erdenkliche tun, um diese Verschwörung aufzudecken.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Beachte diese Mörderin nicht. Ich danke Dir, dass Du mir geholfen hast, diesen komplizierten Fall zu lösen.",
+                "position": "107"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "*Klopft Dir auf die Schulter*",
+                "position": "108"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "*Dir wird schwarz vor Augen. Du wurdest vergiftet.*",
+                "position": "109"
+            }
+		],
+		"place": "Staatstheater",
+        "longitude": "10.531372964288343"
+	},
+	{
+		"chapter": "Verhaftung Rico",
+        "image": "",
+        "flag": "2",
+        "question": "",
+        "dependency": ["spezKapitel", "tRico"],
+        "hints": [
+            {
+                "cost": "100",
+                "hint": ""
+            },
+            {
+                "cost": "100",
+                "hint": ""
+            },
+            {
+                "cost": "100",
+                "hint": ""
+            }
+        ],
+        "latitude": "52.26584545426154",
+        "artefact": [],
+        "type": "",
+        "TTL": [],
+        "answer": "",
+        "dialogue": [
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Ich dachte mir schon, dass Du Herrn Weiß wählen würdest.",
+                "position": "101"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Deshalb habe ich schonmal die Polizei gerufen, damit er direkt abgeführt werden kann.",
+                "position": "102"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Ich denke, die Beweislage ist erdrückend.",
+                "position": "103"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Rico",
+                "text": "Sie begehen einen großen Fehler.",
+                "position": "104"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Rico",
+                "text": "Ich weiß nicht, was Sie gegen mich in der Hand haben, aber das sind nichts als Lügen.",
+                "position": "105"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Rico",
+                "text": "Ich werde alles erdenkliche tun, um diese Verschwörung aufzudecken.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Beachte diesen Mörder nicht. Ich danke Dir, dass Du mir geholfen hast, diesen komplizierten Fall zu lösen.",
+                "position": "107"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "*Klopft Dir auf die Schulter*",
+                "position": "108"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "*Dir wird schwarz vor Augen. Du wurdest vergiftet.*",
+                "position": "109"
+            }
+		],
+		"place": "Staatstheater",
+        "longitude": "10.531372964288343"
+	},
+	{
+		"chapter": "Verhaftung Viktoria",
+        "image": "",
+        "flag": "2",
+        "question": "",
+        "dependency": ["spezKapitel", "tViktoria"],
+        "hints": [
+            {
+                "cost": "100",
+                "hint": ""
+            },
+            {
+                "cost": "100",
+                "hint": ""
+            },
+            {
+                "cost": "100",
+                "hint": ""
+            }
+        ],
+        "latitude": "52.26584545426154",
+        "artefact": [],
+        "type": "",
+        "TTL": [],
+        "answer": "",
+        "dialogue": [
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Ich dachte mir schon, dass Du Frau Kästner wählen würdest.",
+                "position": "101"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Deshalb habe ich schonmal die Polizei gerufen, damit sie direkt abgeführt werden kann.",
+                "position": "102"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Ich denke, die Beweislage ist erdrückend.",
+                "position": "103"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "Ich gebe es ja zu, ich war es. ABER nicht allein! Es war seine Idee!",
+                "position": "104"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "*Zeigt auf den Detektiv*",
+                "position": "105"
+            },
+			{
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text": "Beachte diese Lügnerin nicht. Wir haben alles richtig gemacht. Ich danke Dir, dass Du mir geholfen hast, diesen komplizierten Fall zu lösen.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "*Klopft Dir auf die Schulter*",
+                "position": "107"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "*Dir wird schwarz vor Augen. Du wurdest vergiftet.*",
+                "position": "108"
+            }
+		],
+		"place": "Staatstheater",
+        "longitude": "10.531372964288343"
+	},
+	{
+		"chapter": "Die Wahrheit",
+        "image": "",
+        "flag": "2",
+        "question": "Suche in der Tabelle der Personen, die am Gottesdienst teilgenommen haben, nach der Psychologin.",
+        "dependency": ["spezKapitel", "tDetektiv"],
+        "hints": [
+            {
+                "cost": "100",
+                "hint": ""
+            },
+            { 
+                "cost": "100",
+                "hint": ""
+            },
+            {
+                "cost": "100",
+                "hint": ""
+            }
+        ],
+        "latitude": "52.26584545426154",
+        "artefact": [],
+        "type": "",
+        "TTL": [],
+        "answer": "",
+        "dialogue": [
+            {
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text":  "Ich weiß nicht, wie Du dahinter gekommen bist, dass ich die ganze Aktion geplant habe. Hat es dir Spaß gemacht?",
+                "position": "101"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text":  "Ich jedenfalls hatte meinen. Mit Dir ermitteln als auch die Tatorte, Beweise und Spuren zu manipulieren.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text":  "*Verschwindet uneinholbar hinter der nächsten Hausecke*",
+                "position": "103"
+            }
+		],
+		"place": "Staatstheater",
+        "longitude": "10.531372964288343"
+	},
+    {
+        "chapter": "Nebenkapitel Rathaus",
+        "image": "raetsel_rathaus",
+        "flag": "42",
+        "question": "In welcher Reihenfolge sind diese Türgriffe",
+        "dependency": ["yvonne", "viktoria"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Die Türgriffe findest Du am Platz der deutschen Einheit."
+            },
+            {
+                "cost": "2",
+                "hint": "Schaue am Haupteingang."
+            },
+            {
+                "cost": "3",
+                "hint": "Von links nach rechts."
+            }
+        ],
+        "latitude": "52.264182",
+        "artefact": [],
+        "type": "answer",
+        "TTL": [],
+        "answer": "BARTON",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Hey {$USER$}, wie Du hier siehst, befindet sich das Rathaus auf dem Platz der Deutschen Einheit. ",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Es grenzt an die Münzstraße, Dankwardstraße, den Bohlweg und den Domplatz.",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Außerdem ist es eine Erinnerungsstätte für verfolgte und ermordete Sinti, und im Untergeschoss befindet sich das Restaurant Ratskeller.",
+                "position": "103"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Zuerst wurde beschlossen, dass der nachträgliche Rathausturm nicht gebaut wird, da es zu teuer war.",
+                "position": "104"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Jedoch wurde er aufgrund des bereits gelegten Fundamentes trotzdem gebaut.",
+                "position": "105"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Es gibt sechs verschiedene Türgriffe an den drei doppelflügligen Glastüren.",
+                "position": "106"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Jeder Türgriff symbolisiert Bauwerke, Szenen und Personen aus der Geschichte Braunschweigs.",
+                "position": "107"
+            }
+        ],
+        "place": "Rathaus",
+        "longitude": "10.525030"
+    },
+    {
+        "chapter": "Nebenkapitel Burgplatz",
+        "image": "",
+        "flag": "42",
+        "question": "Was ist die kleinste Einrichtung neben der Burg Dankwarderode?",
+        "dependency": ["yvonne"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Schaue dir den Eingang vom Braunschweiger Löwen aus an."
+            },
+            {
+                "cost": "2",
+                "hint": "Es befindet sich direkt an der Burg Dankwarderode."
+            },
+            {
+                "cost": "3",
+                "hint": "Es liegt direkt links neben dem Eingang."
+            }
+        ],
+        "latitude": "52.264685",
+        "artefact": [],
+        "type": "answer",
+        "TTL": [],
+        "answer": "(?i)Spitzwegeck|Der.Bücherwurm|Bücherwurm|Der.Buecherwurm|Buecherwurm|Antiquariat|Antiquariat.am.Burgplatz",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Der Burgplatz ist ein geschichtliches und geografisches Zentrum der Stadt Braunschweig.",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Deshalb hat er eine hohe geschichtliche und kulturelle Bedeutung.",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Im neunten Jahrhundert befand sich hier der Fürstensitz der Brunonen.",
+                "position": "103"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Im zwölften Jahrhundert wurde er als Zentrum der welfischen Macht von Heinrich dem Löwen ausgebaut.",
+                "position": "104"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Seither befindet sich der Braunschweiger Löwe im Mittelpunkt des Burgplatzes.",
+                "position": "105"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Im Zweiten Weltkrieg wurde der größte Teil des Burgplatzes von Bombenangriffen verschont.",
+                "position": "106"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Somit wurde glücklicherweise nur der Palas der Burg und das Dach des Domes beschädigt.",
+                "position": "107"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Im Vergleich dazu wurde nahezu 90% der Braunschwieger Innenstadt zerstört.",
+                "position": "108"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Neben den Traditionsinseln Aegidienviertel, Altstadtmarkt, Magniviertel und dem Michaelisviertel gehört der Burgplatz zu den fünf historisch relevanten Rekonstruktionen nach dem Zweiten Weltkrieg.",
+                "position": "109"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Der Burgplatz ist der von dem Palas der ehemaligen Burg Dankwarderode, dem Braunschweiger Dom, dem Vieweghaus, dem Vertheimischen haus und dem Huneborstelschen Haus umgrenzt.",
+                "position": "110"
+            }
+        ],
+        "place": "Burgplatz",
+        "longitude": "10.523765"
+    },
+    {
+        "chapter": "Nebenkapitel Städtisches Museum",
+        "image": "",
+        "flag": "42",
+        "question": "In welche Richtung öffnen sich die drei Bögen?",
+        "dependency": ["yvonne", "professor"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Aus Richtung des Magniviertels."
+            },
+            {
+                "cost": "2",
+                "hint": "Finde die Infotafel."
+            },
+            {
+                "cost": "3",
+                "hint": "Rechts vom Museumseingang."
+            }
+        ],
+        "latitude": "52.260846",
+        "artefact": [],
+        "type": "answer",
+        "TTL": [],
+        "answer": "(?i)zum.Löwenwall|Löwenwall|zum.Loewenwall|Loewenwall",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Als die Stadt ihr 1000-jähriges Bestehen feierte, wurde 1861 das Museum durch die Initiative von Bürgern gegründet.",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Das Ziel war es kulturelle und künstlerische Leistungen der Bürger Braunschweigs zu sammeln.",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Das heutige Museumsgebäude wurde 1906 am Löwenwall eröffnet.",
+                "position": "103"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Die Sammlungen des Museums stammen überwiegend aus Schenkungen und Stiftungen von Braunschweiger Bürgern und Unternehmen.",
+                "position": "104"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Das Altstadtrathaus ist eine Erweiterung zu diesem Museum.",
+                "position": "105"
+            }
+        ],
+        "place": "Staedtisches Museum",
+        "longitude": "10.531834"
+    },
+    {
+        "chapter": "Nebenkapitel Botanischer Garten",
+        "image": "",
+        "flag": "42",
+        "question": "Was ist der wissenschaftliche Name des Oleander?",
+        "dependency": ["professor"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Am hinteren Ende des Gartens, nahe der Oker."
+            },
+            {
+                "cost": "2",
+                "hint": "Die Blüten sind pink."
+            },
+            {
+                "cost": "3",
+                "hint": "Die Pflanze befindet sich in 2 Töpfen an der Treppe."
+            }
+        ],
+        "latitude": "52.270288",
+        "artefact": [],
+        "type": "answer",
+        "TTL": [],
+        "answer": "Nerium Oleander",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Im Botanischen Garten der Technischen Universität Braunschweig werden unter anderem grundlegende Forschungsaufgaben im Bereich der organismischen Pflanzenwissenschaften durchgeführt.",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Er ist somit ein wichtiges Freilandlabor für experimentelle Pflanzenforschung.",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Der Raum Braunschweig hat sich zu einem bedeutenden Platz der Pflanzenforschung entwickelt, an dem natürlich auch das Institut für Pflanzenbiologie der Technischen Universität beteiligt ist.",
+                "position": "103"
+            }
+        ],
+        "place": "Botanischer Garten",
+        "longitude": "10.533416"
+    },
+    {
+        "chapter": "Nebenkapitel Alte Waage",
+        "image": "",
+        "flag": "42",
+        "question": "Im Dialog wurde erwähnt wofür das Gebäude früher verwendet wurde. Was war es?",
+        "dependency": ["rico"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Lies dir den Dialog noch einmal genau durch."
+            },
+            {
+                "cost": "2",
+                "hint": "Es war im frühen 20ten Jahrhundert."
+            },
+            {
+                "cost": "3",
+                "hint": "Zur Zeit Hitlers."
+            }
+        ],
+        "latitude": "52.267304",
+        "artefact": [],
+        "type": "answer",
+        "TTL": [],
+        "answer": "(?i)Heim.der.Hitlerjugend|Hitlerjugend",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Die Alte Waage wurde 1534 als Waag- und Speicherhaus errichtet.",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Zwischen 1937 und 1939 wurde es zum Heim der Hitlerjugend.",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Durch mehrere Bombenangriffe wurde sie während des Zweiten Weltkrieges zerstört und im Jahr 1994 wurde das Gebäude komplett detailgetreu rekonstruiert.",
+                "position": "103"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Um dies zu erreichen, verwendete man weder Nägel noch Schrauben, die aus heutiger Sicht kaum wegzudenken sind.",
+                "position": "104"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Heute dient sie der Volkshochschule Braunschweig als Verwaltungs uns Schulungsgebäude, sowie als Veranstaltungsort für Vorträge, Konferenzen und Seminare.",
+                "position": "105"
+            }
+        ],
+        "place": "Alte Waage",
+        "longitude": "10.520030"
+    },
+    {
+        "chapter": "Nebenkapitel Altstadtmarkt",
+        "image": "",
+        "flag": "42",
+        "question": "Ordne die Gebäude des Altstadtmarktes nach Baujahr von 1 - 7. \n Das Altstadtrathaus ist älter als das Gewandhaus. Das Stechinelli-Haus ist das jüngste von allen. Der Marktbrunnen ist jünger als das Haus zu den sieben Türmen aber älter als das Rüninger Zollhaus. Das Altstadtrathaus, das Haus zu den sieben Türmen und St.Martini wurden in demselben Jahrhundert gebaut. Zwischen den Dreien ist das Haus zu den sieben Türmen am Jüngsten, dann kommt das Altstadtrathaus. Das Gewandthaus ist nach den Dreien am jüngsten.",
+        "dependency": ["gaertnerin"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Die Nummerierung findest Du auf einer Infotafel am Altstadtmarkt."
+            },
+            {
+                "cost": "2",
+                "hint": "Sortiere aufsteigend vom Jüngsten zum Ältesten."
+            },
+            {
+                "cost": "3",
+                "hint": "Wann die Gebäude gebaut wurden, findest Du an den Gebäuden selbst."
+            }
+        ],
+        "latitude": "52.262730",
+        "artefact": [],
+        "type": "answer",
+        "TTL": [],
+        "answer": "7135462",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Der Altstadtmarkt ist Teil der Braunschweiger Traditionsinseln, wie auch der Burgplatz.",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Seit dem frühen 12. Jahrhundert wurde er von den Braunschweigern als wichtiger Handelsplatz von Stoffen und Gewändern genutzt.",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Wegen Betrügereien beim Verkauf der Materialien wurde die Braunschweiger Elle eingeführt, die zur Kontrolle dient.",
+                "position": "103"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Das Altstadtrathaus ist eines der ältesten erhaltenen Rathäuser Deutschlands.",
+                "position": "104"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Sein ältester Teil stammt noch aus Mitte des 13. Jahrhunderts.",
+                "position": "105"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Es ist im Zweiten Weltkrieg komplett ausgebrannt, doch die Fassade blieb erhalten.",
+                "position": "106"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Heute dient es zu Repräsentationszwecken der Stadt und das Erdgeschoss wird als Ausstellungsfläche für das Städtische Museum genutzt.",
+                "position": "107"
+            }
+        ],
+        "place": "Gewandhaus",
+        "longitude": "10.517693"
+    },
+    {
+        "chapter": "Nebenkapitel Herzog Anton Ulrich Museum",
+        "image": "",
+        "flag": "42",
+        "question": "Welchen Künstler findet ihr an der Außenfassade des Museumsgebäudes?",
+        "dependency": ["notizzettel"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "An der Hauptstraße."
+            },
+            {
+                "cost": "2",
+                "hint": "Siehe nach oben."
+            },
+            {
+                "cost": "3",
+                "hint": "Ein Künstler genügt."
+            }
+        ],
+        "latitude": "52.263348",
+        "artefact": [],
+        "type": "answer",
+        "TTL": [],
+        "answer": "(?i)Dürer|Duerer|Durer|Masaccio|Leonardo|van.Eyck|Lochner|Schongauer|Giotto|van.Leyden|Signorelli|Holbein",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Das Museun wurde 1754 eröffnet, nur ein Jahr nach dem British Museum in London.",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Es zählt damit als eines der ersten, öffentlich zugänglichen Museen und hieß zunächst Landesmuseum.",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Es zählt auch heute noch zu einem der größten und bedeutendsten Kunstmuseen Deutschlands.",
+                "position": "103"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Benannt wurde es nach seinem Gründer Herzog Anton Ulrich von Braunschweig-Wolfenbüttel. ",
+                "position": "104"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Es zeigt etwa 4000 Kunstwerke aus 3000 Jahren Kunstgeschichte.",
+                "position": "105"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Seine Sammlung umfasst Kunstwerke und Skulpturen des Barock und Renaissance, aber auch der Antike.",
+                "position": "106"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Viele der Kunstwerke wurden von Napoleonischen Truppen während der Besetzung 1806 für die Pariser Louvre gestohlen.",
+                "position": "107"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Es gelang Braunschweig jedoch im Zuge der Befreiungskriege nahezu alle Kunstwerke zurück zu erlangen.",
+                "position": "108"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Unter anderem sind dort die Werke von Rembrandt, Rubens und Vermeer zu finden.",
+                "position": "109"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Das Gebäude des Museums wurde seit dem 19. Jehrhundert vielen, zum Teil drastischen, Veränderungen unterzogen.",
+                "position": "110"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Grund dafür sind vor allem die ersten Schäden im Bausatz aus dem 18. Jahrhundert. ",
+                "position": "111"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Diese Schäden wurden während der Besetzung von Napoleonischen Truppen verschlimmert.",
+                "position": "112"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Das heutige Gebäude wurde 1887 nach Stilvorbild der italienischen Renaissance neu eröffnet.",
+                "position": "113"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Den heutigen Namen erhielt das Museum dann 1927.",
+                "position": "114"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Glücklicherweise wurde das Museum während des Zweiten Weltkrieges nur geringfügig beschädigt und es wurde am Anfang des neuen Jahrtausends renoviert und 2016 wiedereröffnet.",
+                "position": "115"
+            }
+        ],
+        "place": "HAUM",
+        "longitude": "10.532968"
+    },
+    {
+        "chapter": "Nebenkapitel Magnikirche",
+        "image": "",
+        "flag": "42",
+        "question": "Aus welchem Material ist die Figur gestaltet, die an der Giebel des Chors hängt?",
+        "dependency": ["?schriftprobe_yvonne", "?schriftprobe_professor"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Man sieht sie vom Langhaus aus."
+            },
+            {
+                "cost": "2",
+                "hint": "Das Material ist in den Jahren oxidiert."
+            },
+            {
+                "cost": "3",
+                "hint": "Die Freiheitsstatue ist aus dem selben Material."
+            }
+        ],
+        "latitude": "52.262202",
+        "artefact": [],
+        "type": "answer",
+        "TTL": [],
+        "answer": "(?i)Kupfer",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Die Magnikirche in Braunschweig stammt aus dem frühen 11. Jahrhundert.",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Sie bildet heute den Mittelpunkt des Magniviertels im alten Weichbild Altewiek.",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Die Weiheurkunde aus dem Jahr 1031 gilt als erster urkundlicher Beleg der Existenz dessen, was heute die Stadt Braunschweig ist.",
+                "position": "103"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "In der Urkunde wird die Siedlung als Brunesguik bezeichnet.",
+                "position": "104"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Als Namenspatron wird der apulische Bischof Magnus vermutet, der besonders bei den Friesen verehrt wurde.",
+                "position": "105"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "In diesem Fall hätte die Siedlung schon sehr früh Handelsbeziehungen bis zur Nordsee unterhalten.",
+                "position": "106"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Die Pfarrkirche St. Magni wurde ab 1252 neu gebaut, Reste der ursprünglichen Kirche sind im Fundament erhalten geblieben.",
+                "position": "107"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Im Glockenhaus zwischen zwei kurzen oktogonalen Türmen auf dem quaderförmigen sächsischen Westriegel hängt die 'Magnusglocke' aus dem Jahr 1335, welche als älteste Glocke des Braunschweiger Landes gilt.",
+                "position": "108"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Insgesamt besitzt die Magnikirche ein Geläut aus fünf Glocken, von denen die zwei kleinsten nicht zum Läuten benutzt werden.",
+                "position": "109"
+            }
+        ],
+        "place": "Magnikirche",
+        "longitude": "10.529802"
+    },
+    {
+        "chapter": "Nebenkapitel Ostcampus",
+        "image": "",
+        "flag": "42",
+        "question": "Wie wird das Gebäude gegenüber dem Gauß-IT Zenrum im Volksmund genannt?",
+        "dependency": ["rico"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Angelehnt an den echten Gebäudenamen."
+            },
+            {
+                "cost": "2",
+                "hint": "Welche Fakultät ist hier hauptsächlich zu finden."
+            },
+            {
+                "cost": "3",
+                "hint": "Es ist ein Hochhaus in der vorallem die Elektrotechnik zufinden ist."
+            }
+        ],
+        "latitude": "52.276646",
+        "artefact": [],
+        "type": "answer",
+        "TTL": [],
+        "answer": "(?i)E.Tower|E.Hochhaus",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Das Gauß-IT Zentrum bietet als zentrale Einrichtung und Kompetenzzentrum der TU Braunschweig Dienstleistungen im Bereich der Informationbearbeitung und der Kommunikationstechnologie an.",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Mit 78 unterschiedlichen IT Dienstleistungen bietet das Zentrum den rund 20.000 Studierenden und über 6.200 haut- und nebenberuflichen Mitarbeiter*innen ein weit gefächertes IT-Angebot.",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Zum Ostcampus selbst gehören das Haus der Elektrotechnik, welches Heimat der Fakultät 5 und eine Vielzahl ihrer Institute ist, die Mensa 2, das Physikzentrum, das Pharmaziezentrum, das Sportzentrum, sowie der neue Sitz der Fachschaft Maschinenbau.",
+                "position": "103"
+            }
+        ],
+        "place": "Ostcampus",
+        "longitude": "10.541235"
+    },
+    {
+        "chapter": "Nebenkapitel Sprachenzentrum",
+        "image": "",
+        "flag": "42",
+        "question": "Welches ist eine Sprache, die im Sprachenzentrum angeboten wird?",
+        "dependency": ["rico"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Es wurden alle Sprachen im Gespräch genannt."
+            },
+            {
+                "cost": "2",
+                "hint": "Alle üblichen Sprachen sind vertreten."
+            },
+            {
+                "cost": "3",
+                "hint": "Einfach raten hilt dir wahrscheinlichg weiter."
+            }
+        ],
+        "latitude": "52.276045",
+        "artefact": [],
+        "type": "answer",
+        "TTL": [],
+        "answer": "(?i)Deutsch|Englisch|Französisch|Franzoesisch|Spanisch|Chinesisch|Arabisch|Japanisch|Italienisch|Polnisch|Portugiesisch|Russisch|Schwedisch|Türkisch|Tuerkisch",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Interkulturelle Kompetenz ist die Fähigkeit, mit Menschen anderer Kulturen erfolgreich zu interagieren.",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Diese Fähigkeit kann auf verschiedenste Weisen erlernt werden.",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Im Vordergrund stehen immer die persönliche Begegnung, das Interesse an anderen Kulturen und das Nachdenken über die eigene Kultur.",
+                "position": "103"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "An der TU Braunschweig gibt es eine Vielzahl von Initiativen und Projekten, die Interkulturalität erlebbar machen.",
+                "position": "104"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Wie zum Beispiel das Sprachtandem, interkulturelle Partner Projekte/Workshops, Studieren ohne Sprachbarrieren.",
+                "position": "105"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Darüber hinaus werden die Sprachen Deutsch, Englisch, Französisch, Spanisch, Chinesisch, Arabisch, Japanisch, Italienisch, Polnisch, Portugiesisch, Russisch, Schwedisch und Türkisch angeboten.",
+                "position": "106"
+            }
+        ],
+        "place": "Sprachenzentrum",
+        "longitude": "10.533949"
+    },
+    {
+        "chapter": "Nebenkapitel Nordcampus",
+        "image": "",
+        "flag": "42",
+        "question": "Wie viele Institute befindne sich am Nordcampus?",
+        "dependency": ["viktoria"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Eine Infotafel befindet sich am Eingang zur Einfahrt am Bültenweg."
+            },
+            {
+                "cost": "2",
+                "hint": "Zähle nur die Institute, nicht die Fakultäten."
+            },
+            {
+                "cost": "3",
+                "hint": " "
+            }
+        ],
+        "latitude": "52.285307",
+        "artefact": [],
+        "type": "answer",
+        "TTL": [],
+        "answer": "11",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Der Nordcampus war früher eine Kaserne in der unter anderem Panzer stationiert waren.",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Wenn man genau hinschaut, kann man dies heute noch an einigen Gebäuden erkennen.",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Heute dient der Campus als Standort für das Institut für Sozialwissenschaften und das Institut für Hochfrequenztechnik.",
+                "position": "103"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Es befindet sich außerdem ein Pavillion auf dem Gelände, bei dem man sich Kaffe und Snacks kaufen kann.",
+                "position": "104"
+            }
+        ],
+        "place": "Nordcampus",
+        "longitude": "10.541337"
+    },
+    {
+        "chapter": "Nebenkapitel Grotrian",
+        "image": "",
+        "flag": "42",
+        "question": "Was wurde hier früher hergestellt?",
+        "dependency": ["professor"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Man erkennt es leicht an dem Namen. Es ist auch heute noch ein bekannter Hertseller."
+            },
+            {
+                "cost": "2",
+                "hint": "Ihr findet die Lösung auch im Gespräch."
+            },
+            {
+                "cost": "3",
+                "hint": " "
+            }
+        ],
+        "latitude": "52.272944",
+        "artefact": [],
+        "type": "answer",
+        "TTL": [],
+        "answer": "(?i)Klavier|Klaviere|Flügel|Fluegel|Klaviere.und.Flügel|Klaviere.und.Fluegel",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Hier sind wir am Grotrian.",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Früher mal der Sitz der Klavier- und Flügelhersteller Grotrian-Steinweg, ist es heute ein Gebäude der AstA.",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Hier werden vor allem in den Semesterferien Klausuren geschrieben.",
+                "position": "103"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Innerhalb des Semesters bieten die Räume ZI24.1, ZI24.2 und ZI24.3 auch Räumlichkeiten zum Lernen.",
+                "position": "104"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Im Grotrian und seinen umliegenden Gebäuden finden sich aber auch verschiedene Fachschaften und Institute.",
+                "position": "105"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Über den Innenhof ist neben dem Grotrian auch das Chemiezentrum der TU direkt zu erreichen.",
+                "position": "106"
+            }
+        ],
+        "place": "Grotrian",
+        "longitude": "10.534074"
+    }
+]}

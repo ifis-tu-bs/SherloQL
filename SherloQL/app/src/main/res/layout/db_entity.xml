@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="30dp"
+    >
+    <ImageButton
+        android:id="@+id/ibEntity"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/dbentyty" >
+    </ImageButton>
+
+    <TextView
+        android:id="@+id/tvEntity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clickable="false"
+        android:text="Entity"
+        android:textSize="24sp"
+
+        android:textColor="@color/color18"
+        android:textStyle="bold">
+
+    </TextView>
+</FrameLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="370.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.QuizCreateWindowController">
+   <children>
+      <Label layoutX="30.0" layoutY="22.0" text="Typ" />
+      <Label layoutX="185.0" layoutY="22.0" text="Schwierigkeit" />
+      <Label layoutX="340.0" layoutY="22.0" text="Coins" />
+      <Label layoutX="30.0" layoutY="72.0" text="Name" />
+      <Label layoutX="30.0" layoutY="119.0" text="Frage" />
+      <Label layoutX="30.0" layoutY="235.0" text="Antworten" />
+      <ComboBox fx:id="type" layoutX="30.0" layoutY="39.0" onAction="#typeTextFieldAction" prefHeight="30.0" prefWidth="150.0" promptText="Rätseltyp wählen" />
+      <ComboBox fx:id="difficulty" layoutX="185.0" layoutY="39.0" prefHeight="30.0" prefWidth="150.0" promptText="Schwierigkeit wählen" />
+      <ComboBox fx:id="points" layoutX="340.0" layoutY="39.0" prefHeight="30.0" prefWidth="150.0" promptText="Coins wählen" />
+      <TextField fx:id="name" layoutX="30.0" layoutY="89.0" prefHeight="30.0" prefWidth="150.0" />
+      <RadioButton fx:id="rBtnImg" layoutX="185.0" layoutY="96.0" mnemonicParsing="false" onAction="#rBtnImgAction" text="Bild wählen?" />
+      <Button fx:id="explorerBtn" disable="true" layoutX="275.0" layoutY="92.0" mnemonicParsing="false" onAction="#explorerBtnAction" text="Explorer" />
+      <TextField fx:id="image" disable="true" editable="false" layoutX="340.0" layoutY="90.0" prefHeight="30.0" prefWidth="150.0" />
+      <TextArea fx:id="question" layoutX="30.0" layoutY="135.0" prefHeight="100.0" prefWidth="415.0" />
+      <TextField fx:id="option0" layoutX="30.0" layoutY="252.0" prefHeight="25.0" prefWidth="100.0" />
+      <TextField fx:id="option1" disable="true" layoutX="135.0" layoutY="252.0" prefHeight="25.0" prefWidth="100.0" />
+      <TextField fx:id="option2" disable="true" layoutX="240.0" layoutY="252.0" prefHeight="25.0" prefWidth="100.0" />
+      <TextField fx:id="option3" disable="true" layoutX="345.0" layoutY="252.0" prefHeight="25.0" prefWidth="100.0" />
+      <RadioButton fx:id="rBtn1" layoutX="74.0" layoutY="283.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="60.0" selected="true" text="1">
+         <toggleGroup>
+            <ToggleGroup fx:id="btnGroup" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="rBtn2" disable="true" layoutX="176.0" layoutY="283.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="60.0" text="2" toggleGroup="$btnGroup" />
+      <RadioButton fx:id="rBtn3" disable="true" layoutX="280.0" layoutY="283.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="60.0" text="3" toggleGroup="$btnGroup" />
+      <RadioButton fx:id="rBtn4" disable="true" layoutX="388.0" layoutY="283.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="60.0" text="4" toggleGroup="$btnGroup" />
+      <Button fx:id="createBtn" layoutX="482.0" layoutY="223.0" mnemonicParsing="false" onAction="#createBtnEvent" prefHeight="25.0" prefWidth="80.0" text="Erstellen" />
+      <Button fx:id="cancelBtn" layoutX="482.0" layoutY="252.0" mnemonicParsing="false" onAction="#cancelBtnAction" prefHeight="25.0" prefWidth="80.0" text="Abbrechen" />
+      <Label fx:id="errorLabel" layoutX="31.0" layoutY="320.0" prefHeight="17.0" prefWidth="415.0" />
+   </children>
+</AnchorPane>

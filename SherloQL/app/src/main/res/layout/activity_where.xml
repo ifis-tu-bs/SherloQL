@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_raetsel"
+    tools:context=".database.database_activitys.ActivityWhere">
+
+    <TextView
+        android:id="@+id/whereLabelText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#212121"
+        android:text="WHERE"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/whereFrageText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hier kannst du Zeilen rausfiltern, die bestimmte Kriterien erfüllen. Welches Kriterium soll erfüllt sein?"
+        android:textColor="#212121"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whereLabelText" />
+
+    <Spinner
+        android:id="@+id/whereAttributeSpinner"
+        android:layout_width="170dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="121dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch5" />
+
+    <Spinner
+        android:id="@+id/whereOperationSpinner"
+        android:layout_width="151dp"
+        android:layout_height="28dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="130dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whereAttributeSpinner" />
+
+    <Button
+        android:id="@+id/whereWeiter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weiter"
+        android:background="@drawable/raetsel_shape"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#212121"
+        android:layout_marginEnd ="40dp"
+        android:layout_marginBottom="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/whereeditText"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:textColor="#212121"
+        android:hint="Kleiner Wert"
+        android:inputType="number"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/wheretextView6"
+        app:layout_constraintTop_toBottomOf="@+id/whereOperationSpinner" />
+
+    <EditText
+        android:id="@+id/whereeditText2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="Großer Wert"
+        android:textColor="#212121"
+        android:inputType="number"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/wheretextView6"
+        app:layout_constraintTop_toBottomOf="@+id/whereOperationSpinner" />
+
+    <EditText
+        android:id="@+id/whereComparisonValue"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="Vergleichswert"
+        android:textColor="#212121"
+        android:inputType="textPersonName"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whereOperationSpinner" />
+
+    <TextView
+        android:id="@+id/wheretextView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="5dp"
+        android:text="AND"
+        android:textColor="#212121"
+        android:textSize="20dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/whereeditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switch5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="187dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="186dp"
+        android:textOff="AND"
+        android:textOn="OR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whereFrageText" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AND"
+        android:textColor="#212121"
+        android:textSize="19dp"
+        app:layout_constraintEnd_toStartOf="@+id/switch5"
+        app:layout_constraintTop_toTopOf="@+id/switch5" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OR"
+        android:textColor="#212121"
+        android:textSize="19dp"
+        app:layout_constraintStart_toEndOf="@+id/switch5"
+        app:layout_constraintTop_toTopOf="@+id/switch5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

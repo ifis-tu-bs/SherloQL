@@ -1,0 +1,2179 @@
+{"Raetsel": [
+    {
+        "difficulty": "1",
+        "category": "Braunschweig",
+        "image": "null",
+        "answer": "(?i)57.07|5707",
+        "question": "How long is the Brunswick ell in cm? \n(Correct to two decimal places)",
+        "name": "BS 1",
+        "type": "Antwort",
+        "choices": [
+            "57.07",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Braunschweig",
+        "image": "null",
+        "answer": "(?i)12.15.18|12. 15. 18",
+        "question": "At which times does Till Eulenspiegel play at the Kohlmarkt?",
+        "name": "BS 2",
+        "type": "Antwort",
+        "choices": [
+            "12, 15, 18",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Braunschweig",
+        "image": "null",
+        "answer": "(?i)Technische Universitaet Carolo.Wilhelmina zu Braunschweig|Technische Universität Carolo.Wilhelmina zu Braunschweig",
+        "question": "What is the full name of the Technical University Brunswick?",
+        "name": "BS 3",
+        "type": "Antwort",
+        "choices": [
+            "Technische Universität Carolo-Wilhelmina zu Braunschweig",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Braunschweig",
+        "image": "null",
+        "answer": "(?i)Till.Eulenspiegel",
+        "question": "What fictional joker played pranks in Brunswick?",
+        "name": "BS 4",
+        "type": "Antwort",
+        "choices": [
+            "Till Eulenspiegel",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Braunschweig",
+        "image": "null",
+        "answer": "(?i)Löwenwall|Loewenwall|lowenwall",
+        "question": "Where can you find the Brunswick Obelisk?",
+        "name": "BS 5",
+        "type": "Antwort",
+        "choices": [
+            "Löwenwall",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Braunschweig",
+        "image": "null",
+        "answer": "(?i)Carl.Friedrich.Gauß|Carl.Friedrich.Gauss",
+        "question": "Which famous mathematician has a statue in a park named after him?",
+        "name": "BS 6",
+        "type": "Antwort",
+        "choices": [
+            "Carl Friedrich Gauß",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Braunschweig",
+        "image": "null",
+        "answer": "(?i)Lion",
+        "question": "Which animal is on Brunswick's coat of arms?",
+        "name": "BS 7",
+        "type": "Antwort",
+        "choices": [
+            "Lion",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category":"Braunschweig",
+        "image": "null",
+        "answer": "Oldenburg",
+        "question": "Which city is the Lower Saxony's third largest city?",
+        "name": "BS 8",
+        "type": "Multiple Choice",
+        "choices": [
+            "Wolfsburg",
+            "Oldenburg",
+            "Braunschweig",
+            "Osnabrück"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category":"Braunschweig",
+        "image": "null",
+        "answer": "House of the Moon",
+        "question": "Which of these three houses does not exist in Brunswick?",
+        "name": "BS 9",
+        "type": "Multiple Choice",
+        "choices": [
+            "House of the Sun",
+            "House of the Stars",
+            "House of the Moon",
+            "House of the Rose"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "2",
+        "category":"Braunschweig",
+        "image": "null",
+        "answer": "Luffen",
+        "question": "How were buns called in Brunswick's old colloquial language?",
+        "name": "BS 10",
+        "type": "Multiple Choice",
+        "choices": [
+            "Rundstücke",
+            "Kadetje",
+            "Semmeln",
+            "Luffen"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category": "Braunschweig",
+        "image": "null",
+        "answer": "6|six|sechs",
+        "question": "How many faculties does the university have?",
+        "name": "BS 11",
+        "type": "Antwort",
+        "choices": [
+            "6",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category": "Braunschweig",
+        "image": "null",
+        "answer": "(?i)science",
+        "question": "Brunswick is also known as the city of ______ ?",
+        "name": "BS 12",
+        "type": "Antwort",
+        "choices": [
+            "Science",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category":"Braunschweig",
+        "image": "null",
+        "answer": "Nordstadt",
+        "question": "In the middle ages Brunswick used to be divided in 5 sub-cities. Which one of the following districts was not one of them?",
+        "name": "BS 13",
+        "type": "Multiple Choice",
+        "choices": [
+            "Neustadt",
+            "Hagen",
+            "Nordstadt",
+            "Sack"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category":"Braunschweig",
+        "image": "null",
+        "answer": "The biggest lecture hall on campus.",
+        "question": "What is an Audimax?",
+        "name": "BS 14",
+        "type": "Multiple Choice",
+        "choices": [
+            "A theater hall that every university has.",
+            "A lecture hall in musicology, known for its exceptional acoustics.",
+            "The biggest lecture hall on campus.",
+            "An exercise room."
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category":"Braunschweig",
+        "image": "null",
+        "answer": "The AStA represents the students interests.",
+        "question": "What does the AStA do?",
+        "name": "BS 15",
+        "type": "Multiple Choice",
+        "choices": [
+            "The AStA represents the students interests.",
+            "The AStA organizes student parties and recreational activities for students.",
+            "The AStA is responsible for the universities lecture hall allocation.",
+            "The AStA is a travel agency."
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category":"Braunschweig",
+        "image": "null",
+        "answer": "A semester is the time in which a student is enrolled in the same subject.",
+        "question": "What is a semester?",
+        "name": "BS 16",
+        "type": "Multiple Choice",
+        "choices": [
+            "A semester is the same as an university semester (time that one is enrolled at the university).",
+            "A semester is the time during which lectures are held (where one has to be at the university).",
+            "A semester is the time in which a student is enrolled in the same subject.",
+            "A semester is the time during which a subject is held."
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category":"Braunschweig",
+        "image": "null",
+        "answer": "Völkenrode",
+        "question": "Which one of the following is not a district of Brunswick?",
+        "name": "BS 17",
+        "type": "Multiple Choice",
+        "choices": [
+            "Broitzem",
+            "Leiferde",
+            "Völkenrode",
+            "Watenbüttel"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category": "Braunschweig",
+        "image": "null",
+        "answer": "(?i)19|neunzehn|nineteen",
+        "question": "How many districts does Brunswick have?",
+        "name": "BS 18",
+        "type": "Antwort",
+        "choices": [
+            "19",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category":"Braunschweig",
+        "image": "null",
+        "answer": "St. Andreas",
+        "question": "Which one of the following churches can be found in Brunswick's city center?",
+        "name": "BS 19",
+        "type": "Multiple Choice",
+        "choices": [
+            "St. Christophorus",
+            "St. Jakobi",
+            "St. Bernward",
+            "St. Andreas"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category": "Braunschweig",
+        "image": "null",
+        "answer": "(?i)Großbritannien|Great.britain",
+        "question": "Which country's forces were occupying Brunswick during the Second World War?",
+        "name": "BS 20",
+        "type": "Antwort",
+        "choices": [
+            "Großbritannien",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category":"Braunschweig",
+        "image": "null",
+        "answer": "9th century",
+        "question": "Brunswick's oldest church was build in the ...",
+        "name": "BS 21",
+        "type": "Multiple Choice",
+        "choices": [
+            "8th century",
+            "9th century",
+            "10th century",
+            "11th century"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category":"Braunschweig",
+        "image": "null",
+        "answer": "Burgplatz",
+        "question": "A part of Paramount's film 'Hansel und Gretel: Witch Hunter' from 2013 with Jeremy Renner and Gemma Arterton were filmed in Brunswick. Where did they film?",
+        "name": "BS 22",
+        "type": "Multiple Choice",
+        "choices": [
+            "Altstadtmarkt",
+            "Burgplatz",
+            "Bürgerpark",
+            "Hauptfriedhof"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category":"Braunschweig",
+        "image": "null",
+        "answer": "Südbahnhof (South Station)",
+        "question": "Which one of the following train stations does ot exist in Brunswick?",
+        "name": "BS 23",
+        "type": "Multiple Choice",
+        "choices": [
+            "Nordbahnhof (North Station)",
+            "Ostbahnhof (East Station)",
+            "Südbahnhof (South Station)",
+            "Westbahnhof (West Station)"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category":"Braunschweig",
+        "image": "null",
+        "answer": "Marienbrunnen",
+        "question": "Which of the following fountains can be found in Brunswick's old town?",
+        "name": "BS 24",
+        "type": "Multiple Choice",
+        "choices": [
+            "Marienbrunnen",
+            "Heinrichsbrunnen",
+            "Till Eulenspiegel Brunnen",
+            "Löwenbrunnen"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category": "Braunschweig",
+        "image": "null",
+        "answer": "(?i)Burgplatz",
+        "question": "Where can the pillar '2000 years of Christianity' be found?",
+        "name": "BS 25",
+        "type": "Antwort",
+        "choices": [
+            "Burgplatz",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "1",
+        "category":"SQL",
+        "image": "null",
+        "answer": "(?i)SELECT",
+        "question": "What command has to be used to read data from a table?",
+        "name": "SQL 1",
+        "type": "Antwort",
+        "choices": [
+            "SELECT",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "SQL",
+        "image": "null",
+        "answer": "Structured Query Language",
+        "question": "What does SQL stand for?\n",
+        "name": "SQL 2",
+        "type": "Multiple Choice",
+        "choices": [
+            "Structured Quiz Language",
+            "Strong Question Language",
+            "Structured Query Language",
+            "Strange Query Language"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category":"SQL",
+        "image": "null",
+        "answer": "(?i)UPDATE",
+        "question": "Which command has to be used to update data in a table?",
+        "name": "SQL 3",
+        "type": "Antwort",
+        "choices": [
+            "UPDATE",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category":"SQL",
+        "image": "null",
+        "answer": "(?i)DELETE",
+        "question": "Which command has to be used to delete data from a table?",
+        "name": "SQL 4",
+        "type": "Antwort",
+        "choices": [
+            "DELETE",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "2",
+        "category": "SQL",
+        "image": "null",
+        "answer": "SELECT * FROM Personen",
+        "question": "How do you display all columns from the table 'Personen'?",
+        "name": "SQL 5",
+        "type": "Multiple Choice",
+        "choices": [
+            "SELECT all FROM Personen",
+            "SELECT * FROM Personen",
+            "SELECT * column FROM Personen",
+            "SELECT all column FROM Personen"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category": "SQL",
+        "image": "sql1",
+        "answer": "SELECT Name, Region \nFROM Welt \nWHERE Region = 'Süd Amerika",
+        "question": "Choose the correct SQL query to receive table 1.",
+        "name": "SQL 6",
+        "type": "Multiple Choice",
+        "choices": [
+            "SELECT Name, Region \nFROM Welt",
+            "SELECT Name, Region \nFROM Region \nWHERE Region = 'Amerika'",
+            "SELECT Name, Region \nFROM Welt \nWHERE Region = 'Süd Amerika'",
+            "SELECT Name, Flaeche \nFROM Welt \nWHERE Region 'Süd Amerika'"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category": "SQL",
+        "image": "sql2",
+        "answer": "SELECT Name, Einwohnerzahl \nFROM Welt \nWHERE Name = 'Malawi' OR Name = 'Nepal'",
+        "question": "Choose the correct SQL query to receive table 2.",
+        "name": "SQL 7",
+        "type": "Multiple Choice",
+        "choices": [
+            "SELECT Name, Einwohnerzahl \nFROM Welt \nWHERE Name = 'Malawi' AND Name = 'Nepal'",
+            "SELECT Name, Einwohnerzahl \nFROM World \nWHERE Einwohnerzahl > 18.000.000",
+            "SELECT Name \nFROM Welt \nWHERE Name = 'Malawi' OR Name = 'Nepal' \nOR Einwohnerzahl < 18.000.000",
+            "SELECT Name, Einwohnerzahl \nFROM Welt \nWHERE Name = 'Malawi' OR Name = 'Nepal'"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category": "SQL",
+        "image": "sql3",
+        "answer": "SELECT ID, Name, Menge, Preis \nFROM Bestand \nWHERE Menge > 200",
+        "question": "Choose the correct SQL query to receive table 3.",
+        "name": "SQL 8",
+        "type": "Multiple Choice",
+        "choices": [
+            "SELECT Name, Menge \nFROM Bestand \nWHERE Name = 'Apfel' AND Name = 'Orange'",
+            "SELECT ID, Name, Menge, Preis \nFROM Bestand \nWHERE Preis < 20000",
+            "SELECT ID, Name, Menge, Preis \nFROM Bestand \nWHERE Menge > 200",
+            "SELECT ID, Name, Menge \nFROM Bestand \nWHERE Name ='Mango' AND Name ='Orange' AND Preis < 18000"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category":"SQL",
+        "image": "null",
+        "answer": "(?i)AND",
+        "question": "Which command can be used to combine conditions?",
+        "name": "SQL 9",
+        "type": "Antwort",
+        "choices": [
+            "AND",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category":"SQL",
+        "image": "null",
+        "answer": "(?i)OR",
+        "question": "Which command has to be used to differentiate between conditions?",
+        "name": "SQL 10",
+        "type": "Antwort",
+        "choices": [
+            "OR",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category":"SQL",
+        "image": "null",
+        "answer": "(?i)WHERE",
+        "question": "Which command has to be used to check if a certain condition is met to get the correct results?",
+        "name": "SQL 11",
+        "type": "Antwort",
+        "choices": [
+            "WHERE",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category":"SQL",
+        "image": "null",
+        "answer": "(?i)FROM",
+        "question": "Which command has to be used to define the use of one or more tables in a query?",
+        "name": "SQL 12",
+        "type": "Antwort",
+        "choices": [
+            "FROM",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "3",
+        "category":"SQL",
+        "image": "null",
+        "answer": "(?i)JOIN",
+        "question": "Which command has to be used to receive the cross product of data sets?",
+        "name": "SQL 13",
+        "type": "Antwort",
+        "choices": [
+            "JOIN",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "3"
+    },
+    {
+        "difficulty": "3",
+        "category": "SQL",
+        "image": "frage314",
+        "answer": "SELECT Bestellung.Bestellnummer, Kunde.Name, Bestellung.Datum \nFROM Bestellung \nJOIN Kunde \nON Bestellung.KundenID = Kunde.Name",
+        "question": "Choose the correct SQL query to receive table 4.",
+        "name": "SQL 14",
+        "type": "Multiple Choice",
+        "choices": [
+            "SELECT Bestellung.Bestellnummer, Bestellung.Datum \nFROM Kunde \nJOIN Bestellung \nON Bestellung.KundenID = Kunde.ID",
+            "SELECT Bestellung.Bestellnummer, Kunde.Name, Bestellung.Datum \nFROM Bestellung \nJOIN Kunde \nON Bestellung.KundenID = Kunde.Name",
+            "SELECT Bestellung.Bestellnummer, Kunde.Name, Bestellung.Datum \nFROM Bestellung \nJOIN Kunde \nON KundenID = Kunde.ID",
+            "SELECT Bestellung.Bestellnummer, Kunde.Name, Bestellung.Datum \nFROM Bestellung \nJOIN Kunde \nON Bestellung.KundenID = Kunde.KundenID"
+        ],
+        "points": "3"
+    },
+    {
+        "difficulty": "3",
+        "category": "SQL",
+        "image": "frage315",
+        "answer": "SELECT Artikel.Beschreibung, Artikel.Hersteller \nFROM Bestellung \nJOIN Kunde \nON Bestellungen.Artikelnummer = Artikel.Artikelnummer \nINNER JOIN Kunde \nON Kunde.ID = Bestellungen.ID \nWHERE Kunde.PLZ = '14052'",
+        "question": "Choose the correct SQL query to receive table 5.",
+        "name": "SQL 15",
+        "type": "Multiple Choice",
+        "choices": [
+            "SELECT Artikel.Beschreibung, Artikel.Hersteller \nFROM Artikel \nINNER JOIN Bestellungen \nON Bestellung.Artikelnummer = Artikel.Artikelnummer \nJOIN Kunde \nON Kunde.ID = Bestellungen.KundenID \nWHERE Kunde.PLZ = '14052'",
+            "SELECT Artikel.Beschreibung, Artikel.Hersteller \nFROM Bestellung \nJOIN Kunde \nON Bestellungen.Artikelnummer = Artikel.Artikelnummer \nINNER JOIN Kunde \nON Kunde.ID = Bestellungen.ID \nWHERE Kunde.PLZ = '14052'",
+            "SELECT Artikel.Beschreibung \nFROM Artikel \nJOIN Bestellungen \nON Bestellungen.Artikelnummer = Artikel.Artikelnummer \nON Kunde.ID = Bestellung.KundenID \nWHERE Kunde.PLZ = '14052'",
+            "SELECT Artikel.Beschreibung, Artikel.Hersteller \nFROM Kunde \nJOIN Artikel \nON Bestellungen.Artikelnummer = Artikel.Artikelnummer \nJOIN Bestellungen \nON Kunde.ID = Bestellungen.KundenID \nWHERE Kunde.PLZ = 'Berlin Charlottenburg'"
+        ],
+        "points": "3"
+    },
+    {
+        "difficulty": "3",
+        "category":"SQL",
+        "image": "frage316",
+        "answer": "(?i)Gabriele.Jaeger",
+        "question": "Enter the correct name for the SQL query.",
+        "name": "SQL 16",
+        "type": "Antwort",
+        "choices": [
+            "Gabriele Jaeger",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "3"
+    },
+    {
+        "difficulty":"1",
+        "category": "Logik",
+        "image": "frage116",
+        "answer": "6|(?i)sechs|six",
+        "question": "A farmer has 10 cows. All except for 6 die in an accident. How many cows does he have?",
+        "name": "Logik 1",
+        "type": "Antwort",
+        "choices": [
+            "6",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty":"1",
+        "category": "Logik",
+        "image": "null",
+        "answer": "(?i)Garden",
+        "question": "Which place is this? \n NRDAGE",
+        "name": "Logik 2",
+        "type": "Antwort",
+        "choices": [
+            "Garden",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty":"3",
+        "category": "Logik",
+        "image": "null",
+        "answer": "(?i)Candle",
+        "question": "They measure my life in hours and I serve them by running out. I am fast when I'm thin and slow when I'm fat. The wind is my enemy. Who am I?",
+        "name": "Logik 3",
+        "type": "Antwort",
+        "choices": [
+            "Candle",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "3"
+    },
+    {
+        "difficulty":"3",
+        "category": "Logik",
+        "image": "null",
+        "answer": "(?i)Heart",
+        "question": "You can touch me, you can break me, you can steal me, you can win me if you want to be mine. Who am I?",
+        "name": "Logik 4",
+        "type": "Antwort",
+        "choices": [
+            "Heart",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "3"
+    },
+    {
+        "difficulty":"3",
+        "category": "Logik",
+        "image": "null",
+        "answer": "(?i)Secret",
+        "question": "Those who have me want to share, but once shared they loose me. Who am I?",
+        "name": "Logik 5",
+        "type": "Antwort",
+        "choices": [
+            "Secret",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "3"
+    },
+    {
+        "difficulty":"3",
+        "category": "Logik",
+        "image": "null",
+        "answer": "(?i)Last Name|Surname",
+        "question": "Arnold Schwarzenegger has a long one, Michael J. Fox has a short one, Bill Clinton is always using his, Madonna isn't using hers and the Pope is never using his. What is it?",
+        "name": "Logik 6",
+        "type": "Antwort",
+        "choices": [
+            "(?i)Last Name|Surname",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "3"
+    },
+    {
+        "difficulty":"3",
+        "category": "Logik",
+        "image": "null",
+        "answer": "(?i)Echo",
+        "question": "I speak without a mouth and hear without any ears. I don't have a body but come alive with the wind. Who am I?",
+        "name": "Logik 7",
+        "type": "Antwort",
+        "choices": [
+            "Echo",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "3"
+    },
+    {
+        "difficulty":"3",
+        "category": "Logik",
+        "image": "null",
+        "answer": "(?i)Meat",
+        "question": "Paul is 190cm tall and works as an assistant in a butcher's shop. His shoe size is 45. What does he weigh?",
+        "name": "Logik 8",
+        "type": "Antwort",
+        "choices": [
+            "Meat",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "3"
+    },
+    {
+        "difficulty":"3",
+        "category": "Logik",
+        "image": "null",
+        "answer": "(?i)Silence",
+        "question": "What is so fragile that it breaks just by saying it's name?",
+        "name": "Logik 9",
+        "type": "Antwort",
+        "choices": [
+            "Silence",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "3"
+    },
+    {
+        "difficulty":"2",
+        "category": "Logik",
+        "image": "null",
+        "answer": "11|(?i)elf|eleven",
+        "question": "How many letters are in the alphabet?",
+        "name": "Logik 10",
+        "type": "Antwort",
+        "choices": [
+            "11",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty":"2",
+        "category": "Logik",
+        "image": "null",
+        "answer": "(?i)Person|Human",
+        "question": "First I walk on 4 feet, then on 2 and at the very end I walk on 3. Who am I?",
+        "name": "Logik 11",
+        "type": "Antwort",
+        "choices": [
+            "(?i)Person|Human",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty":"2",
+        "category": "Logik",
+        "image": "frage226",
+        "answer": "(?i)A",
+        "question": "Which picture comes next?",
+        "name": "Logik 12",
+        "type": "Antwort",
+        "choices": [
+            "A",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty":"2",
+        "category": "Logik",
+        "image": "frage227",
+        "answer": "(?i)left|to.the.left",
+        "question": "In which direction is the bus going?",
+        "name": "Logik 13",
+        "type": "Antwort",
+        "choices": [
+            "(?i)left|to.the.left",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty":"2",
+        "category": "Logik",
+        "image": "frage228",
+        "answer": "87",
+        "question": "On which parking lot number is the car parking?",
+        "name": "Logik 14",
+        "type": "Antwort",
+        "choices": [
+            "87",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty":"2",
+        "category": "Logik",
+        "image": "frage229",
+        "answer": "(?i)C",
+        "question": "Which one of the following dice matches the pattern?",
+        "name": "Logik 15",
+        "type": "Antwort",
+        "choices": [
+            "C",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty":"2",
+        "category": "Logik",
+        "image": "null",
+        "answer": "(?i)12000|12.000",
+        "question": "Old Granny Juniors left half of her money to her granddaughter and a quarter to her grandson. She left a sixth to her brother and the rest, 1000 Euros, to the dog shelter. How much did she leave in total?",
+        "name": "Logik 16",
+        "type": "Antwort",
+        "choices": [
+            "(?i)12000|12.000",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty":"2",
+        "category": "Logik",
+        "image": "null",
+        "answer": "Yes",
+        "question": "John is married, Thomas is not. No one knows if Mary is married or not. John is looking at Mary and Mary is looking at Thomas.Is a married person looking at a not-married person?",
+        "name": "Logik 17",
+        "type": "Antwort",
+        "choices": [
+            "Yes",
+            "No",
+            "There is no way to tell",
+            " "
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty":"1",
+        "category": "Logik",
+        "image": "null",
+        "answer": "(?i)A Cock|Cock|A Rooster|Rooster",
+        "question": "What is dripping and has a comb?",
+        "name": "Logik 18",
+        "type": "Antwort",
+        "choices": [
+            "(?i)A Cock|Cock|A Rooster|Rooster",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category":"Mathematik",
+        "image": "frage117",
+        "answer": "3",
+        "question": "Think of a random number and follow the instructions bellow. What is the result?",
+        "name": "Mathe 1",
+        "type": "Antwort",
+        "choices": [
+            "3",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "3",
+        "category":"Mathematik",
+        "image": "null",
+        "answer": "47",
+        "question": "A small number of cards has gone missing from a full stack of cards. When handing out to 4 people 3 cards are left. When handing out to 3 people 2 cards are left. And when handing out to 5 people 2 are left. How many cards are in the remaining deck?",
+        "name": "Mathe 2",
+        "type": "Antwort",
+        "choices": [
+            "47",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "3"
+    },
+    {
+        "difficulty": "3",
+        "category":"Mathematik",
+        "image": "null",
+        "answer": "21",
+        "question": "What is the smallest number that is the sevenfold of its checksum (sum of all its digits)?",
+        "name": "Mathe 3",
+        "type": "Antwort",
+        "choices": [
+            "21",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "3"
+    },
+    {
+        "difficulty": "3",
+        "category":"Mathematik",
+        "image": "null",
+        "answer": "24",
+        "question": "A brother says about his younger brother: 'Two years ago I was three times as old as my brother. In three years I will be twice as old as my brother.' What is the sum of both brothers' current age?",
+        "name": "Mathe 4",
+        "type": "Antwort",
+        "choices": [
+            "24",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "3"
+    },
+    {
+        "difficulty": "3",
+        "category":"Mathematik",
+        "image": "null",
+        "answer": "86",
+        "question": "What is the smallest number that will increase by 12 when turned upside down?",
+        "name": "Mathe 5",
+        "type": "Antwort",
+        "choices": [
+            "86",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "3"
+    },
+    {
+        "difficulty": "2",
+        "category":"Mathematik",
+        "image": "null",
+        "answer": "7",
+        "question": "What is the result? \n 6-1 x 0 + 2 / 2",
+        "name": "Mathe 6",
+        "type": "Antwort",
+        "choices": [
+            "7",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "1",
+        "category":"Mathematik",
+        "image": "null",
+        "answer": "(?i)3|3.00|3.00€",
+        "question": "300g of strawberries are 1,80€. How much is 500g?",
+        "name": "Mathe 7",
+        "type": "Antwort",
+        "choices": [
+            "(?i)3|3.00|3.00€",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "2",
+        "category":"Mathematik",
+        "image": "null",
+        "answer": "96",
+        "question": "Lea is going to a concert and takes 60 minutes by car if she is going 80km/h on average. How long will Marco take for the same route if motorbike is going 50 km/h? (in minutes)",
+        "name": "Mathe 8",
+        "type": "Antwort",
+        "choices": [
+            "96",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "1",
+        "category":"Mathematik",
+        "image": "null",
+        "answer": "(?i)23|23€",
+        "question": "Lukas' phone bill for the months from January to June are 18€, 41€, 27€, 19€, 12€ and 21€ respectively. How high is his average phone bill?",
+        "name": "Mathe 9",
+        "type": "Antwort",
+        "choices": [
+            "(?i)23|23€",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category":"Mathematik",
+        "image": "null",
+        "answer": "2000",
+        "question": "2 · 10³ = ?",
+        "name": "Mathe 10",
+        "type": "Antwort",
+        "choices": [
+            "2000",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "2",
+        "category":"Mathematik",
+        "image": "null",
+        "answer": "2",
+        "question": "- 5 · (- 6) + 24 : (- 2) - 4 · 4 = ?",
+        "name": "Mathe 11",
+        "type": "Antwort",
+        "choices": [
+            "2",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category":"Mathematik",
+        "image": "null",
+        "answer": "27,5",
+        "question": "- 25 : (- 2) - 5 · 3 + 30 = ?",
+        "name": "Mathe 12",
+        "type": "Antwort",
+        "choices": [
+            "27,5",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category":"Mathematik",
+        "image": "null",
+        "answer": "(?i)500|500€",
+        "question": "How high are your savings if you receive 7.50€ in interest at end of the year for an interest rate of 1.5%?",
+        "name": "Mathe 13",
+        "type": "Antwort",
+        "choices": [
+            "(?i)500|500€",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category":"Mathematik",
+        "image": "null",
+        "answer": "180",
+        "question": "The diameter of a tire is 60cm. What is its circumference? \n (Assume that Pi = 3)",
+        "name": "Mathe 14",
+        "type": "Antwort",
+        "choices": [
+            "180",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "1",
+        "category": "Mathematik",
+        "image": "null",
+        "answer": "XIV",
+        "question": "How does 14 translate into Roman numerals?",
+        "name": "Mathe 15",
+        "type": "Multiple Choice",
+        "choices": [
+            "XIIII",
+            "XIV",
+            "IVX",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category":"Sprachen",
+        "image": "null",
+        "answer": "(?i)C",
+        "question": "Complete the following rule: \n I before E except after __ - or when it sounds like A like in 'neighbor or weight'!",
+        "name": "Sprache 1",
+        "type": "Antwort",
+        "choices": [
+            "C",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "Portemonnaie",
+        "question": "Which of the following is the correct German spelling for 'wallet'?",
+        "name": "Sprache 2",
+        "type": "Multiple Choice",
+        "choices": [
+            "Portemonaie",
+            "Portemone",
+            "Portemonnaie",
+            "Portemonee"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "Notlage",
+        "question": "Which of the following words is synonymous for 'Misere' in German?",
+        "name": "Sprache 3",
+        "type": "Multiple Choice",
+        "choices": [
+            "Notlage",
+            "Notunterkunft",
+            "Notruf",
+            "Notfallnummer"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "Plusquamperfekt",
+        "question": "In what tense is the sentence 'Das hatte ich auch gedacht.'?",
+        "name": "Sprache 4",
+        "type": "Multiple Choice",
+        "choices": [
+            "Präteritum",
+            "Plusquamperfekt",
+            "Perfekt",
+            "Präsens"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "2",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "3000",
+        "question": "How many words do you have to know to be able to read a German newspaper?",
+        "name": "Sprache 5",
+        "type": "Multiple Choice",
+        "choices": [
+            "3000",
+            "4500",
+            "30000",
+            "45000"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "1",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "German and English",
+        "question": "In which language does the following word exist? : Kindergarten",
+        "name": "Sprache 6",
+        "type": "Multiple Choice",
+        "choices": [
+            "German",
+            "English",
+            "German and English",
+            "neither"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "German and English",
+        "question": "In which language does the following word exist? : Kaffeeklatsch",
+        "name": "Sprache 7",
+        "type": "Multiple Choice",
+        "choices": [
+            "German",
+            "English",
+            "German and English",
+            "neither"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "German and English",
+        "question": "In which language does the following word exist? : Autobahn",
+        "name": "Sprache 8",
+        "type": "Multiple Choice",
+        "choices": [
+            "German",
+            "English",
+            "German and English",
+            "neither"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "German",
+        "question": "In which language does the following word exist? : Vorschule",
+        "name": "Sprache 9",
+        "type": "Multiple Choice",
+        "choices": [
+            "German",
+            "English",
+            "German and English",
+            "neither"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "German",
+        "question": "In which language does the following word exist? : Mobbing",
+        "name": "Sprache 10",
+        "type": "Multiple Choice",
+        "choices": [
+            "German",
+            "English",
+            "German and English",
+            "neither"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "German and English",
+        "question": "In which language does the following word exist? : Lied",
+        "name": "Sprache 11",
+        "type": "Multiple Choice",
+        "choices": [
+            "German",
+            "English",
+            "German and English",
+            "neither"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "German and English",
+        "question": "In which language does the following word exist? : Schnitzel",
+        "name": "Sprache 12",
+        "type": "Multiple Choice",
+        "choices": [
+            "German",
+            "English",
+            "German and English",
+            "neither"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "German",
+        "question": "In which language does the following word exist? : Beamer",
+        "name": "Sprache 13",
+        "type": "Multiple Choice",
+        "choices": [
+            "German",
+            "English",
+            "German and English",
+            "neither"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "German",
+        "question": "In which language does the following word exist? : Handy",
+        "name": "Sprache 14",
+        "type": "Multiple Choice",
+        "choices": [
+            "German",
+            "English",
+            "German and English",
+            "neither"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "German and English",
+        "question": "In which language does the following word exist? : Angst",
+        "name": "Sprache 15",
+        "type": "Multiple Choice",
+        "choices": [
+            "German",
+            "English",
+            "German and English",
+            "neither"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "German and English",
+        "question": "In which language does the following word exist? : Götterdämmerung",
+        "name": "Sprache 16",
+        "type": "Multiple Choice",
+        "choices": [
+            "German",
+            "English",
+            "German and English",
+            "neither"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "German and English",
+        "question": "In which language does the following word exist? : Hausfrau",
+        "name": "Sprache 17",
+        "type": "Multiple Choice",
+        "choices": [
+            "German",
+            "English",
+            "German and English",
+            "neither"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "German and English",
+        "question": "In which language does the following word exist? : Zeitgeist",
+        "name": "Sprache 18",
+        "type": "Multiple Choice",
+        "choices": [
+            "German",
+            "English",
+            "German and English",
+            "neither"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "German",
+        "question": "In which language does the following word exist? : Hometrainer",
+        "name": "Sprache 19",
+        "type": "Multiple Choice",
+        "choices": [
+            "German",
+            "English",
+            "German and English",
+            "neither"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "English",
+        "question": "In which language does the following word exist? : Svelte",
+        "name": "Sprache 20",
+        "type": "Multiple Choice",
+        "choices": [
+            "German",
+            "English",
+            "German and English",
+            "neither"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "German and English",
+        "question": "In which language does the following word exist? : Saudade",
+        "name": "Sprache 21",
+        "type": "Multiple Choice",
+        "choices": [
+            "German",
+            "English",
+            "German and English",
+            "neither"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "neither",
+        "question": "In which language does the following word exist? : Binen",
+        "name": "Sprache 22",
+        "type": "Multiple Choice",
+        "choices": [
+            "German",
+            "English",
+            "German and English",
+            "neither"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "German and English",
+        "question": "In which language does the following word exist? : Angel",
+        "name": "Sprache 23",
+        "type": "Multiple Choice",
+        "choices": [
+            "German",
+            "English",
+            "German and English",
+            "neither"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "German and English",
+        "question": "In which language does the following word exist? : Brief",
+        "name": "Sprache 24",
+        "type": "Multiple Choice",
+        "choices": [
+            "German",
+            "English",
+            "German and English",
+            "neither"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "German and English",
+        "question": "In which language does the following word exist? : Art",
+        "name": "Sprache 25",
+        "type": "Multiple Choice",
+        "choices": [
+            "German",
+            "English",
+            "German and English",
+            "neither"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "Grüzi",
+        "question": "In Northern Germany you say 'Moin' to greet someone and in Bavaria 'Servus'. What do they say in Switzerland?",
+        "name": "Sprache 26",
+        "type": "Multiple Choice",
+        "choices": [
+            "Grüß Gott",
+            "Salut",
+            "Grüzi",
+            "Salve"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "2",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "le vasistas",
+        "question": "What word do the French use to describe a spyhole in a door or a window that is high up?",
+        "name": "Sprache 27",
+        "type": "Multiple Choice",
+        "choices": [
+            "la fenêtre",
+            "la porte",
+            "les grandes fenêtres",
+            "le vasistas"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "3",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "sich ärgern",
+        "question": "Which word do the Germans use synonymously to 'echauffieren'?",
+        "name": "Sprache 28",
+        "type": "Multiple Choice",
+        "choices": [
+            "schmunzeln",
+            "sich ärgern",
+            "jemanden begleiten",
+            "etwas verlegen"
+        ],
+        "points": "3"
+    },
+    {
+        "difficulty": "2",
+        "category": "Sprachen",
+        "image": "null",
+        "answer": "salfgetijmentallingsten",
+        "question": "Which of these words does not exist?",
+        "name": "Sprache 29",
+        "type": "Multiple Choice",
+        "choices": [
+            "waarschuwingsknipperlichtinstallatie",
+            "salfgetijmentallingsten",
+            "hottentottententententoonstelling",
+            "afgelebberdeboterham"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category":"Allgemeines",
+        "image": "null",
+        "answer": "(?i)Arthur.Conan.Doyle",
+        "question": "Who was the author of the famous detective series Sherlock Holmes?",
+        "name": "Allgemein 1",
+        "type": "Antwort",
+        "choices": [
+            "Arthur Conan Doyle",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category": "Allgemeines",
+        "image": "null",
+        "answer": "A tutorial recapitulates and deepens the knowledge gained from lectures.",
+        "question": "What is a tutorial at an university?",
+        "name": "Allgemein 2",
+        "type": "Multiple Choice",
+        "choices": [
+            "A tutorial recapitulates and deepens the knowledge gained from lectures.",
+            "Tutorials are lectures that you can attend for a fee, where additional material is taught.",
+            "During a tutorial students from higher semesters discuss their various projects.",
+            "A tutorial is a Pokemon."
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "1",
+        "category":"Allgemeines",
+        "image": "null",
+        "answer": "(?i)h",
+        "question": "Fill in the blank: Wer nämlich mit '__' schreibt ist dämlich.",
+        "name": "Allgemein 3",
+        "type": "Antwort",
+        "choices": [
+            "h",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "2",
+        "category": "Allgemeines",
+        "image": "null",
+        "answer": "2002",
+        "question": "Since when has sign language been recognized as an language in Germany?",
+        "name": "Allgemein 4",
+        "type": "Multiple Choice",
+        "choices": [
+            "1982",
+            "2002",
+            "1952",
+            "2012"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "1",
+        "category": "Allgemeines",
+        "image": "null",
+        "answer": "9. November 1979",
+        "question": "On which day did the Berlin Wall fall?",
+        "name": "Allgemein 5",
+        "type": "Multiple Choice",
+        "choices": [
+            "9. September 1979",
+            "9. October 1979",
+            "9. November 1979",
+            "9. December 1979"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Allgemeines",
+        "image": "null",
+        "answer": "Cold War",
+        "question": "During which war was the Berlin Wall built?",
+        "name": "Allgemein 6",
+        "type": "Multiple Choice",
+        "choices": [
+            "Cold War",
+            "30 Years' War",
+            "Second World War",
+            "First World War"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "2",
+        "category": "Allgemeines",
+        "image": "null",
+        "answer": "Museum",
+        "question": "What can now be found at the spot where 'Checkpoint Charlie' used to be?",
+        "name": "Allgemein 7",
+        "type": "Multiple Choice",
+        "choices": [
+            "Artwork",
+            "Museum",
+            "Parliament",
+            "Monument"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "1",
+        "category": "Allgemeines",
+        "image": "null",
+        "answer": "7000",
+        "question": "Roughly how many languages are spoken world wide?",
+        "name": "Allgemein 8",
+        "type": "Multiple Choice",
+        "choices": [
+            "9000",
+            "7600",
+            "7000",
+            "2500"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Allgemeines",
+        "image": "null",
+        "answer": "Nobody has the intention of building a wall.",
+        "question": "What did Walter Ulbricht say two months before the Berlin Wall was built?",
+        "name": "Allgemein 9",
+        "type": "Multiple Choice",
+        "choices": [
+            "I have a dream.",
+            "Nobody has the intention of building a wall.",
+            "No wall, no money.",
+            "We have to stick together in these trying times."
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Allgemeines",
+        "image": "null",
+        "answer": "Eiserner Vorhang",
+        "question": "Which one of the following was a 'nickname' for the Berlin Wall?",
+        "name": "Allgemein 10",
+        "type": "Multiple Choice",
+        "choices": [
+            "Grauer Riese",
+            "Weiße Mauer",
+            "Eiserner Vorhang",
+            "Berliner Wall"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "2",
+        "category": "Allgemeines",
+        "image": "null",
+        "answer": "1852",
+        "question": "How many kilometers is a sea mile?",
+        "name": "Allgemein 11",
+        "type": "Multiple Choice",
+        "choices": [
+            "3658",
+            "1852",
+            "2500",
+            "800"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "1",
+        "category": "Allgemeines",
+        "image": "null",
+        "answer": "206",
+        "question": "How many bones make up a human skeleton?",
+        "name": "Allgemein 12",
+        "type": "Multiple Choice",
+        "choices": [
+            "53",
+            "164",
+            "206",
+            "253"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "2",
+        "category": "Allgemeines",
+        "image": "null",
+        "answer": "64",
+        "question": "How many years did Johann Wolfgang von Goethe spend on writing 'Faust'?",
+        "name": "Allgemein 13",
+        "type": "Multiple Choice",
+        "choices": [
+            "36",
+            "45",
+            "51",
+            "64"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "1",
+        "category": "Allgemeines",
+        "image": "null",
+        "answer": "Bacteria",
+        "question": "What do antibiotics fight?",
+        "name": "Allgemein 14",
+        "type": "Multiple Choice",
+        "choices": [
+            "Bacteria",
+            "Viruses",
+            "Parasites",
+            "Fungi"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Allgemeines",
+        "image": "null",
+        "answer": "88",
+        "question": "How many key does an average piano have?",
+        "name": "Allgemein 15",
+        "type": "Multiple Choice",
+        "choices": [
+            "44",
+            "66",
+            "88",
+            "112"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category":"Allgemeines",
+        "image": "null",
+        "answer": "8",
+        "question": "How many planets make up our solar system?",
+        "name": "Allgemein 16",
+        "type": "Antwort",
+        "choices": [
+            "8",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Allgemeines",
+        "image": "null",
+        "answer": "Antonio Vivaldi",
+        "question": "Who composed the 'Four Seasons'?",
+        "name": "Allgemein 17",
+        "type": "Multiple Choice",
+        "choices": [
+            "Ludwig van Beethoven",
+            "Giuseppe Verdi",
+            "Edvard Grieg",
+            "Antonio Vivaldi"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Allgemeines",
+        "image": "null",
+        "answer": "Felix Mendelssohn Bartholdy",
+        "question": "Who composed the 'Wedding March'?",
+        "name": "Allgemein 18",
+        "type": "Multiple Choice",
+        "choices": [
+            "Edvard Grieg",
+            "Felix Mendelssohn Bartholdy",
+            "Robert Schuhmann",
+            "Wolfgang Amadeus Mozart"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category":"Geographie",
+        "image": "null",
+        "answer": "16",
+        "question": "How many constituent states make up Germany?",
+        "name": "Geo 1",
+        "type": "Antwort",
+        "choices": [
+            "16",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category":"Geographie",
+        "image": "null",
+        "answer": "(?i)Oker",
+        "question": "Which river passes through Brunswick's city?",
+        "name": "Geo 2",
+        "type": "Antwort",
+        "choices": [
+            "Oker",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "2",
+        "category":"Geographie",
+        "image": "null",
+        "answer": "(?i)Harz",
+        "question": "Which mountain range is also called the 'Norddeutsche Bergparadies' (Northern German mountain paradise)?",
+        "name": "Geo 3",
+        "type": "Antwort",
+        "choices": [
+            "Harz",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category": "Geographie",
+        "image": "null",
+        "answer": "India",
+        "question": "In this country 21 languages are recognized beside the national language. Which country is it?",
+        "name": "Geo 4",
+        "type": "Multiple Choice",
+        "choices": [
+            "Micronesia",
+            "Indonesia",
+            "India",
+            "Philippines"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "1",
+        "category": "Geographie",
+        "image": "null",
+        "answer": "Namibia",
+        "question": "The people of this country use various click sounds when they speak. Which country do they come from?",
+        "name": "Geo 5",
+        "type": "Multiple Choice",
+        "choices": [
+            "Netherlands",
+            "Honduras",
+            "Namibia",
+            "Belize"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category": "Geographie",
+        "image": "null",
+        "answer": "Mainz",
+        "question": "Which city is the capital of Rhineland-Palatinate (Rheinland-Pfalz)?",
+        "name": "Geo 6",
+        "type": "Multiple Choice",
+        "choices": [
+            "Mainz",
+            "Rostock",
+            "Erfurt",
+            "Stuttgart"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "2",
+        "category": "Geographie",
+        "image": "fuji",
+        "answer": "Japan",
+        "question": "In which country can you find this tourist attraction?",
+        "name": "Geo 7",
+        "type": "Multiple Choice",
+        "choices": [
+            "South Africa",
+            "Iceland",
+            "Japan",
+            "Nepal"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "2",
+        "category":"Geographie",
+        "image": "null",
+        "answer": "26",
+        "question": "Into how many cantons is Switzerland divided?",
+        "name": "Geo 8",
+        "type": "Antwort",
+        "choices": [
+            "26",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "1",
+        "category":"Geographie",
+        "image": "null",
+        "answer": "(?i)Antarctica",
+        "question": "Which continent is also called the 7th continent?",
+        "name": "Geo 9",
+        "type": "Antwort",
+        "choices": [
+            "Antarctica",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category":"Geographie",
+        "image": "null",
+        "answer": "(?i)Bermuda Triangle",
+        "question": "Which region in the Atlantic is known for a number of mysterious disappearances and phenomenons?",
+        "name": "Geo 10",
+        "type": "Antwort",
+        "choices": [
+            "Bermuda Triangle",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "1",
+        "category":"Geographie",
+        "image": "null",
+        "answer": "(?i)France",
+        "question": "Which country is the biggest country within the European Union?",
+        "name": "Geo 11",
+        "type": "Antwort",
+        "choices": [
+            "France",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "1"
+    },
+    {
+        "difficulty": "2",
+        "category":"Geographie",
+        "image": "null",
+        "answer": "(?i)Norway",
+        "question": "Which country has the highest living standards in the world?",
+        "name": "Geo 12",
+        "type": "Antwort",
+        "choices": [
+            "Norway",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "3",
+        "category":"Geographie",
+        "image": "null",
+        "answer": "(?i)Jangtsekiang",
+        "question": "Which river is the longest river in Mainland China?",
+        "name": "Geo 13",
+        "type": "Antwort",
+        "choices": [
+            "Jangtsekiang",
+            "null",
+            "null",
+            "null"
+        ],
+        "points": "3"
+    },
+    {
+        "difficulty": "2",
+        "category": "Geographie",
+        "image": "null",
+        "answer": "Vietnam",
+        "question": "Which country has roughly the same total area as Germany but a significantly higher number of citizens?",
+        "name": "Geo 14",
+        "type": "Multiple Choice",
+        "choices": [
+            "Indonesia",
+            "Vietnam",
+            "Myanmar",
+            "Philippines"
+        ],
+        "points": "2"
+    },
+    {
+        "difficulty": "1",
+        "category": "Geographie",
+        "image": "null",
+        "answer": "Rhine",
+        "question": "Which river is the closest to Basel?",
+        "name": "Geo 15",
+        "type": "Multiple Choice",
+        "choices": [
+            "Main",
+            "Rhine",
+            "Danube",
+            "Vltava"
+        ],
+        "points": "1"
+    }
+]
+}

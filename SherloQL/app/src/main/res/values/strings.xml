@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">SherloQL</string>
+    <string name="home">Home</string>
+    <string name="query">QUERY</string>
+    <string name="ddl">DDL</string>
+    <string name="dml">DML</string>
+    <string name="select">SELECT</string>
+    <string name="from">FROM</string>
+    <string name="where">WHERE</string>
+    <string name="title_activity_map">Map</string>
+    <string name="database">Database</string>
+    <string name="preference_file_key" />
+    <string name="status_exception_error">%1$s (status %2$d). %3$s.</string>
+    <string name="achievements_exception">There was an issue communicating with achievements.</string>
+
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+    /
+
+</resources>

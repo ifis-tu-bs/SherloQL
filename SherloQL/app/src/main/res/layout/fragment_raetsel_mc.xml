@@ -1,0 +1,248 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_raetsel"
+        tools:context=".uiraetsel.RaetselMainFragment">
+
+
+        <View
+            android:id="@+id/viewRiddle"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:background="@color/color7"
+            android:translationZ="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/ubuntu"
+            android:foregroundGravity="center"
+            android:gravity="left"
+            android:text="Type Raetsel"
+            android:textColor="@color/color1"
+            android:textSize="25sp"
+            android:translationZ="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/viewRiddle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/viewRiddle" />
+
+
+        <ImageView
+            android:id="@+id/total_coins"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="24dp"
+            android:translationZ="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/total_coins" />
+
+        <TextView
+            android:id="@+id/total_coins_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/ubuntu"
+            android:text="0"
+            android:textColor="@color/color8"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:translationZ="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+            app:layout_constraintEnd_toStartOf="@+id/total_coins"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="0dp"
+            android:layout_height="220dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            app:cardBackgroundColor="@color/color1"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewRiddle" />
+
+
+        <View
+            android:id="@+id/viewRiddle2"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginEnd="64dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:translationZ="2dp"
+            android:background="#212121"
+            app:layout_constraintEnd_toEndOf="@+id/cardView"
+            app:layout_constraintStart_toStartOf="@+id/cardView"
+            app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Raetsel Name"
+            android:textColor="@color/color1"
+            android:fontFamily="@font/ubuntu"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:translationZ="3dp"
+            app:layout_constraintBottom_toBottomOf="@+id/viewRiddle2"
+            app:layout_constraintEnd_toEndOf="@+id/viewRiddle2"
+            app:layout_constraintStart_toStartOf="@+id/viewRiddle2"
+            app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="0dp"
+            android:layout_height="185dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMaxTextSize="20sp"
+            android:gravity="center"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:translationZ="3dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView"
+            app:layout_constraintEnd_toEndOf="@+id/cardView"
+            app:layout_constraintStart_toStartOf="@+id/cardView"
+            app:layout_constraintTop_toBottomOf="@+id/viewRiddle2" />
+
+
+                <ImageButton
+                    android:id="@+id/hint_icon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="36dp"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:srcCompat="@drawable/hint_icon" />
+
+
+        <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+            android:id="@+id/image_riddle"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:minWidth="100dp"
+            android:minHeight="100dp"
+            android:clickable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+
+        <Button
+            android:id="@+id/btnChoiceOne"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/raetsel_shape"
+            android:fontFamily="@font/ubuntu"
+            android:textColor="@color/color7"
+            android:backgroundTintMode="@color/color1"
+            app:layout_constraintBottom_toTopOf="@+id/btnChoiceTwo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_riddle" />
+
+
+        <Button
+            android:id="@+id/btnChoiceTwo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/raetsel_shape"
+            android:fontFamily="@font/ubuntu"
+            android:textColor="@color/color7"
+            android:backgroundTintMode="@color/color1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnChoiceOne" />
+
+
+        <Button
+            android:id="@+id/btnChoiceThree"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/raetsel_shape"
+            android:fontFamily="@font/ubuntu"
+            android:textColor="@color/color7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnChoiceTwo" />
+
+
+        <Button
+            android:id="@+id/btnChoiceFour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/raetsel_shape"
+            android:fontFamily="@font/ubuntu"
+            android:textColor="@color/color7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnChoiceThree" />
+
+
+        <Button
+            android:id="@+id/backToMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:onClick="buttonClick"
+            android:text="Zurück zur Karte"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnChoiceFour" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

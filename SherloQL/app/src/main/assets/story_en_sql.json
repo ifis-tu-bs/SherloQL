@@ -1,0 +1,5206 @@
+{"Story": [
+    {
+        "chapter": "Chapter 0",
+        "image": "",
+        "flag": "0",
+        "question": "Please enter your name.",
+        "dependency": [],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Please enter your name."
+            },
+            {
+                "cost": "2",
+                "hint": "Please enter your name."
+            },
+            {
+                "cost": "3",
+                "hint": "Please enter your name."
+            }
+        ],
+        "latitude": "52.27305856594336",
+        "artefact": ["intro"],
+        "type": "answer",
+        "TTL": [],
+        "answer": "",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Good Morning! There you are!",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "My name is Barton and I will guide you through your first case in Brunswick.",
+                "position": "103"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Since you are new here I will take the chance to show you around the city and introduce you to the language SQL.",
+                "position": "104"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "I already created a database for you to use during this case.",
+                "position": "105"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Detektiv",
+                "text": "Since this is our first time meeting, would you mind telling me your name?",
+                "position": "106"
+            },
+            {
+                "image": "Rsurprised",
+                "person": "Detektiv",
+                "text": "Ok {$USER$}, let's start!",
+                "position": "201"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Detektiv",
+                "text": "This morning at 5.32 am a body was found here at the Gaußberg Park.",
+                "position": "202"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Since we're already here let me tell you a bit about the park itself.",
+                "position": "203"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "The park is a small public park of 1.38 hectare that was installed in 1831.",
+                "position": "204"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "From its plateau one can view the surrounding rampard streets, the Oker and the square at Wendentor.",
+                "position": "205"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Detektiv",
+                "text": "Let's head to the crime scene. The police should be there already.",
+                "position": "206"
+            }
+        ],
+        "place": "Informatik Zentrum",
+        "longitude": "10.524859033659743"
+    },
+    {
+        "chapter": "Chapter 1",
+        "image": "",
+        "flag": "0",
+        "question": "Find Moritz's phone number in the table \"personen\". The ID should correspond with Gauß's age. You should be able to find more information at the back of the park.",
+        "dependency": ["intro"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "His birth and death dates can be found on a monument."
+            },
+            {
+                "cost": "2",
+                "hint": "1777-1855"
+            },
+            {
+                "cost": "3",
+                "hint": "77 years"
+            }
+        ],
+        "latitude": "52.27212148362936",
+        "artefact": [
+            "?terminkalender",
+            "?kinoticket",
+            "?abschiedsbrief"
+        ],
+        "type": "sql",
+        "TTL": [],
+        "answer": "015733567813",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Polizist",
+                "text": "Good morning, detective.",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Good morning. How far have you gotten in your investigations?",
+                "position": "102"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Polizist",
+                "text": "As stated, a witness has found a male body at the river bank this morning at 5.32 am.",
+                "position": "103"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Polizist",
+                "text": "We have identified the corpse as 24 year old PhD student Moritz Mayer.",
+                "position": "104"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Polizist",
+                "text": "Upon first examinations it has been determined that the victim drowned late yesterday. No traces of external influences.",
+                "position": "105"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Polizist",
+                "text": "Furthermore we have found the victim's suicide letter, a movie ticket, as well as an organizer. As of this time we suspect a suicide.",
+                "position": "106"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Detektiv",
+                "text": "What about the witness?",
+                "position": "107"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Polizist",
+                "text": "Our witness is the 37 year old gardener Arianne Baumgarten. She found the body this morning during her rounds in the Gaußberg Park.",
+                "position": "108"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Polizist",
+                "text": "She is currently with our psychologist.",
+                "position": "109"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Detektiv",
+                "text": "Have any other people been questioned so far?",
+                "position": "110"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Polizist",
+                "text": "Yes. You can find the list of all suspects, as well as all evidence with one of my collegues.",
+                "position": "111"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Polizist",
+                "text": "He should still be in the Gaußberg Park.",
+                "position": "112"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "All right, thank you very much. Please let us know if there are any updates.",
+                "position": "113"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Polizist",
+                "text": "Very well, Sir. Good luck with your investigations.",
+                "position": "114"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Goodbye. Have a nice day.",
+                "position": "115"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Detektiv",
+                "text": "Sounds like a pretty staightfoward case, {$USER$}. Let's go find his collegues. Maybe the evidence can tell us more.",
+                "position": "116"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Detektiv",
+                "text": "But wait! Look up the victims phone number first. It's already in the database. Maybe we can find out a little more from there.",
+                "position": "117"
+            },
+            {
+                "image": "Rsurprised",
+                "person": "Detektiv",
+                "text": "Good job.",
+                "position": "201"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Detektiv",
+                "text": "It looks like the victim met quite a few people on the day he died. We should question them first.",
+                "position": "202"
+            }
+        ],
+        "place": "Gaussberg Park",
+        "longitude": "10.522789432050589"
+    },
+    {
+        "chapter": "Vernehmung Professor",
+        "image": "",
+        "flag": "0",
+        "question": "Look in the table \"terminkalender\" if the Professor actually had a meeting that evening (stating from 5 pm). The time is givin in \"hhmm\".",
+        "dependency": ["?terminkalender"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Choose the table \"terminkalender\""
+            },
+            {
+                "cost": "2",
+                "hint": "Use >= on the beginning of the dates"
+            },
+            {
+                "cost": "3",
+                "hint": "SELECT tk_taetigkeit FROM terminkalender WHERE tk_begin >= 1700"
+            }
+        ],
+        "latitude": "52.2734275073803",
+        "artefact": ["professor"],
+        "type": "sql",
+        "TTL": [
+            "gaertnerin",
+            "!professor"
+        ],
+        "answer": "Presentation Paper \"modern security breaches\".",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "There we are, {$USER$}!",
+                "position": "101"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "The Techinical University Carolo-Wilhelmina was founded in 1745.",
+                "position": "102"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "With close to 20000 students and 71 courses it is one of the most significant universities in Germany.",
+                "position": "103"
+            },
+            {
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text": "Moreover the university is one of the nine most prominent technical universities in Germany (TU9).",
+                "position": "104"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ah, I can already see the Professor ahead. Let's go talk to him.",
+                "position": "105"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Hello! We are looking for Professor Thomas Münch?",
+                "position": "106"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Ah yes. That would be me.",
+                "position": "107"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Professor",
+                "text": "I assume you are here because of Moritz Mayer?",
+                "position": "108"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Correct. As you might already know he was found dead this morning.",
+                "position": "109"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "We found your name in his planer. Could you tell us what your relationship was?.",
+                "position": "110"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Professor",
+                "text": "I was his supervisor and mentor for the startup he was working on.",
+                "position": "111"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "What startup?",
+                "position": "112"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Moritz Mayer and Rico Weiß founded a startup together. I was supporting them with it.",
+                "position": "113"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "The startup was developing a database that collects patient data.",
+                "position": "114"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "I was to include all patients in Germany.",
+                "position": "115"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Including their address, vaccinations, allergies, and more.",
+                "position": "116"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Meaning, whoever has access to the database, has access to information on almost all people in Germany.",
+                "position": "117"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Information that could be sold or used for identity theft and more.",
+                "position": "118"
+            },
+            {
+                "image": "Rsurprised",
+                "person": "Professor",
+                "text": "If I am being honest, I believe this could have been the reason Moritz was killed.",
+                "position": "119"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Where else have you been yesterday?",
+                "position": "120"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "I was in a meeting. My secretary can confirm this.",
+                "position": "121"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Did you notice anything different about Moritz in the last few days?",
+                "position": "122"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "We know, that you met up with him.",
+                "position": "123"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Professor",
+                "text": "We met, because he had a few questions for me regarding the database.",
+                "position": "124"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Since the project got bigger, he wanted to increase the security.",
+                "position": "125"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Professor",
+                "text": "Ah. There was something. Shortly after meeting with Moritz hie friend came by. She was asking for him.",
+                "position": "126"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Do you know her name?",
+                "position": "127"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Her name is Viktoria Kästner. She was also one of my mentees.",
+                "position": "128"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Professor",
+                "text": "I know, that she wanted to be part of the startup, too.",
+                "position": "129"
+            },
+            {
+                "image": "Rsurprised",
+                "person": "Professor",
+                "text": "Moritz was adamantly against it, but I don't know why.",
+                "position": "130"
+            },
+            {
+                "image": "Rsurprised",
+                "person": "Professor",
+                "text": "It seemed to me like he was very sceptical of her.",
+                "position": "131"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Thank you very much Professor. This was very helpful.",
+                "position": "132"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "It seems like things are slowly clearing up.",
+                "position": "133"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "No problem, detective. I hope you can find the culprit soon.",
+                "position": "134"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "He was a highly intelligent young man. I hope you have a nice day.",
+                "position": "135"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Well, {$USER$}, this gives us some things to think about.",
+                "position": "136"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "He mentioned a Viktoria Kästner. Maybe we should question her, too.",
+                "position": "137"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "But let's check the Professor's alibi first.",
+                "position": "138"
+            }
+        ],
+        "place": "Universitaetsplatz",
+        "longitude": "10.529241533208864"
+    },
+    {
+        "chapter": "Vernehmung Psychologin",
+        "image": "",
+        "flag": "0",
+        "question": "Find the floor the psychologist is working on by using a suitable SQL query. Her ID is 714. Use table joins.",
+        "dependency": ["?terminkalender"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "You need atleast two joins."
+            },
+            {
+                "cost": "2",
+                "hint": "Join \"person_in_abteilung\" and \"abteilung\" on the names and filter for the psychologist's ID"
+            },
+            {
+                "cost": "3",
+                "hint": "SELECT abt_etage FROM abteilung JOIN person_in_abteilung ON abt_name = pia_abteilung WHERE person_id = 714"
+            }
+        ],
+        "latitude": "52.265731",
+        "artefact": ["pastor", "yvonne"],
+        "type": "sql",
+        "TTL": [
+            "gaertnerin",
+            "!yvonne"
+        ],
+        "answer": "2",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "There we are, {$USER$}. The psychologist should be working here.",
+                "position": "101"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "First we have to find out which floor she is working on.",
+                "position": "102"
+            },
+            {
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text": "Right. Thank you. Let's go there.",
+                "position": "201"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Hello. Can I help you?",
+                "position": "202"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Hello. I am Detective Barton and this is my assistant {$USER$}.",
+                "position": "203"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "We are here because of Moritz Mayer and wanted to talk with his psychologist.",
+                "position": "204"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Do you know who we have to ask for?",
+                "position": "205"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "That would be me. My name is Yvonne Bayer. Please come into my office.",
+                "position": "206"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Thank you. As you may know, Moritz Mayer was found dead this morning.",
+                "position": "207"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "We have some questions regarding his death.",
+                "position": "208"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Could you tell us more about Mr. Mayer?",
+                "position": "209"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Yes, sure. I was assisting Mr. Mayer with his startup since the beginning this year.",
+                "position": "210"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "I was advising him on the patient data that should be saved.",
+                "position": "211"
+            },
+            {
+                "image": "Rsurprised",
+                "person": "Yvonne",
+                "text": "I am still shaken by his death.",
+                "position": "212"
+            },
+            {
+                "image": "Rsurprised",
+                "person": "Yvonne",
+                "text": "I never got the impression that he would take his own life.",
+                "position": "213"
+            },
+            {
+                "image": "Rsurprised",
+                "person": "Yvonne",
+                "text": "He was a very intelligent and diligent young man.",
+                "position": "214"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "When have you last seen him?",
+                "position": "215"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Yvonne",
+                "text": "We met yesterday around 10am for a little while.",
+                "position": "216"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Yvonne",
+                "text": "That was the last time I saw him.",
+                "position": "217"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Did you notice anything off about him?",
+                "position": "218"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Yvonne",
+                "text": "Not really. I only noticed that he seemed worried.",
+                "position": "219"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "But I didn't think much about it.",
+                "position": "220"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "I thought that it would have something to do with the startup.",
+                "position": "221"
+            },
+            {
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text": "Were you anywhere else yesterday?",
+                "position": "222"
+            },
+            {
+                "image": "Rsurprised",
+                "person": "Yvonne",
+                "text": "Let me think. I was at the church service at the Cathedral.",
+                "position": "223"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Can someone confirm this?",
+                "position": "224"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Yvonne",
+                "text": "Yes. I talked with the pastor David right after service.",
+                "position": "225"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Thank you Ms. Beyer, that would be it for now.",
+                "position": "226"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "We ask you to be available for further questions.",
+                "position": "227"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Please let us know if you remember anything else.",
+                "position": "228"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Thank you, Sir. I will.",
+                "position": "229"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Talking about the Start-up! We should try to find out more about it, {$USER$}.",
+                "position": "230"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Let's take a quick break for now.",
+                "position": "231"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "After that we should check out the Cathedral.",
+                "position": "232"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Let's see if the pastor can confirm the alibi.",
+                "position": "233"
+            }
+        ],
+        "place": "Studentenwerk",
+        "longitude": "10.527609"
+    },
+	{
+		"chapter": "Vernehmung Pastor",
+        "image": "",
+        "flag": "0",
+        "question": "Find out if the psychologist was at the service.She has the ID 714. The relevant tables are \"gottesdienste\" and \"teilnahme_an_gottesdienst\".",
+        "dependency": ["pastor"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Table joins could be very helpful."
+            },
+            {
+                "cost": "2",
+                "hint": "2 tables"
+            },
+            {
+                "cost": "3",
+                "hint": "SELECT gd_id FROM gottesdienste JOIN teilnahme_gottesdienst ON gd_id = tag_gd_id WHERE tag_person = 714"
+            }
+        ],
+        "latitude": "52.26446347384392",
+        "artefact": ["Alibi"],
+        "type": "sql",
+        "TTL": [],
+        "answer": "4",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Finally, this is the Brunswick Cathedral, {$USER$}. Let me tell you a little about it before we head in.",
+                "position": "101"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "The Cathedral is a episcopal church of the Evangelical-Lutheran Church in Brunswick.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "It was build by Henry the Lion from 1173 to 1195 upon his return from palestine.",
+                "position": "103"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "This Cathedral is the tomb of Henry the Lion and his family.",
+                "position": "104"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Since then it has ben rebuild, expanded and reconstructed multiple times.",
+                "position": "105"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Perfektes Timing! The service just finished. Let's go talk to the pastor.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Good evening. We are looking pastor David. Can you help us?",
+                "position": "107"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Pastor",
+                "text": "Good evening. Yes, that would be me. How can I help you?",
+                "position": "108"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "I am detective Barton and this is my assistant {$USER$}.",
+                "position": "109"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "We are currently working on a case and would like to know if a certain Mr. Beyer took part in the service yesterday evening.",
+                "position": "110"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Pastor",
+                "text": "Ms. Beyer. Let me take a quick look at my list.",
+                "position": "111"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Pastor",
+                "text": "Ah, yes! Ms. Beyer was here for the service last evening and asked me some questions after.",
+                "position": "112"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Pastor",
+                "text": "I hope that everything is alright?",
+                "position": "113"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ms. Beyer is fine, no need to worry.",
+                "position": "114"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "We are currently investigating the death of a young man, who has been found this morning in the Gaußberg Park.",
+                "position": "115"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Pastor",
+                "text": "May his soul rest in peace. I hope I was able to help you.",
+                "position": "116"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Yes, you were. Thank you very much! I hope you have a nice evening.",
+                "position": "117"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Hey {$USER$}. Please take a look at the pastor's list and check if it is the same Ms. Beyer we are looking for. The list is already in the database.",
+                "position": "118"
+            },
+			{
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text": "Well, that confirms her alibi. It's already pretty late, let's continue tomorrow.",
+                "position": "201"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Rest well, you have already done a lot today. See you tomorrow.",
+                "position": "202"
+            }
+			
+		],
+		"place": "Dom",
+        "longitude": "10.523414015794136"
+	},
+	{
+		"chapter": "Vernehmung Rico",
+        "image": "",
+        "flag": "0",
+        "question": "You can find the cinema ticket, that Moritz had with him, on the pin board. Determine the day, on which the movie was shown. Use the table \"filme\".",
+        "dependency": ["?terminkalender"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Use the information on the cinema ticket."
+            },
+            {
+                "cost": "2",
+                "hint": "Use \"LIKE\" and the appropriate % to compare."
+            },
+            {
+                "cost": "3",
+                "hint": "SELECT film_wochentag FROM filme WHERE film_name like 'Sherlock%'"
+            }
+        ],
+        "latitude": "52.26678923591834",
+        "artefact": ["rico"],
+        "type": "sql",
+        "TTL": [
+            "gaertnerin",
+            "!rico"
+        ],
+        "answer": "Monday",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ah, there you are {$USER$}.",
+                "position": "101"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "We are at the Astor Film Theater Braunschweig, probably the most popular cinema in Brunswick.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "It has enough seats for a total of 2573 visitors, split into 8 halls.",
+                "position": "103"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Old classics are re-run quite regularly, that are advertised in der Brunswick newsletter.",
+                "position": "104"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "That reminds me of one of the evidences: the washed out cinema ticket.",
+                "position": "105"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "We should check when Moritz was watching the movie. Maybe that could help us along.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "I have already acquired a list of the last weeks movie plan. It's already in the database.",
+                "position": "107"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Great! I assume, that Mr. Weiß is waiting for us right there.Let's go.",
+                "position": "201"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Hello. You have to be Henrik Weiß. Thank you for taking your time.",
+                "position": "202"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Hello! You can call me Rico if you want. How can I help you?",
+                "position": "203"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "We sadly have to tell you that your friend Moritz Mayer has been found dead in the Gaußberg Park this morning.",
+                "position": "204"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "According to first investigations we are assuming that it was suicide.",
+                "position": "205"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Rico",
+                "text": "What?! That can't be! Moritz wouldn't kill himself! We even wanted to meet up today!",
+                "position": "206"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Well, seems like you have to cancel that. We wanted to ask how your relationship to Moritz was.",
+                "position": "207"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Rico",
+                "text": "I am sorry, I have to digest it first. He was my best friend.",
+                "position": "208"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Could you tell us something about him? How was he?",
+                "position": "209"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Did you notice anything off about him, that could lead him to his suicide?",
+                "position": "210"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Rico",
+                "text": "Well, he was a computer engineering student just like me.",
+                "position": "211"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Rico",
+                "text": "He was putting a lot of work into our startup, but he never seemed suicidal to me.",
+                "position": "212"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "You mentioned a startup. Could you tell us more about it?",
+                "position": "213"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "We founded the startup together. It was supposed to collect patient data.",
+                "position": "214"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Rico",
+                "text": "Well, a collection of addresses, allergies and other information on German citizens, to make it easier for medical practitioners.",
+                "position": "215"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "That sounds like a very useful database.",
+                "position": "216"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "But it could be very dangerous in the wrong hands.",
+                "position": "217"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Rico",
+                "text": "Are you saying, that it could have been a motive for murder?",
+                "position": "218"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "I am saying that I believe you to be his murderer.",
+                "position": "219"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Rico",
+                "text": "I don't know what made you believe that?",
+                "position": "220"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Rico",
+                "text": "Are you kidding?",
+                "position": "221"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Rico",
+                "text": "I am already part of the startup. What would I gain from killing my best friend?!",
+                "position": "222"
+            },
+			{
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text": "I have to consider all possibilities.",
+                "position": "223"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Rico",
+                "text": "I am sorry. I still cant believe what happened. You are just doing your job.",
+                "position": "224"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "You seem to be quite upset.",
+                "position": "225"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Maybe you should go home and try to come to terms with it. We will stay in contact.",
+                "position": "226"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "The police psychologist is always available to you, should you need any help.",
+                "position": "227"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Ok, thank you very much. I hope you have a nice day.",
+                "position": "228"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Thank you. Rest well.",
+                "position": "229"
+            }
+		],
+		"place": "Kino",
+        "longitude": "10.517396248261711"
+	},
+	{
+		"chapter": "Vernehmung Viktoria (Rico)",
+        "image": "",
+        "flag": "0",
+        "question": "Delete the entry with the person ID 819. This person has nothing to do with the story ;)",
+        "dependency": ["rico"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Use Data Manipulation Language (DML)."
+            },
+            {
+                "cost": "2",
+                "hint": "Specify the ID to be deleted in the query."
+            },
+            {
+                "cost": "3",
+                "hint": "DELETE FROM personen WHERE person_id=819;"
+            }
+        ],
+        "latitude": "52.26615541291471",
+        "artefact": ["akt1", "viktoria"],
+        "type": "sql-delete",
+        "TTL": [],
+        "answer": "persons,person_id,819",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Here we are at the new town city hall, {$USER$}, also known as the DAX.",
+                "position": "101"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Over the years the new town city hall has been used for different things.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "It has been used as a central town hall since the 13th century.",
+                "position": "103"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "From 1671 to 1830 it was the place of administration for the new town and in the 19th and 20th century it was a archive and museum.",
+                "position": "104"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "From September 26, 1913 the building was used as the city's school museum, where exhibitions, presentations and experimental classes were held.",
+                "position": "105"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "The building was partially destroyed due to numerous bomb attacks during the second world war and rebuild in 1974.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "These days it is home of the Bierbörse Dax. Always worth a visit.",
+                "position": "107"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "I have recently noticed an old, irrelevant entry in our database. Can you delete it for me?",
+                "position": "108"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Well, that's that. Let's move on.",
+                "position": "201"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Hello. You must be Viktoria Kästner.",
+                "position": "202"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Viktoria",
+                "text": "Hello. I have already heard about Moritz. So tragic.",
+                "position": "203"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "We have heard, that you knew Moritz. What was your relationship?",
+                "position": "204"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "I was his best friend and class mate.",
+                "position": "205"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "I see. Did you notice anything off about him recently?",
+                "position": "206"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Did he behave any different?",
+                "position": "207"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "Yes, I noticed that he was very stressed, but he usually was.",
+                "position": "208"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Do you know why?",
+                "position": "209"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Viktoria",
+                "text": "Maybe you have already heard of the startup.",
+                "position": "210"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Yes, it has come up a few times.",
+                "position": "211"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "I thought that was the reason for him being stressed. Someone offered them monetary support recently.",
+                "position": "212"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "\"Them\". So you are not part of it.",
+                "position": "213"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "No, I am not. But that is another story.",
+                "position": "214"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Well, we have time.",
+                "position": "215"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Viktoria",
+                "text": "What do you want to know?",
+                "position": "216"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "I wanted to contribute, but wasn't allowed to. I don't know why.",
+                "position": "217"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "That's it.",
+                "position": "218"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Well, ok.",
+                "position": "219"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Could you tell us what you were doing in the night of his death then?",
+                "position": "220"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "You can't be serious. I am a suspect?",
+                "position": "221"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Please calm down. This is just routine. Everyone is a suspect at first.",
+                "position": "222"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "I was out partying. I am allowed to have fun when I want to.",
+                "position": "223"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "On your own?",
+                "position": "224"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "Yes, of course. Everyone I usually go with didn't have time.",
+                "position": "225"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "Do you have any problems with that?",
+                "position": "226"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "No, thank you for your time. We hope you have a nice day.",
+                "position": "227"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "You too. Bye.",
+                "position": "228"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Hmmm. It seems like Moritz's death is affecting her a lot. I don't think Viktoria has any reasons to murder Moritz. What do you think {$USER$}?",
+                "position": "229"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Take a break for now. We still have a lot to do.",
+                "position": "230"
+            }
+		],
+		"place": "Neustadtrathaus",
+        "longitude": "10.522089313871277"
+	},
+	{
+		"chapter": "Vernehmung Viktoria (Prof)",
+        "image": "",
+        "flag": "0",
+        "question": "Delete the entry with the person ID 819. This person has nothing to do with the story ;)",
+        "dependency": ["professor"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Use Data Manipulation Language (DML)."
+            },
+            {
+                "cost": "2",
+                "hint": "Specify the ID to be deleted in the query."
+            },
+            {
+                "cost": "3",
+                "hint": "DELETE FROM personen WHERE person_id=819;"
+            }
+        ],
+        "latitude": "52.26615541291471",
+        "artefact": ["akt1", "viktoria"],
+        "type": "sql-delete",
+        "TTL": ["rico"],
+        "answer": "persons,person_id,819",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Here we are at the new town city hall, {$USER$}, also known as the DAX.",
+                "position": "101"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Over the years the new town city hall has been used for different things.",
+                "position": "102"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "It has been used as a central town hall since the 13th century.",
+                "position": "103"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "From 1671 to 1830 it was the place of administration for the new town and in the 19th and 20th century it was a archive and museum.",
+                "position": "104"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "From September 26, 1913 the building was used as the city's school museum, where exhibitions, presentations and experimental classes were held.",
+                "position": "105"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "The building was partially destroyed due to numerous bomb attacks during the second world war and rebuild in 1974.",
+                "position": "106"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "These days it is home of the Bierbörse Dax. Always worth a visit.",
+                "position": "107"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "I have recently noticed an old, irrelevant entry in our database. Can you delete it for me?",
+                "position": "108"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Well, that's that. Let's move on.",
+                "position": "201"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Hello. You must be Viktoria Kästner.",
+                "position": "202"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Viktoria",
+                "text": "Hello. I have already heard about Moritz. So tragic.",
+                "position": "203"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "We have heard, that you knew Moritz. What was your relationship?",
+                "position": "204"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "I was his best friend and class mate.",
+                "position": "205"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "I see. Did you notice anything off about him recently?",
+                "position": "206"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Did he behave any different?",
+                "position": "207"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "Yes, I noticed that he was very stressed, but he usually was.",
+                "position": "208"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Do you know why?",
+                "position": "209"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Viktoria",
+                "text": "Maybe you have already heard of the startup.",
+                "position": "210"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Yes, it has come up a few times.",
+                "position": "211"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "I thought that was the reason for him being stressed. Someone offered them monetary support recently.",
+                "position": "212"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "\"Them\". So you are not part of it.",
+                "position": "213"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "No, I am not. But that is another story.",
+                "position": "214"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Well, we have time.",
+                "position": "215"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Viktoria",
+                "text": "What do you want to know?",
+                "position": "216"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "I wanted to contribute, but wasn't allowed to. I don't know why.",
+                "position": "217"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "That's it.",
+                "position": "218"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Well, ok.",
+                "position": "219"
+            },
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Could you tell us what you were doing in the night of his death then?",
+                "position": "220"
+            },
+            {
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "You can't be serious. I am a suspect?",
+                "position": "221"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Please calm down. This is just routine. Everyone is a suspect at first.",
+                "position": "222"
+            },
+            {
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "I was out partying. I am allowed to have fun when I want to.",
+                "position": "223"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "On your own?",
+                "position": "224"
+            },
+            {
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "Yes, of course. Everyone I usually go with didn't have time.",
+                "position": "225"
+            },
+            {
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "Do you have any problems with that?",
+                "position": "226"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "No, thank you for your time. We hope you have a nice day.",
+                "position": "227"
+            },
+            {
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "You too. Bye.",
+                "position": "228"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Hmmm. It seems like Moritz's death is affecting her a lot. I don't think Viktoria has any reasons to murder Moritz. What do you think {$USER$}?",
+                "position": "229"
+            },
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Take a break for now. We still have a lot to do.",
+                "position": "230"
+            }
+		],
+		"place": "Neustadtrathaus",
+        "longitude": "10.522089313871277"
+	},
+	{
+		"chapter": "Vernehmung Gärtnerin",
+        "image": "",
+        "flag": "0",
+        "question": "Count, how often the gardener can be found in \"arbeitsplan\". Her ID is 3.",
+        "dependency": ["akt1"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Use the aggregate functions"
+            },
+            {
+                "cost": "2",
+                "hint": "Use COUNT"
+            },
+            {
+                "cost": "3",
+                "hint": "SELECT COUNT(ap_person) FROM arbeitsplan WHERE ap_person = 3"
+            }
+        ],
+        "latitude": "52.262420349287815",
+        "artefact": ["gaertnerin","?obduktionsbericht"],
+        "type": "sql",
+        "TTL": [],
+        "answer": "2",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Hey {$USER$}. I just got the police notice saying that the gardener was released from therapy and is back to working.",
+                "position": "101"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "I have already entered the working schedule she gave the police into our database.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "I also took the freedom to call her and have her meet us at the Kohlmarkt.",
+                "position": "103"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "While we wait for her I can tell you a few interesting things about the Kohlmarkt.",
+                "position": "104"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Did you know that the name Kohlmarkt has nothing to do with the vegetable (Kohl = cabbage)?",
+                "position": "105"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "The square was originally called Kohlenmarkt (coal market) because it used to be where coal was stored and sold.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Nowadays it is a popular place to meet up with a lot of cafes and restaurants surrounding it.",
+                "position": "107"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "The square also offers a variety of events. Feel free to look around!",
+                "position": "108"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ah, it seems Mrs. Baumgarten is here. Very good!",
+                "position": "109"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Hello!",
+                "position": "110"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "My name is Barton and this is my assistant {$USER$}. We are currently investigating the death of Moritz Mayer, whose body you found at the beginning of the week.",
+                "position": "111"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Arianne",
+                "text": "Oh, hello. Yes, that is correct. I found the young man that morning.",
+                "position": "112"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "That can wait for a second! Tell us what happened again as detailed as possible, please.",
+                "position": "113"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Arianne",
+                "text": "I arrived that morning and found the young man liveless in the park.",
+                "position": "114"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Arianne",
+                "text": "Of course I immediately called the police.",
+                "position": "115"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Hey. Please take a look if she had to work when the murder took place.",
+                "position": "116"
+            },
+			{
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text": "Weird. According to your schedule you didn't have to work that day.",
+                "position": "201"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Arianne",
+                "text": "I was only working because one of my colleagues was.... wait, how did you know?",
+                "position": "202"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Well, I \"am\" doing my job. I have to know everything about the possible perpetrators.",
+                "position": "203"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Arianne",
+                "text": "Very well. I just wanted to tell that I don't remember seeing the farewell letter the police found in the park anyway.",
+                "position": "204"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Arianne",
+                "text": "Now if you excuse me. I still need time to digest everything. Have a nice day.",
+                "position": "205"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Have a nice day!",
+                "position": "206"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "The way she acts is suspicious, {$USER$}. Something is off. We should keep an eye on her.",
+                "position": "207"
+            }
+		],
+		"place": "Kohlmarkt",
+        "longitude": "10.520019944565053"
+	},
+	{
+		"chapter": "Gespräch Polizei",
+        "image": "notizzettel",
+        "flag": "0",
+        "question": "Put the pieces back together (input the numbers in order from left to right).",
+        "dependency": ["gaertnerin"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Check the edges."
+            },
+            {
+                "cost": "2",
+                "hint": "You should receive a legible text."
+            },
+            {
+                "cost": "3",
+                "hint": "SHERLOCK"
+            }
+        ],
+        "latitude": "52.26496582024375",
+        "artefact": ["gaertnerintod", "notizzettel"],
+        "type": "answer",
+        "TTL": [],
+        "answer": "SHERLOCK",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Good, you are here {$USER$}. We are currently in the Museumspark.",
+                "position": "101"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "It's located in the east of the Brunswick city center that is surrounded by the Oker and the moats.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "It's a total of 4.81 hectare big, which is roughly about 6 soccer fields.",
+                "position": "103"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "The park as it is now was scaled down during the building of the Herzog Anton Ulrich Museum in 1883.",
+                "position": "104"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Polizist",
+                "text": "Ah! hello, Sir.",
+                "position": "105"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Polizist",
+                "text": "As I have already told you on the phone, the dead body of Arianne Baumgarten was found by a passerby this morning.",
+                "position": "106"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Are there any other witnesses.",
+                "position": "107"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Polizist",
+                "text": "Aside from the one who found the body there are no witnesses.",
+                "position": "108"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Polizist",
+                "text": "Said witness is currently with our psychologists.",
+                "position": "109"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Any evidence or such?",
+                "position": "110"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Polizist",
+                "text": "We did indeed find what seems to be a ripped up note close to the body.",
+                "position": "111"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Polizist",
+                "text": "I have already send you a copy.",
+                "position": "112"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Polizist",
+                "text": "Considering the information we have now, it is also quite possible that Mr. Mayers death was not a suicide.",
+                "position": "113"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Polizist",
+                "text": "If that is the case, it is also safe to assume that the farewell letter was written by the murderer",
+                "position": "114"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Thank you very much! Best of luck for your further investigations. Have a nice day!",
+                "position": "115"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Polizist",
+                "text": "Thank you. Good luck to you, too. Have a nice day.",
+                "position": "116"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "It seems that her body shows the same signs as Moritz's body. This can't be a coincident, {$USER$}.",
+                "position": "117"
+            },
+			{
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text": "Moritz's death appears to be more complicated than a suicide.",
+                "position": "118"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "We should put this note back together immediately. You do that while I make a phone call.",
+                "position": "119"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Good job! Now what does this note mean... ",
+                "position": "201"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "You know what, {$USER$}, let's talk to our suspects again. I think someone didn't tell us everything the first time.",
+                "position": "202"
+            }
+		],
+		"place": "Museumspark",
+        "longitude": "10.533103864472105"
+	},
+	{
+		"chapter": "Vernehmung Yvonne und Prof Thomas #1",
+        "image": "",
+        "flag": "0",
+        "question": "Take a look in the table \"terminkalender\" and check if the Professor really had a meeting that evening (from 5pm). The time format is \"hhmm\"",
+        "dependency": ["gaertnerintod", "!professor", "!yvonne"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Take a look at the database"
+            },
+            {
+                "cost": "2",
+                "hint": "Choose table \"terminkalender\""
+            },
+            {
+                "cost": "3",
+                "hint": "SELECT tk_taetigkeit FROM terminkalender WHERE tk_begin >= 1700"
+            }
+        ],
+        "latitude": "52.2597077849014",
+        "artefact": ["?schriftprobe_yvonne", "?schriftprobe_professor", "pastor"],
+        "type": "sql",
+        "TTL": [],
+        "answer": "Presentation Paper \"modern security breaches\".",
+        "dialogue": [
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Did I get the time wrong or are we early, {$USER$}?",
+                "position": "101"
+            },
+			{
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text": "Well, if we have the time I might as well tell you a little about the obelisk.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "The obelisk is a monument built in 1823 to remember the dukes Karl Wilhelm Ferdinand and Friedrich Wilhelm of Brunswick, who died in the fight against Napoleon.",
+                "position": "103"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "It represents commemoration, gratitude and adoration.",
+                "position": "104"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "The words “Vaterland” (fatherland) and “Deutschland” (Germany) were used to strengthen the patriotism and increase the willingness for war and sacrifice for national goals.",
+                "position": "105"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Oh, there they are already.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Hello Sir. Madam.",
+                "position": "107"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "You don't know us yet. I am detective Barton and this is my assistant {$USER$}.",
+                "position": "108"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Hello. I am Professor Münch.",
+                "position": "109"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Hello. Yes, you are the one who called me.",
+                "position": "110"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Yes yes. Thank you for meeting us on such a short notice.",
+                "position": "111"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "It is about the murder of a young man, Moritz Mayer.",
+                "position": "112"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Furthermore, the woman who found the young man was also found dead yesterday.",
+                "position": "113"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Oh my god, that is teriible!",
+                "position": "114"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Sadly we already knew about Moritz.",
+                "position": "115"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Ah. Well then, could you tell us what your relationship with the first victim was?",
+                "position": "116"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Maybe you could start, Ms. Beyer.",
+                "position": "117"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "I was advising Moritz and Rico on medicine and the information they needed on patient records for the startup.",
+                "position": "118"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Okay. And what were you doing on the evening of Moritz's death?",
+                "position": "119"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "When was the last time you talked to him?",
+                "position": "120"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "On Thursday evening I was taking part in the service in the Cathedral. It was wit Pastor David.",
+                "position": "121"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "I assume that he can verify this. I was talking with him after the service was over.",
+                "position": "122"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "The last time I saw Moritz was the day before he died. He had some questions on the patient records.",
+                "position": "123"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Okay. I think that is enough for now. What about you, Professor? How do you know Moritz?",
+                "position": "124"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "I was his mentor and also advised Moritz and Rico on their startup's database",
+                "position": "125"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "The database is a collection of patient records, with the information on the citizens of Germany.",
+                "position": "126"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Their address, information on their relations, vaccinations, allergies, medications and such.",
+                "position": "127"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Very interesting. And when was the last time you saw Moritz? Did you notice anything off about him?",
+                "position": "128"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "We met a few days ago. He had a few questions for me, too.",
+                "position": "129"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "He intended to increase the security on the startup.",
+                "position": "130"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Shortly after he left a friend of his came by.",
+                "position": "131"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "She was asking for him.",
+                "position": "132"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "I'm assuming you are talking about Viktoria Kästner.",
+                "position": "133"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Yes. She too is one of my mentee",
+                "position": "134"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "She wanted to be part of the startup too, but Moritz was strongly against it.",
+                "position": "135"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Sadly I don't know why.",
+                "position": "136"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "And where were you on the evening that Moritz died?",
+                "position": "137"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "If I remember correctly I was in a meeting. My secretary will be able to confirm this.",
+                "position": "138"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "We can verify that quickly. Could you please take a quick look in our database?",
+                "position": "139"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Seems to be correct. As said Ms. Arianne Baumgarten, the gardener that found Moritz's body, was also found dead yesterday.",
+                "position": "201"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Do you have an alibi for that time too?",
+                "position": "202"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "I spend that time with Yvonne. We had something to celebrate.",
+                "position": "203"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Yes, I can confirm that.",
+                "position": "204"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "No one else?",
+                "position": "205"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "No, sadly not.",
+                "position": "206"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "I see.",
+                "position": "207"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "One more thing. Could you please write down your contact info down? Just in case we need to contact you again.",
+                "position": "208"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "That would be it. Thank you again for your time. Have a nice day!",
+                "position": "209"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Good luck on your investigations. I hope you catch the culprit soon.",
+                "position": "210"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Good luck, detective. Have a nice day.",
+                "position": "211"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "We should take a closer look at those notes, {$USER$}. Maybe compare them to the evidence we already have just to be safe.",
+                "position": "212"
+            }
+        ],
+		"place": "Löwenwall",
+        "longitude": "10.530907003109151"
+	},
+	{
+		"chapter": "Vernehmung Yvonne und Prof Thomas #2",
+        "image": "",
+        "flag": "0",
+        "question": "Take a look in the table \\\"terminkalender\\\" and check if the Professor really had a meeting that evening (from 5pm). The time format is \\\"hhmm\\\".",
+        "dependency": ["gaertnerintod", "yvonne", "!professor"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Take a look at the database"
+            },
+            {
+                "cost": "2",
+                "hint": "Choose table \\\"terminkalender\\\""
+            },
+            {
+                "cost": "3",
+                "hint": "SELECT tk_taetigkeit FROM terminkalender WHERE tk_begin >= 1700"
+            }
+        ],
+        "latitude": "52.2597077849014",
+        "artefact": ["?schriftprobe_yvonne", "?schriftprobe_professor"],
+        "type": "sql",
+        "TTL": [],
+        "answer": "Presentation Paper \"modern security breaches\".",
+        "dialogue": [
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Did I get the time wrong or are we early, {$USER$}?",
+                "position": "101"
+            },
+			{
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text": "Well, if we have the time I might as well tell you a little about the obelisk.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "The obelisk is a monument built in 1823 to remember the dukes Karl Wilhelm Ferdinand and Friedrich Wilhelm of Brunswick, who died in the fight against Napoleon.",
+                "position": "103"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "It represents commemoration, gratitude and adoration.",
+                "position": "104"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "The words “Vaterland” (fatherland) and “Deutschland” (Germany) were used to strengthen the patriotism and increase the willingness for war and sacrifice for national goals.",
+                "position": "105"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Oh, there they are already.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Hello Sir. Madam.",
+                "position": "107"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Ah hello. Nice to see you again.",
+                "position": "108"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Hello. I am Professor Münch.",
+                "position": "109"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "My name is Barton and I am currently investigating the murder of Moritz Mayer and Arinanne Baumgarten with my assistant {$USER$}.",
+                "position": "110"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "I assume you already know Moritz?",
+                "position": "111"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "You are the same Professor Münch as the one noted in Moritz's planner, right?",
+                "position": "112"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Yvonne",
+                "text": "Wait, murder?!? I thought it was suicide?",
+                "position": "113"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Yes, sadly.",
+                "position": "114"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "According to our newest investigations both Mr. Mayer and Ms. Baumgarten were victims of a murder.",
+                "position": "115"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Oh my god how horrible!",
+                "position": "116"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "I do know Mr. Mayer.",
+                "position": "117"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "It is tragic what happened to him. but I don't know a Arianne Baumgarten.",
+                "position": "118"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "I see. Then maybe you could tell us about Mr. Mayer first.",
+                "position": "119"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Mr. Mayer was one of my PhD students and one of the founders of a startup, that I am a shareholder of.",
+                "position": "120"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "He was a very bright young man.",
+                "position": "121"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Could you tell us a little more about the startup?",
+                "position": "122"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "The startup is developing a central database, that contains a collection of patient records.",
+                "position": "123"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "It holds information on the citizens of Germany.",
+                "position": "124"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Their address, information on their relations, vaccinations, allergies, medications and such.",
+                "position": "125"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "So, whoever has access to it also has access to a lot of sensitive information.",
+                "position": "126"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Information that can be sold or used with malicious intent in a variety of ways ",
+                "position": "127"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Yes, that is correct.",
+                "position": "128"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "And where were you on the evening of Moritz's death?",
+                "position": "129"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "If I remember correctly I was in a meeting. My secretary will be able to confirm this.",
+                "position": "130"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "{$USER$}, take a quick look at the database, please.",
+                "position": "131"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Did you notice anything off about Moritz the days before he died?",
+                "position": "201"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "We know that you met up with him.",
+                "position": "202"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "We met up because he had a few questions for me.",
+                "position": "203"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Since the startup gained importance he wanted to increase security.",
+                "position": "204"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Ah. Shortly after he left a friend of his came by.",
+                "position": "205"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "She was asking for him.",
+                "position": "206"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Do you know her name?",
+                "position": "207"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Viktoria Kästner. She too is one of my mentee.",
+                "position": "208"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "She wanted to be part of the startup too, but Moritz was strongly against it, but I don't know why.",
+                "position": "209"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "It seemed like he did not trust her.",
+                "position": "210"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "And how about the evening of Ms. Baumgarten's murder?",
+                "position": "211"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "I was with Yvonne that time.",
+                "position": "212"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Yes, I can confirm that.",
+                "position": "213"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Is there anyone else that can confirm that?.",
+                "position": "214"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "No, sadly not.",
+                "position": "215"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "I see. One more thing. we need your contact info again.",
+                "position": "216"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Could you write it down for us again, please?",
+                "position": "217"
+            },	
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Of course. Here.",
+                "position": "218"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Yes, of course. Here you go.",
+                "position": "219"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Thank you very much. Your statements were very helpful. That would be it already.",
+                "position": "220"
+            },	
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "We will contact you, should anything come up.",
+                "position": "221"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Good luck on your investigations. I hope you catch the culprit soon.",
+                "position": "222"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Good luck, detective. Have a nice day.",
+                "position": "223"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "You too, have a nice day!",
+                "position": "224"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "We should take a closer look at those notes, {$USER$}. Maybe compare them to the evidence we already have just to be safe.",
+                "position": "225"
+            }
+		],
+		"place": "Loewenwall",
+        "longitude": "10.530907003109151"
+	},
+	{
+		"chapter": "Vernehmung Yvonne und Prof Thomas #3",
+        "image": "",
+        "flag": "0",
+        "question": "Find the combination TTMM in the table \"kreditkartenabrechnung\", where a \"prepaid card\" was purchased. The reference will say \"prepaid card\"",
+        "dependency": ["gaertnerintod", "professor", "!yvonne"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Use WHERE or LIKE."
+            },
+            {
+                "cost": "2",
+                "hint": "There are no JOINs with other tables needed."
+            },
+            {
+                "cost": "3",
+                "hint": "SELECT kka_datum FROM kreditkartenabrechnung WHERE kka_bemerkung = 'Prepaid-Karte'"
+            }
+        ],
+        "latitude": "52.2597077849014",
+        "artefact": ["?schriftprobe_yvonne", "?schriftprobe_professor", "pastor"],
+        "type": "sql",
+        "TTL": [],
+        "answer": "1231",
+        "dialogue": [
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Did I get the time wrong or are we early, {$USER$}?",
+                "position": "101"
+            },
+			{
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text": "Well, if we have the time I might as well tell you a little about the obelisk.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "The obelisk is a monument built in 1823 to remember the dukes Karl Wilhelm Ferdinand and Friedrich Wilhelm of Brunswick, who died in the fight against Napoleon.",
+                "position": "103"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "It represents commemoration, gratitude and adoration.",
+                "position": "104"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "The words “Vaterland” (fatherland) and “Deutschland” (Germany) were used to strengthen the patriotism and increase the willingness for war and sacrifice for national goals.",
+                "position": "105"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Oh, there they are already.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Hello Sir. Madam.",
+                "position": "107"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Ah, hello.",
+                "position": "108"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Hello Mr. Barton. Hello {$USER$}.",
+                "position": "109"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "You might already know that we are investigating the murder of Moritz Mayer and Arianne Baumgarten.",
+                "position": "110"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Wait, murder? I thought it was suicide?",
+                "position": "111"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "According to our newest investigations both Mr. Mayer and Ms. Baumgarten were victims of a murder.",
+                "position": "112"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Oh my god how horrible!",
+                "position": "113"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "It is tragic what happened to him. but I don't know a Arianne Baumgarten.",
+                "position": "114"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "I see. Then let's start with what you know about Mr. Mayer, Ms. Beyer.",
+                "position": "115"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "I was advising Moritz and Rico on medicine and the information they needed on patient records for the startup.",
+                "position": "116"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Okay. And what were you doing on the evening of Moritz's death?",
+                "position": "117"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "When was the last time you talked to him?",
+                "position": "118"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "On Thursday evening I was taking part in the service in the Cathedral. It was wit Pastor David.",
+                "position": "119"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "I assume that he can verify this. I was talking with him after the service was over.",
+                "position": "120"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "The last time I saw Moritz was the day before he died. He had some questions on the patient records.",
+                "position": "121"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "And what were you both doing on the night of Ms. Baumgarten's murder?",
+                "position": "122"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "I spend that time with Yvonne",
+                "position": "123"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Yes, I can confirm that.",
+                "position": "124"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Anyone else?",
+                "position": "125"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Sadly not.",
+                "position": "126"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "I see. One more thing. we need your contact info again.",
+                "position": "127"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Could you write it down for us again, please?",
+                "position": "128"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Yes, of course. Here you go.",
+                "position": "129"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Of course. Here.",
+                "position": "130"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Thank you very much. Your statements were very helpful. That would be it already.",
+                "position": "131"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "We will contact you, should anything come up.",
+                "position": "132"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Good luck on your investigations. I hope you catch the culprit soon.",
+                "position": "133"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Good luck, detective. Have a nice day.",
+                "position": "134"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "You too, have a nice day!",
+                "position": "135"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "We should take a closer look at those notes, {$USER$}. Maybe compare them to the evidence we already have just to be safe.",
+                "position": "136"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Dammit! I wanted to look up the quickest way to the Cathedral, to talk with the pastor, but I forgot my PIN.",
+                "position": "137"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "If I remember correctly it should be the date of the day I bought the SIM card (TTMM)",
+                "position": "138"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Thanks! You are my saviour. I have to go now. See you!",
+                "position": "201"
+            }
+		],
+		"place": "Löwenwall",
+        "longitude": "10.530907003109151"
+	},
+	{
+		"chapter": "Vernehmung Yvonne und Prof Thomas #4",
+        "image": "",
+        "flag": "0",
+        "question": "Find the combination TTMM in the table \"kreditkartenabrechnung\", where a \"prepaid card\" was purchased. The reference will say \"prepaid card\"",
+        "dependency": ["gaertnerintod", "professor", "yvonne"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Use WHERE or LIKE."
+            },
+            {
+                "cost": "2",
+                "hint": "There are no JOINs with other tables needed."
+            },
+            {
+                "cost": "3",
+                "hint": "SELECT kka_datum FROM kreditkartenabrechnung WHERE kka_bemerkung = 'Prepaid-Karte'"
+            }
+        ],
+        "latitude": "52.2597077849014",
+        "artefact": ["?schriftprobe_yvonne", "?schriftprobe_professor"],
+        "type": "sql",
+        "TTL": [],
+        "answer": "1231",
+        "dialogue": [
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Did I get the time wrong or are we early, {$USER$}?",
+                "position": "101"
+            },
+			{
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text": "Well, if we have the time I might as well tell you a little about the obelisk.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "The obelisk is a monument built in 1823 to remember the dukes Karl Wilhelm Ferdinand and Friedrich Wilhelm of Brunswick, who died in the fight against Napoleon.",
+                "position": "103"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "It represents commemoration, gratitude and adoration.",
+                "position": "104"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "The words “Vaterland” (fatherland) and “Deutschland” (Germany) were used to strengthen the patriotism and increase the willingness for war and sacrifice for national goals.",
+                "position": "105"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Oh, there they are already.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Hello Ms. Beyer, Mr. Münch. Nice to see you again.",
+                "position": "107"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Hello Mr. Barton.",
+                "position": "108"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Hello {$USER$}, Herr Barton.",
+                "position": "109"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "We wanted to talk to you again because another person died in the case on the murder of Moritz Mayer.",
+                "position": "110"
+            },
+			{
+			    "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Wait, murder?!? I thought it was suicide?",
+                "position": "111"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Yes, sadly.",
+                "position": "112"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "According to our newest investigations both Mr. Mayer and Ms. Baumgarten were victims of a murder.",
+                "position": "113"
+            },
+			{
+			    "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Oh my god how horrible!",
+                "position": "114"
+            },
+			{
+			    "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "But how are those two deaths connected?",
+                "position": "115"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Arianne Baumgarten was a gardener at the Gaußberg Park and was the person who found Moritz's dead body.",
+                "position": "116"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "The information she had were very important for the ongoing investigations.",
+                "position": "117"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "We suspect that that was the reason why she was killed.",
+                "position": "118"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "This is why we wanted to talk to everyone involved again.",
+                "position": "119"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "I see. Sadly I don't know a Ms. Baumgarten.",
+                "position": "120"
+            },
+			{
+			    "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Neither do I.",
+                "position": "121"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "You have already told us what you were doing n the night of Moritz's death. Could you tell us what you were doing on the day the gardener died this time?",
+                "position": "122"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "I was with Yvonne this time.",
+                "position": "123"
+            },
+			{
+			    "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Yes, that is correct.",
+                "position": "124"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Is there anyone else, that can confirm that?",
+                "position": "125"
+            },
+			{
+			    "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Sadly not.",
+                "position": "126"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "I see. One more thing. we need your contact info again.",
+                "position": "127"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Could you write it down for us again, please?",
+                "position": "128"
+            },
+			{
+			    "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Yes, of course. Here you go.",
+                "position": "129"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Of course. Here.",
+                "position": "130"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Thank you very much. Your statements were very helpful. That would be it already.",
+                "position": "131"
+            },
+			{
+			    "image": "Rsmiling",
+                "person": "Yvonne",
+                "text": "Good luck on your investigations. I hope you catch the culprit soon.",
+                "position": "132"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Professor",
+                "text": "Good luck, detective. Have a nice day.",
+                "position": "133"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "You too, have a nice day!",
+                "position": "134"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "We should take a closer look at those notes, {$USER$}. Maybe compare them to the evidence we already have just to be safe.",
+                "position": "135"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Dammit! I wanted to look up the quickest way to the Cathedral, to talk with the pastor, but I forgot my PIN.",
+                "position": "136"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "If I remember correctly it should be the date of the day I bought the SIM card (TTMM)",
+                "position": "137"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Thanks! You are my saviour. I have to go now. See you!",
+                "position": "201"
+            }
+		],
+		"place": "Löwenwall",
+        "longitude": "10.530907003109151"
+	},
+	{
+		"chapter": "Vernehmung Rico #1",
+        "image": "",
+        "flag": "0",
+        "question": "Delete the gardener from the table \"personen\" since she isn't a suspect any longer. Her ID is 3.",
+        "dependency": ["gaertnerintod", "!rico"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Use Data Manipulation Language (DML)."
+            },
+            {
+                "cost": "2",
+                "hint": "Specify the ID to be deleted in the Query."
+            },
+            {
+                "cost": "3",
+                "hint": "DELETE FROM personen WHERE person_id=3"
+            }
+        ],
+        "latitude": "52.26226963537403",
+        "artefact": ["?schriftprobe_rico"],
+        "type": "sql-delete",
+        "TTL": [],
+        "answer": "persons,person_id,3",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Hey there, {$USER$}. We are at the Happy Rizzi house right now. Among all the buildings in Brunswick that takes the most time to get used to.",
+                "position": "101"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "It was designed by the US-American artist James Rizzi and build by the Brunswick architect Konrad Kloster.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "The house was build in 1997 and has been used as a office building until today.",
+                "position": "103"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "The facade is fashioned with Pop-Art.",
+                "position": "104"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Among the most common motives are the happy faces, as well as hearts, eyes, stars and birds.",
+                "position": "105"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Since we are still waiting could you delete Ms. Baumgarten from the table of suspects. She is obviously not among them anymore.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Thank you, {$USER$}. It seems like our date is already waiting for us over there.",
+                "position": "201"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Hello. YOu must be Henrik Weiß. Thank you for taking the time to talk to us.",
+                "position": "202"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Hello. You can call me Rico if you'd like. How can I help you?",
+                "position": "203"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "You probably already know about the death of Moritz Mayer. Could you tell us a little about him?",
+                "position": "204"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Yes, I was told about it. He was a Computer Science student just like me.",
+                "position": "205"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "He was putting a lot of time into our startup in the past months. But he never seemed to me like someone who would take his own life.",
+                "position": "206"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "You mentioned a startup. Could you tell us about it?",
+                "position": "207"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "The two of us founded a startup. It's focused on digitalizing and centralizing patient records.",
+                "position": "208"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "It's a collection of all patient data, like addresses, allergies, medication and such to make it easier for medical professionals to access the information.",
+                "position": "209"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "That sounds like a very useful database.",
+                "position": "210"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "But on the other hand it might be used for a lot of bad too, doesn't it?",
+                "position": "211"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Are you trying to say, that that could have been a motivation for murder?",
+                "position": "212"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Well yes. Theoretically everyone who knew could have killed him. Even you!",
+                "position": "213"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Rico",
+                "text": "You can't be serious right now.",
+                "position": "214"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Rico",
+                "text": "I am already a shareholder of the startup. What would I gain from killing my best friend?",
+                "position": "215"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "I have to consider all possibilities.",
+                "position": "216"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Because it seems like Moritz has indeed been murdered.",
+                "position": "217"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "I am sorry, what?? I thought it was suicide. I didn't think Moritz would have any enemies.",
+                "position": "218"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Sadly thats not it. Out witness Arianne Baumgarten has also been found dead.",
+                "position": "220"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "She was a gardener at the Gaußberg-Park and the one who found Moritz's body.",
+                "position": "221"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "We would like to know what you were doing on those nights.",
+                "position": "222"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "I was working late on both of those nights.",
+                "position": "223"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Is there anyone who can confirm this?",
+                "position": "224"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Sadly not. I was always the last to leave.",
+                "position": "225"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "I see. One more thing. We need your contact information.",
+                "position": "226"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Can you write it down for us?",
+                "position": "227"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Of course. One second.",
+                "position": "228"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Thank you very much. We will contact you, should anything else come up.",
+                "position": "229"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Yes, of course. I wish you the best for your investigations. Have a nice day.",
+                "position": "230"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Thank you. Have a nice day.",
+                "position": "231"
+            }
+		],
+		"place": "Happy Rizzi Haus",
+        "longitude": "10.528715864247056"
+	},
+	{
+		"chapter": "Vernehmung Rico #2",
+        "image": "",
+        "flag": "0",
+        "question": "Delete the gardener from the table \\\"personen\\\" since she isn't a suspect any longer. Her ID is 3.",
+        "dependency": ["gaertnerintod", "rico"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Use Data Manipulation Language (DML)."
+            },
+            {
+                "cost": "2",
+                "hint": "Specify the ID to be deleted in the Query.."
+            },
+            {
+                "cost": "3",
+                "hint": "DELETE FROM personen WHERE person_id=3"
+            }
+        ],
+        "latitude": "52.26226963537403",
+        "artefact": ["?schriftprobe_rico"],
+        "type": "sql-delete",
+        "TTL": [],
+        "answer": "persons,person_id,3",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Hey there, {$USER$}. We are at the Happy Rizzi house right now. Among all the buildings in Brunswick that takes the most time to get used to.",
+                "position": "101"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "It was designed by the US-American artist James Rizzi and build by the Brunswick architect Konrad Kloster.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "The house was build in 1997 and has been used as a office building until today.",
+                "position": "103"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "The facade is fashioned with Pop-Art.",
+                "position": "104"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Among the most common motives are the happy faces, as well as hearts, eyes, stars and birds.",
+                "position": "105"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Since we are still waiting could you delete Ms. Baumgarten from the table of suspects. She is obviously not among them anymore.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Thank you, {$USER$}. It seems like our date is already waiting for us over there.",
+                "position": "201"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Hello Mr. Weiß. Thank you for taking the time to talk to us again.",
+                "position": "202"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "I hope you are feeling better today.",
+                "position": "203"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Hello. Thank you for asking. I still can't wrap my head around it, but I do feel a little better.",
+                "position": "204"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "How can I help you today?",
+                "position": "205"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Sadly it has come to our attention that Moritz might not have commit suicide, but was murdered.",
+                "position": "206"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "What?? Murder?? But who would want to kill him?",
+                "position": "207"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Sadly there is more. Our main witness Arianne Baumgarten has been found dead as well.",
+                "position": "208"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "She was the gardener at the gaußberg Park who found Moritz's body.",
+                "position": "209"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "That is why we would like to know what you were doing on those two nights.",
+                "position": "210"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "I had to work late on both of those days.",
+                "position": "211"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Is there anyone who can confirm this?",
+                "position": "212"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Sadly no. I was the last one to leave.",
+                "position": "213"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "I see. One more thing. We need your contact information.",
+                "position": "214"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Can you write it down for us?",
+                "position": "215"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Of course. One second.",
+                "position": "216"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Thank you very much. We will contact you, should anything else come up.",
+                "position": "217"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Rico",
+                "text": "Yes, of course. I wish you the best for your investigations. Have a nice day.",
+                "position": "218"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Thank you. Have a nice day.",
+                "position": "219"
+            }
+		],
+		"place": "Happy Rizzi Haus",
+        "longitude": "10.528715864247056"
+	},
+	{
+		"chapter": "Vernehmung Viktoria #1",
+        "image": "",
+        "flag": "0",
+        "question": "Find out, how many people in the table \"personen\" have the firstname Wilhelm.",
+        "dependency": ["gaertnerintod"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Use aggregate functions."
+            },
+            {
+                "cost": "2",
+                "hint": "Use COUNT"
+            },
+            {
+                "cost": "3",
+                "hint": "SELECT COUNT(vorname) FROM personen WHERE vorname = 'Wilhelm'"
+            }
+        ],
+        "latitude": "52.263397159373426",
+        "artefact": ["?schriftprobe_viktoria"],
+        "type": "sql",
+        "TTL": [],
+        "answer": "3",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Hello Ms. Kästner. Nice to see you again.",
+                "position": "101"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "Yes yes, hello. What is wrong this time?",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Well, there are new developments on the case. Moritz's death appears to be a murder, not a suicide.",
+                "position": "103"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "You don't say. how did you come to that conclusion? You were so confident that it was suicide.",
+                "position": "104"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Our main witness Arianne Baumgarten was found dead as well.",
+                "position": "105"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Since she had information on the case, we assume that she was murdered because of it.",
+                "position": "106"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "Ok. And what does that have to do with me?",
+                "position": "107"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "We would like to know what you were doing during that time.",
+                "position": "108"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "I was writing job applications that evening.",
+                "position": "109"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "And nobody can confirm this, right?",
+                "position": "110"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "Yes, so? I don't always have to spend my time around other people.",
+                "position": "111"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Of course not. We are asking everyone this question.",
+                "position": "112"
+            },
+			{
+                "image": "Rthinking",
+                "person": "Viktoria",
+                "text": "Well, if you don't need anything else from me I am leaving.",
+                "position": "113"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "One more thing. We still need your contact information.",
+                "position": "114"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Could you write it down for us?",
+                "position": "115"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Viktoria",
+                "text": "There you go. Are we done here?",
+                "position": "116"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Yes, we have no more questions. Thank you for your cooperation.",
+                "position": "117"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Have a nice day!",
+                "position": "118"
+            },
+			{
+                "image": "Rsmiling",
+                "person": "Viktoria",
+                "text": "Bye.",
+                "position": "119"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Well {$USER$}, if we are already here, let me tell you a little bit about the Palace before we leave.",
+                "position": "120"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "The Palace was used as the resicency of Brunswicks dukes of the house of Welfen from 1753 to 1918.",
+                "position": "121"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "The original was build between 1831 and 1841.",
+                "position": "122"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "During the Second World War it was heavily damaged by the air strikes and finally torn down 1960.",
+                "position": "123"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "The current building was reconstructed from 2005 to 2007 and is now used as a shopping mall, a library and a museum.",
+                "position": "124"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "On the Portikus (roof) of the reconstructed Schloss is home Europe's biggest quadriga lead by the city's goddess Brunonia.",
+                "position": "125"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "The sculptures on the Palace square resemble the dukes Karl Wilhelm Ferdinand and Friedrich Wilhelm were errected in 1874.",
+                "position": "126"
+            }
+		],
+		"place": "Schloss",
+        "longitude": "10.527201534020358"
+	},
+	{
+		"chapter": "Spezial Kapitel",
+        "image": "",
+        "flag": "1",
+        "question": "On the bulletin board you will now find all the necessary evidence with which we can identify the murderer.\n\nCompare the writing samples with these and write the suspect in the input.",
+        "dependency": ["?schriftprobe_professor", "?schriftprobe_rico", "?schriftprobe_viktoria", "?schriftprobe_yvonne"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Everyone who was interrogated are worth considering."
+            },
+            {
+                "cost": "100",
+                "hint": ""
+            },
+            {
+                "cost": "100",
+                "hint": ""
+            }
+        ],
+        "latitude": "52.26584545426154",
+        "artefact": ["{$Killer$}", "spezKapitel"],
+        "type": "sql",
+        "TTL": [],
+        "answer": "",
+        "dialogue": [
+            {
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "There you are, {$USER$}. The building in the middle of the square is the state theater of Brunswick.",
+                "position": "101"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "It presents five different sectors of performing arts.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "This consists of acting, musical theater, dance, child theater and the state orchestra.",
+                "position": "103"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "It was opened in 1690 by duke Anton Ulrich of Brunswick-Lüneburg.",
+                "position": "104"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "It is, along with the Hagenmarkt theater, one of the first theaters in the German speaking area to be open to the public.",
+                "position": "105"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "At first it was only used for operas, but started showing theater performances regularly starting in the 18th century.",
+                "position": "106"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "The most significant performance here would be the premier of Emilia Galotti and Faust.",
+                "position": "107"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "The building was mostly destroyed in the Second World War and rebuild again in 1948.",
+                "position": "108"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "This makes it is one of the first theaters of post-war Germany.",
+                "position": "109"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "You must be wondering why we are here, {$USER$}. We finally made it this far.",
+                "position": "110"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "You have taken a look at all the suspects and their written notes, haven't you? If not take a look now.",
+                "position": "111"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "Now, who do you think is the culprit? But be sure of your choice. We wouldn't want to arrest an innocent person now would we.",
+                "position": "112"
+            }
+		],
+		"place": "Staatstheater",
+        "longitude": "10.531372964288343"
+	},
+	{
+		"chapter": "Verhaftung Professor",
+        "image": "",
+        "flag": "2",
+        "question": "",
+        "dependency": ["spezKapitel", "tProfessor"],
+        "hints": [
+            {
+                "cost": "100",
+                "hint": ""
+            },
+            {
+                "cost": "100",
+                "hint": ""
+            },
+            {
+                "cost": "100",
+                "hint": ""
+            }
+        ],
+        "latitude": "52.26584545426154",
+        "artefact": [],
+        "type": "",
+        "TTL": [],
+        "answer": "",
+        "dialogue": [
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "I knew you would pick the Professor, {$USER$}.",
+                "position": "101"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "That's why I took the freedom to call the police, so that we can arrest him immediately.",
+                "position": "102"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "The evidence should be able to speak for itself.",
+                "position": "103"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Professor",
+                "text": "No, you are making a big mistake.",
+                "position": "104"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Professor",
+                "text": "I don't know what evidence you have against me, but it's all lies.",
+                "position": "105"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Professor",
+                "text": "I will do everything to proof it.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Don't pay attention to this murderer. Thank you for helping me with this case.",
+                "position": "107"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "*claps you on the shoulder*",
+                "position": "108"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "*Your vision starts to get spotty. You were poisoned.*",
+                "position": "109"
+            }
+		],
+		"place": "Staatstheater",
+        "longitude": "10.531372964288343"
+	},
+	{
+		"chapter": "Verhaftung Psychologin",
+        "image": "",
+        "flag": "2",
+        "question": "",
+        "dependency": ["spezKapitel", "tYvonne"],
+        "hints": [
+            {
+                "cost": "100",
+                "hint": ""
+            },
+            {
+                "cost": "100",
+                "hint": ""
+            },
+            {
+                "cost": "100",
+                "hint": ""
+            }
+        ],
+        "latitude": "52.26584545426154",
+        "artefact": [],
+        "type": "",
+        "TTL": [],
+        "answer": "",
+        "dialogue": [
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "I knew you would pick the psychologist, {$USER$}.",
+                "position": "101"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "That's why I took the freedom to call the police, so that we can arrest her immediately.",
+                "position": "102"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "The evidence should be able to speak for itself.",
+                "position": "103"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Yvonne",
+                "text": "No, you are making a big mistake.",
+                "position": "104"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Yvonne",
+                "text": "I don't know what evidence you have against me, but it's all lies.",
+                "position": "105"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Yvonne",
+                "text": "I will do everything to proof it.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Don't pay attention to this murderer. Thank you for helping me with this case.",
+                "position": "107"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "*claps you on the shoulder*",
+                "position": "108"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "*Your vision starts to get spotty. You were poisoned.*",
+                "position": "109"
+            }
+		],
+		"place": "Staatstheater",
+        "longitude": "10.531372964288343"
+	},
+	{
+		"chapter": "Verhaftung Rico",
+        "image": "",
+        "flag": "2",
+        "question": "",
+        "dependency": ["spezKapitel", "tRico"],
+        "hints": [
+            {
+                "cost": "100",
+                "hint": ""
+            },
+            {
+                "cost": "100",
+                "hint": ""
+            },
+            {
+                "cost": "100",
+                "hint": ""
+            }
+        ],
+        "latitude": "52.26584545426154",
+        "artefact": [],
+        "type": "",
+        "TTL": [],
+        "answer": "",
+        "dialogue": [
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "I knew you would pick the Mr. Weiß, {$USER$}.",
+                "position": "101"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "That's why I took the freedom to call the police, so that we can arrest him immediately.",
+                "position": "102"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "The evidence should be able to speak for itself.",
+                "position": "103"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Rico",
+                "text": "No, you are making a big mistake.",
+                "position": "104"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Rico",
+                "text": "I don't know what evidence you have against me, but it's all lies.",
+                "position": "105"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Rico",
+                "text": "I will do everything to proof it.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "Don't pay attention to this murderer. Thank you for helping me with this case.",
+                "position": "107"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "*claps you on the shoulder*",
+                "position": "108"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "*Your vision starts to get spotty. You were poisoned.*",
+                "position": "109"
+            }
+		],
+		"place": "Staatstheater",
+        "longitude": "10.531372964288343"
+	},
+	{
+		"chapter": "Verhaftung Viktoria",
+        "image": "",
+        "flag": "2",
+        "question": "",
+        "dependency": ["spezKapitel", "tViktoria"],
+        "hints": [
+            {
+                "cost": "100",
+                "hint": ""
+            },
+            {
+                "cost": "100",
+                "hint": ""
+            },
+            {
+                "cost": "100",
+                "hint": ""
+            }
+        ],
+        "latitude": "52.26584545426154",
+        "artefact": [],
+        "type": "",
+        "TTL": [],
+        "answer": "",
+        "dialogue": [
+            {
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "I knew you would pick the Ms. Kästner, {$USER$}.",
+                "position": "101"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "That's why I took the freedom to call the police, so that we can arrest her immediately.",
+                "position": "102"
+            },
+			{
+                "image": "Lthinking",
+                "person": "Detektiv",
+                "text": "The evidence should be able to speak for itself.",
+                "position": "103"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "No. I confess it was me, but I wasn't alone! It was his idea! HIS!",
+                "position": "104"
+            },
+			{
+                "image": "Rsurprised",
+                "person": "Viktoria",
+                "text": "*points at the detective*",
+                "position": "105"
+            },
+			{
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text": "Ignore those lies. We did everything right. Thank you for helping me with this case.",
+                "position": "106"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "*claps you on the shoulder*",
+                "position": "107"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text": "*Your vision starts to get spotty. You were poisoned.*",
+                "position": "108"
+            }
+		],
+		"place": "Staatstheater",
+        "longitude": "10.531372964288343"
+	},
+	{
+		"chapter": "Die Wahrheit",
+        "image": "",
+        "flag": "2",
+        "question": "",
+        "dependency": ["spezKapitel", "tDetektiv"],
+        "hints": [
+            {
+                "cost": "100",
+                "hint": ""
+            },
+            { 
+                "cost": "100",
+                "hint": ""
+            },
+            {
+                "cost": "100",
+                "hint": ""
+            }
+        ],
+        "latitude": "52.26584545426154",
+        "artefact": [],
+        "type": "",
+        "TTL": [],
+        "answer": "",
+        "dialogue": [
+            {
+                "image": "Lsurprised",
+                "person": "Detektiv",
+                "text":  "I don't know how you noticed that it was me. Did you have fun, {$USER$}?",
+                "position": "101"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text":  "I definitely did. To be able to investigate and manipulate the crime scenes and evidence.",
+                "position": "102"
+            },
+			{
+                "image": "Lsmiling",
+                "person": "Detektiv",
+                "text":  "*disappears behind the next corner*",
+                "position": "103"
+            }
+		],
+		"place": "Braunschweiger Dom",
+        "longitude": "10.531372964288343"
+	},
+    {
+        "chapter": "Nebenkapitel Rathaus",
+        "image": "raetsel_rathaus",
+        "flag": "0",
+        "question": "In which order can you find the door knobs",
+        "dependency": ["yvonne", "viktoria"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "You can find the door knobs at the Platz der Deutschen Einheit."
+            },
+            {
+                "cost": "2",
+                "hint": "Take a look at the main entrance."
+            },
+            {
+                "cost": "3",
+                "hint": "From left to right."
+            }
+        ],
+        "latitude": "52.264182",
+        "artefact": [],
+        "type": "answer",
+        "TTL": [],
+        "answer": "BARTON",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "As you can see, {$USER$}, the town hall is at the Platz der Deutschen Einheit ",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "and is next to the Münzstraße, Dankwardstraße, Bohlweg and the Cathedral square.",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Furthermore it is also a Place of remembrance for the hunted and murdered Sinti, and there is a restaurant in the basement.",
+                "position": "103"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "First it was decided to not build the additional town hall tower, since it was to expensive.",
+                "position": "104"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "But since the foundation was already layed down it was build anyway.",
+                "position": "105"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "There are six different door knobs to be found at the three double-winged glass doors.",
+                "position": "106"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Every door knob symbolises an important building, scene or person from the history of Brunswick.",
+                "position": "107"
+            }
+        ],
+        "place": "Rathaus",
+        "longitude": "10.525030"
+    },
+    {
+        "chapter": "Nebenkapitel Burgplatz",
+        "image": "",
+        "flag": "0",
+        "question": "What is the smallest building next to the Dankwarderode Castle?",
+        "dependency": ["yvonne"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Look at the entrance from the Brunswick Lion."
+            },
+            {
+                "cost": "2",
+                "hint": "It#s directly next to the Dankwarderode castle."
+            },
+            {
+                "cost": "3",
+                "hint": "It's to the left of the entrance."
+            }
+        ],
+        "latitude": "52.264685",
+        "artefact": [],
+        "type": "answer",
+        "TTL": [],
+        "answer": "(?i)Spitzwegeck|Der.Bücherwurm|Bücherwurm|Der.Buecherwurm|Buecherwurm|Antiquariat|Antiquariat.am.Burgplatz",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "The Burgplatz (Castle Square) is a historical and geographical center of Brunswick ",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "and therefore is of significant historical and cultural importance.",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "In the ninth century the Burgplatz was where the princely seat of the Brunonids was found ",
+                "position": "103"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "and was expanded to be the center of power to the House of Welf in the twelfth century by Henry the Lion.",
+                "position": "104"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Since then the Brunswick Lion can be found at the center of the Burgplatz.",
+                "position": "105"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "During the Second World War the Burgplatz was mostly spared by the heavy bombings, ",
+                "position": "106"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "and only the Palas of the castle and the Cathedral's roof were damaged.",
+                "position": "107"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "At the same time almost 90% of Brunswick's city was destroyed.",
+                "position": "108"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Aside from the Traditionsinseln ('traditional islands') Aegidienviertel, Altstadtmarkt, Magniviertel and the Michaelisviertel ",
+                "position": "109"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "the Burgplatz is one of the five historically most relevant reconstructions of the post-war city.",
+                "position": "110"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "The Burgplatz is defined by the Palas of the former Dankwarderode Castle, the Brunswick Cathedral, ",
+                "position": "111"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "the Vieweghaus, the Vertheimischen Haus and the Huneborstelschen Haus.",
+                "position": "112"
+            }
+        ],
+        "place": "Burgplatz",
+        "longitude": "10.523765"
+    },
+    {
+        "chapter": "Nebenkapitel Städtisches Museum",
+        "image": "",
+        "flag": "0",
+        "question": "In which direction do the three arcs lead?",
+        "dependency": ["yvonne", "professor"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "From the Magniviertel."
+            },
+            {
+                "cost": "2",
+                "hint": "Find the info sign."
+            },
+            {
+                "cost": "3",
+                "hint": "To the right of the museum's entrance."
+            }
+        ],
+        "latitude": "52.260846",
+        "artefact": [],
+        "type": "answer",
+        "TTL": [],
+        "answer": "(?i)to.the.Löwenwall|to.the.Loewenwall|Loewenwall|Löwenwall",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "When the city was celebrating it's 1000th anniversary the museum was founded by a citizen's innitiative ",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "to collect the cultural and artstic artefacts of Brunswick's citizens.",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Today's museums's building was opened at the Löwenwall in 1906.",
+                "position": "103"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "The museum's collection consists mostly of gifts and donations of Brunswick's citizens and companies.",
+                "position": "104"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "The old town hall is an extension of the museum.",
+                "position": "105"
+            }
+        ],
+        "place": "Staedtisches Museum",
+        "longitude": "10.531834"
+    },
+    {
+        "chapter": "Nebenkapitel Botanischer Garten",
+        "image": "",
+        "flag": "0",
+        "question": "What is the scientific name of the oleander?",
+        "dependency": ["professor"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "At the back of the garden, close to the Oker."
+            },
+            {
+                "cost": "2",
+                "hint": "The flowers are pink."
+            },
+            {
+                "cost": "3",
+                "hint": "The plant is in 2 pots close to the stairs."
+            }
+        ],
+        "latitude": "52.270288",
+        "artefact": [],
+        "type": "answer",
+        "TTL": [],
+        "answer": "Nerium oleander",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "The botanical garden of the Technichal University Brunswick ",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "is used for fundamental research in the area of organic botany among other things.",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "It is therefor an important outdoor laboratory for experimental botany.",
+                "position": "103"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Brunswick has become an important place for botany and crop research,",
+                "position": "104"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "where the univerities institute for plant biology is naturally involved.",
+                "position": "105"
+            }
+        ],
+        "place": "Botanischer Garten",
+        "longitude": "10.533416"
+    },
+    {
+        "chapter": "Nebenkapitel Alte Waage",
+        "image": "",
+        "flag": "0",
+        "question": "In the dialogue the detective told you what the building was used for. What was it?",
+        "dependency": ["rico"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Pay attention to what the detective said."
+            },
+            {
+                "cost": "2",
+                "hint": "In the early 20th century."
+            },
+            {
+                "cost": "3",
+                "hint": "During Hitler's reign."
+            }
+        ],
+        "latitude": "52.267304",
+        "artefact": [],
+        "type": "answer",
+        "TTL": [],
+        "answer": "A",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "The Alte Waage was build as a storehouse in 1534.",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Between 1937 and 1939 it was home to the Hitler Youth.",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Due to multiple bombings during the Second World War it was completely destroyed ",
+                "position": "103"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "and reconstructed in 1904 as authentic as possible.",
+                "position": "104"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "To achieve that they neither used screws nor nails, which is unimaginable these days.",
+                "position": "105"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "These days the community college of Brunswick uses it for administrations and trainings,",
+                "position": "106"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "as well as a venue for lectures, conferences and seminars.",
+                "position": "107"
+            }
+        ],
+        "place": "Alte Waage",
+        "longitude": "10.520030"
+    },
+    {
+        "chapter": "Nebenkapitel Altstadtmarkt",
+        "image": "",
+        "flag": "0",
+        "question": "Sort the buildings at the Olt Town Market by year from 1 to 7. \n The Old Town Hall is older than the Cloth Hall. The Stechinelli House is the youngest of them all. The Market Fountain is younger than the House of the Seven Towers but older than the Rueninger Tollhouse. The Old Town Hall, the House of the Seven Towers and the St. Martini were build in the same century. Between the three the House of the Seven Towers is the youngest, then comes the Old Town Hall. Apart from those three the Cloth Hall is the youngest.",
+        "dependency": ["gaertnerin"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "You can find the number of each building on an information board at the Old Town Market."
+            },
+            {
+                "cost": "2",
+                "hint": "Sort from youngest to oldest."
+            },
+            {
+                "cost": "3",
+                "hint": "The year in which the buildings were built can be found on the buildings themselves."
+            }
+        ],
+        "latitude": "52.262730",
+        "artefact": [],
+        "type": "answer",
+        "TTL": [],
+        "answer": "7135462",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "The Old Town market is part of the 'Traditionsinseln' of Brunswick, as is the Burgplatz.",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "It has been an important trading hub in Brunswick for cloths and fibers since the early 12th century.",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Due to fraudulences in sells they introduced the Brunswick ell (Braunschweiger Elle) to have a standardized unit of measure.",
+                "position": "103"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "The Old Town Hall is one of the oldest remaining town halls in Germany.",
+                "position": "104"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "It's oldest standing remain was built in the mid 1200s.",
+                "position": "105"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "During the Second World War the building was completely burned out, but the facade remained.",
+                "position": "106"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "These days it's mainly used for representation purposes while the ground floor is used as a showroom by the Städtisches Museum.",
+                "position": "107"
+            }
+        ],
+        "place": "Altstadtmarkt",
+        "longitude": "10.517693"
+    },
+    {
+        "chapter": "Nebenkapitel Herzog Anton Ulrich Museum",
+        "image": "",
+        "flag": "0",
+        "question": "Which artist can be found on the facade of the museum's building?",
+        "dependency": ["notizzettel"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "Just one artist is enough."
+            },
+            {
+                "cost": "2",
+                "hint": "Look up."
+            },
+            {
+                "cost": "3",
+                "hint": "At the main street."
+            }
+        ],
+        "latitude": "52.263348",
+        "artefact": [],
+        "type": "answer",
+        "TTL": [],
+        "answer": "(?iDürer|Duerer|Durer|Masaccio|Leonardo|van.Eyck|Lochner|Schongauer|Giotto|van.Leyden|Signorelli|Holbein)",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "The museum was founded in 1754, just one year after the British Museum in London.",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "It's one of the first public museums and was first named Landesmuseum (state museum).",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "To this day it is one of the biggest and most significant art museums in Germany.",
+                "position": "103"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "It was later named after its founder Duke Anton Ulrich of Brunswick-Wolfenbüttel ",
+                "position": "104"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "and counts about 4000 artworks in its exhibition show casing roughly 3000 years of art history.",
+                "position": "105"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "His collection includes artworks and sculptures from the Baroque and Renaissance, as well as the ancient world.",
+                "position": "106"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Many artworks were taken by Napoleonic troops for the Louvre in Paris during the occupation in 1806,",
+                "position": "107"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "but almost all stolen artworks were won back during the liberation wars.",
+                "position": "108"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Among the exhibition are works from Rembrandt, Rubens, Vermeer and many more.",
+                "position": "109"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Since the 19th century the building itself has been (drastically) remodelled multiple times.",
+                "position": "110"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Reason for that were the damages in the foundation that were found in the 1700s, ",
+                "position": "111"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "that were exacerbated during the Napoleonic occupation.",
+                "position": "112"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "The building as it can be found these days was reopened in 1887 in an Italian Renaissance's style.",
+                "position": "113"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "It's name today was given to it in 1927.",
+                "position": "114"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Fortunately it was mostly spared during World War II and the museum's building barely got damaged.",
+                "position": "115"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "It was closed again at the beginning of this century for renovations and has been open again since 2016.",
+                "position": "116"
+            }
+        ],
+        "place": "HAUM",
+        "longitude": "10.532968"
+    },
+    {
+        "chapter": "Nebenkapitel Magnikirche",
+        "image": "",
+        "flag": "0",
+        "question": "What material was used to create the sculpture hanging from the choir's gable?",
+        "dependency": ["?schriftprobe_yvonne", "?schriftprobe_professor"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "You can see the figure from the longhouse."
+            },
+            {
+                "cost": "2",
+                "hint": "The material has oxidized."
+            },
+            {
+                "cost": "3",
+                "hint": "The Statue of Liberty is made from the same material."
+            }
+        ],
+        "latitude": "52.262202",
+        "artefact": [],
+        "type": "answer",
+        "TTL": [],
+        "answer": "(?i)copper",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "The Magni church in Brunswick was build in the early 11th century ",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "and makes up todays center of the Magniviertel (Magni district).",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "It's ordination certificate is from 1031 is the first documentary evidence for what is Brunswick today.",
+                "position": "103"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "In the certificate the settlement is named Brunesguik.",
+                "position": "104"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "It is assumed that the Apulian bishop Magnus is its namesake, who was worshipped by the Fries.",
+                "position": "105"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "In that case the settlement would have had trade routes to the North Sea very early on.",
+                "position": "106"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "The parish church St. Magni was rebuild in 1252; the original churches remains can still be found in the foundation.",
+                "position": "107"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "The Magnusglocke (Magnus bell) from 1335, which is hanging in the house between two short octagonal towers on the cuboid Saxon west work, ",
+                "position": "108"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "is the oldest bell that can be found in the Brunswick county.",
+                "position": "109"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "The Magni churches chime consists of 5 bells in total, of which the two smallest ones are not used for tolling.",
+                "position": "110"
+            }
+        ],
+        "place": "Magnikirche",
+        "longitude": "10.529802"
+    },
+    {
+        "chapter": "Nebenkapitel Ostcampus",
+        "image": "",
+        "flag": "0",
+        "question": "What is the tower opposite of the IT center called colloquially?",
+        "dependency": ["rico"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "It's close to the buildngs actual name."
+            },
+            {
+                "cost": "2",
+                "hint": "Which faculty can be found here?"
+            },
+            {
+                "cost": "3",
+                "hint": "It's a tower in which most institutes belong to the faculty of electrical engineering."
+            }
+        ],
+        "latitude": "52.276646",
+        "artefact": [],
+        "type": "answer",
+        "TTL": [],
+        "answer": "(?i)E.Tower|E.Hochhaus",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "The Gauß-IT center is a central institution and competence center of the TU Brunswick",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "and offers services in information processing and communication technologies.",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "The center offers 78 different IT services to the roughly 20000 students and over 6200 employee.",
+                "position": "103"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Part of the east campus are the house of electrical engineering, which is home to the faculty 5 and a wide number of its institutes,",
+                "position": "104"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "the sencond canteen, the physics center, the pharmacy center, the sports center and the new seat of the student council for mechanical engineering.",
+                "position": "105"
+            }
+        ],
+        "place": "Ostcampus",
+        "longitude": "10.541235"
+    },
+    {
+        "chapter": "Nebenkapitel Sprachenzentrum",
+        "image": "",
+        "flag": "0",
+        "question": "Which languages are offered at th eLanguage Center?",
+        "dependency": ["rico"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "All languages were named in the dialogue."
+            },
+            {
+                "cost": "2",
+                "hint": "All common languages are offered."
+            },
+            {
+                "cost": "3",
+                "hint": "A well placed guess might help you."
+            }
+        ],
+        "latitude": "52.276045",
+        "artefact": [],
+        "type": "answer",
+        "TTL": [],
+        "answer": "(?i)German|English|French|Spanish|Chinese|Arabic|Japanese|Italian|Polisch|Portugese|Russian|Swedish|Turkish",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Intercultural competence is the ability to interact with people of different cultures successfully.",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "This skill can be learned on different ways:",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "First are always the personal interaction, interest in different cultures and the pondering on one's own culture.",
+                "position": "103"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "At the TU Brunswick a variety of initiatives and projects make it possible to experience interculturality.",
+                "position": "104"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Examples for that are the language tandem, intercultural partner projects/workshops and 'Studieren ohne Sprachbarrieren' (studying without language barriers).",
+                "position": "105"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Moreover it offers classes for the languages German, English, French, Spanish, Chinese, Arabic, Japanese, Italian, Polish, Portugese, Russian, Swedish and Turkish.",
+                "position": "106"
+            }
+        ],
+        "place": "Sprachenzentrum",
+        "longitude": "10.533949"
+    },
+    {
+        "chapter": "Nebenkapitel Nordcampus",
+        "image": "",
+        "flag": "0",
+        "question": "How many institutes can be found at the north campus?",
+        "dependency": ["viktoria"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "An info sign can be found at the entrance to the Bültenweg."
+            },
+            {
+                "cost": "2",
+                "hint": "'Just count the institutes, not the faculties."
+            },
+            {
+                "cost": "3",
+                "hint": " "
+            }
+        ],
+        "latitude": "52.285307",
+        "artefact": [],
+        "type": "answer",
+        "TTL": [],
+        "answer": "11",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "The north campus used to be barracks where tanks were kept.",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "If you look closely you can still see the remnants of it at some buildings.",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "These days the campus is mostly home to the institute for social sciences and the institute for high frequency technology.",
+                "position": "103"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "There is also a pavillion where students can buy coffee and snacks.",
+                "position": "104"
+            }
+        ],
+        "place": "Nordcampus",
+        "longitude": "10.541337"
+    },
+    {
+        "chapter": "Nebenkapitel Grotrian",
+        "image": "",
+        "flag": "0",
+        "question": "What was manufactured here?",
+        "dependency": ["professor"],
+        "hints": [
+            {
+                "cost": "1",
+                "hint": "One might recognize the name. It still is a well-known manufacturer."
+            },
+            {
+                "cost": "2",
+                "hint": "You can find the answer in the dialogue."
+            },
+            {
+                "cost": "3",
+                "hint": " "
+            }
+        ],
+        "latitude": "52.272944",
+        "artefact": [],
+        "type": "answer",
+        "TTL": [],
+        "answer": "(?i)Piano|Pianos|Grand Piano|Grand Pianos",
+        "dialogue": [
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "Here we are at the Grotrian.",
+                "position": "101"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "This used to be home to the piano manufacturer Grotrian-Steinweg, and is now used by the AstA.",
+                "position": "102"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "The rooms are mostly used for exams during semester breaks.",
+                "position": "103"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "During the semester the rooms ZI24.1, ZI24.2 and ZI24.3 also offer a quiet place for students to study.",
+                "position": "104"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "A variety of institutes and student councils can also be found in the Grotrian and its surrounding buildings.",
+                "position": "105"
+            },
+            {
+                "image": "Rsmiling",
+                "person": "Detektiv",
+                "text": "The inner courtyard also connects it to the university's center for chemistry.",
+                "position": "106"
+            }
+        ],
+        "place": "Grotrian",
+        "longitude": "10.534074"
+    }
+]}

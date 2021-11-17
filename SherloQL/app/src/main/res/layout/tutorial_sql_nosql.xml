@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nexttutbttn"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tutorialsqlnosql_ger"
+    android:screenOrientation="locked">
+
+    <!-- TODO: change position of buttons according to background -->
+
+    <Button
+        android:id="@+id/tutWithoutSQL"
+        android:layout_width="96dp"
+        android:layout_height="57dp"
+        android:scaleType="fitXY"
+        android:text="Ohne SQL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tutWithSQL"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <Button
+        android:id="@+id/tutWithSQL"
+        android:layout_width="96dp"
+        android:layout_height="57dp"
+        android:scaleType="fitXY"
+        android:text="mit SQL"
+        app:layout_constraintEnd_toStartOf="@+id/tutWithoutSQL"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.7" />
+</androidx.constraintlayout.widget.ConstraintLayout>

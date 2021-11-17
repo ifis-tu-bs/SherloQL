@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: rgb(170,30,60);" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EditDialogueController">
+   <children>
+      <ComboBox fx:id="cbPerson" layoutX="28.0" layoutY="33.0" prefWidth="150.0" promptText="Person" />
+      <ComboBox fx:id="cbBild" layoutX="275.0" layoutY="33.0" prefWidth="150.0" promptText="Bild" />
+      <TextField fx:id="tfPosition" layoutX="29.0" layoutY="87.0" promptText="Position" />
+      <TextArea fx:id="taDialog" layoutX="26.0" layoutY="153.0" prefHeight="210.0" prefWidth="422.0" promptText="Text hier..." />
+      <Label layoutX="29.0" layoutY="15.0" text="Person" />
+      <Label layoutX="275.0" layoutY="15.0" text="Bild" />
+      <Label layoutX="26.0" layoutY="70.0" text="Position" />
+      <Button fx:id="btnBack" layoutX="465.0" layoutY="337.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="26.0" prefWidth="121.0" text="Zurück" />
+      <Button fx:id="btnSave" layoutX="465.0" layoutY="303.0" mnemonicParsing="false" onAction="#editDialogue" prefWidth="121.0" text="Speichern" />
+      <Label layoutX="26.0" layoutY="134.0" text="Dialog" />
+      <Label fx:id="lblError" layoutX="462.0" layoutY="277.0" prefHeight="17.0" prefWidth="128.0" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

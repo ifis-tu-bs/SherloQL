@@ -1,0 +1,116 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#03F5F5F5"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cslRs"
+        android:layout_width="match_parent"
+        android:background="#03F5F5F5"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/viewSeperator"
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:background="#03F5F5F5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewRaetsel" />
+
+        <View
+            android:id="@+id/viewRaetsel"
+            android:layout_width="match_parent"
+            android:layout_height="196dp"
+            android:background="@drawable/raetsel_shape"
+            app:layout_constraintBottom_toTopOf="@id/viewSeperator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Name Raetsel"
+            android:textColor="@color/color7"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="164dp"
+            android:fontFamily="@font/ubuntu"
+            android:foregroundGravity="center_vertical|center_horizontal"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Type Raetsel"
+            android:textColor="@color/color7"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/viewRaetsel"
+            app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+        <TextView
+            android:id="@+id/tvDifficultyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/ubuntu"
+            android:text="Schwierigkeit : "
+            android:textColor="@color/color7"
+            android:textSize="20sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvDifficulty"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDifficulty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="@font/ubuntu"
+            android:text="2"
+            android:textColor="@color/color7"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/viewSeperator"
+            app:layout_constraintStart_toEndOf="@+id/tvDifficultyText" />
+
+
+        <TextView
+            android:id="@+id/tvPoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="@font/ubuntu"
+            android:text="0"
+            android:textColor="@color/color8"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/viewSeperator"
+            app:layout_constraintEnd_toStartOf="@+id/ivPoints" />
+
+        <ImageView
+            android:id="@+id/ivPoints"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="@font/ubuntu"
+            app:layout_constraintBottom_toTopOf="@+id/viewSeperator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/coin" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

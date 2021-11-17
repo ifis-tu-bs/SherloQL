@@ -1,0 +1,112 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root {
+    -fx-background-color: rgb(170,30,60);
+}
+
+.list-view {
+    -fx-background-color:  rgb(190,30,60);
+}
+
+.list-view .list-cell:odd {
+    -fx-background-color: rgb(190,30,60);
+    -fx-text-fill: white;
+    -fx-font-size:18.0;
+}
+
+.list-view .list-cell:even {
+    -fx-background-color: rgb(180,30,60);
+    -fx-text-fill: white;
+    -fx-font-size:18.0;
+}
+
+.list-view .list-cell:selected:odd,
+.list-view .list-cell:selected:even {
+    -fx-background-color: rgb(184, 108, 118);
+    -fx-font-size:18.0;
+    -fx-text-fill: white;
+}
+
+.context-menu {
+    -fx-background-color: rgb(170,30,60);
+    -fx-text-fill: white;
+}
+
+.menu-item .label {
+    -fx-background-color: rgb(170,30,60);
+    -fx-text-fill: white;
+}
+
+.menu-item:focused {
+    -fx-background-color: rgb(184, 108, 118);
+    -fx-border-color: rgb(184, 108, 118);
+}
+
+.menu-item:focused .label {
+    -fx-background-color: rgb(184, 108, 118);
+    -fx-border-color: rgb(184, 108, 118);
+    -fx-text-fill: white;
+}
+
+.table-view{
+    -fx-background-color: rgb(190,30,60);
+}
+
+.table-view:focused{
+    -fx-background-color: rgb(190,30,60);
+}
+
+.table-view .column-header-background{
+    -fx-background-color: rgb(190,30,60);
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: rgb(190,30,60);
+    -fx-text-fill: white;
+}
+
+.table-view:constrained-resize .column-header-background .nested-column-header .table-column,
+.table-view:row-selection:constrained-resize .column-header-background .nested-column-header .table-column{
+    -fx-background-color: rgb(190,30,60);
+}
+
+.table-view .table-cell{
+    -fx-text-fill: white;
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, rgb(190,30,60);
+    -fx-text-fill: white;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:even{
+    -fx-background-color: -fx-table-cell-border-color, rgb(180,30,60);;
+    -fx-text-fill: white;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:odd:selected,
+.table-row-cell:even:selected{
+   -fx-background-color: rgb(184, 108, 118);
+   -fx-text-fill: white;
+   -fx-background-insets: 0;
+   -fx-background-radius: 1;
+}
+
+.tab-pane:top{
+    -fx-background-color: rgb(184, 108, 118);
+}
+
+.tab-pane .tab-header-area .tab-header-background{
+    -fx-background-color: rgb(184, 108, 118);
+}
+
+.label .text{
+    -fx-fill: white;
+}
+
+.text-area{
+    -fx-wrap-text: true;
+}

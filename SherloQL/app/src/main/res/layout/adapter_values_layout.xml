@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100">
+
+    <TextView
+        android:id="@+id/textView"
+        android:gravity = "center"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:layout_weight="70"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="30"
+        android:textColor="#FFFFFF"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="277dp"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:inputType="textPersonName"
+            android:text="" />
+    </LinearLayout>
+
+</LinearLayout>

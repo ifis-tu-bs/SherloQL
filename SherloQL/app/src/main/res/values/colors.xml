@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#F5F5F5</color>
+    <color name="colorAccent">#03DAC5</color>
+
+
+
+    <!--  Color RiddleBook  -->
+    <color name="color1">#F5F5F5</color>
+    <color name="color2">#BDBDBD</color>
+    <color name="color3">#9E9E9E</color>
+    <color name="color4">#757575</color>
+    <color name="color5">#607D8B</color>
+    <color name="color6">#D7CCC8</color>
+    <color name="color7">#212121</color>
+    <color name="color8">#FFEB3B</color>
+    <color name="color9">#CDDC39</color>
+    <color name="color10">#00E037</color>
+
+
+    <!--  Color DB  -->
+    <color name="color11">#ccdde5</color>
+    <color name="color12">#c27c5a</color>
+    <color name="color13">#82001b</color>
+    <color name="color14">#e2cdc2</color>
+    <color name="color15">#ff8d94</color>
+    <color name="color16">#282932</color>
+    <color name="color17">#757575</color>
+    <color name="color18">#B2EBF2</color>
+    <color name="color19">#00BCD4</color>
+    <color name="color20">#536DFE</color>
+
+    <color name="color21">#28BA06</color>
+    <color name="color22">#33B5E5</color>
+    <color name="color23">#0099CA</color>
+    <color name="color24">#00B6DF</color>
+    <color name="color25">#A3F0F6F8</color>
+    <color name="color26">#A3F0F6F8</color>
+    <color name="color27">#BBE7E9</color>
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="600.0" style="-fx-background-color: rgb(170,30,60);" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StoryController">
+   <children>
+      <AnchorPane fx:id="chapterSettings" prefHeight="370.0" prefWidth="600.0">
+         <children>
+            <ComboBox fx:id="cbPlace" layoutX="14.0" layoutY="100.0" prefWidth="160.0" promptText="Ort auswählen" />
+            <Label layoutX="13.0" layoutY="137.0" text="Abhängigkeiten zum Erstellen" textFill="WHITE" />
+            <ComboBox fx:id="cbCreate" layoutX="13.0" layoutY="159.0" prefHeight="26.0" prefWidth="160.0" promptText="Previous" />
+            <Button fx:id="btnNewArtefact" layoutX="183.0" layoutY="160.0" mnemonicParsing="false" onAction="#addArgs" prefHeight="25.0" prefWidth="25.0" text="+" />
+            <Label layoutX="222.0" layoutY="137.0" text="Abhängigkeiten zum Löschen" textFill="WHITE" />
+            <ComboBox fx:id="cbDelete" layoutX="221.0" layoutY="160.0" prefHeight="26.0" prefWidth="160.0" promptText="Previous" />
+            <Button fx:id="btnNewArtefact1" layoutX="391.0" layoutY="161.0" mnemonicParsing="false" onAction="#addArgs" prefHeight="25.0" prefWidth="25.0" text="+" />
+            <Button fx:id="btnExplorer" disable="true" layoutX="222.0" layoutY="39.0" mnemonicParsing="false" onAction="#openImage" prefHeight="26.0" prefWidth="60.0" text="Explorer" />
+            <RadioButton fx:id="rbtnImage" layoutX="222.0" layoutY="15.0" mnemonicParsing="false" onAction="#rBtnImgAction" text="Bild wählen?" textFill="WHITE" />
+            <TextField fx:id="tfImage" disable="true" editable="false" layoutX="289.0" layoutY="39.0" prefHeight="25.0" prefWidth="135.0" />
+            <ListView fx:id="listViewCreate" layoutX="13.0" layoutY="196.0" prefHeight="160.0" prefWidth="195.0" stylesheets="@application.css" />
+            <ListView fx:id="listViewDelete" layoutX="221.0" layoutY="196.0" prefHeight="160.0" prefWidth="195.0" stylesheets="@application.css" />
+            <TextField fx:id="tfName" layoutX="15.0" layoutY="39.0" prefWidth="160.0" />
+            <Label layoutX="16.0" layoutY="15.0" text="Name" textFill="WHITE" />
+            <Label layoutX="14.0" layoutY="77.0" text="Ort" textFill="WHITE" />
+            <TextField fx:id="tfArtefact" layoutX="221.0" layoutY="100.0" prefWidth="160.0" />
+            <Label layoutX="222.0" layoutY="77.0" text="Artefakt" textFill="WHITE" />
+            <Button fx:id="btnNext1" layoutX="466.0" layoutY="294.0" mnemonicParsing="false" onAction="#page2" prefHeight="26.0" prefWidth="120.0" text="Weiter" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="15.0" />
+            <Button fx:id="btnBack" layoutX="466.0" layoutY="330.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="26.0" prefWidth="120.0" text="Zurück" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="15.0" />
+            <ToggleButton fx:id="btnLastChapter" layoutX="465.0" layoutY="40.0" mnemonicParsing="false" text="Letztes Kapitel" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="chapterDialogue" prefHeight="370.0" prefWidth="600.0" visible="false">
+         <children>
+            <TableView fx:id="tvDialog" layoutX="14.0" layoutY="12.0" prefHeight="271.0" prefWidth="572.0" stylesheets="@application.css">
+               <columns>
+                  <TableColumn fx:id="position" prefWidth="42.0" text="Pos" />
+                  <TableColumn fx:id="person" prefWidth="94.0" text="Person" />
+                  <TableColumn fx:id="text" prefWidth="435.0" text="Text" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Button fx:id="btnDialog" layoutX="14.0" layoutY="300.0" mnemonicParsing="false" onAction="#addDialogue" prefHeight="56.0" prefWidth="135.0" text="Dialog Erstellen" />
+            <Button fx:id="btnEdit" layoutX="165.0" layoutY="300.0" mnemonicParsing="false" onAction="#editEntry" prefHeight="56.0" prefWidth="135.0" text="Dialog Bearbeiten" />
+            <Button fx:id="btnDelete" layoutX="315.0" layoutY="300.0" mnemonicParsing="false" onAction="#deleteElement" prefHeight="56.0" prefWidth="135.0" text="Dialog Löschen" />
+            <Button fx:id="btnNext2" layoutX="466.0" layoutY="300.0" mnemonicParsing="false" onAction="#page3" prefHeight="26.0" prefWidth="120.0" text="Weiter" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="15.0" />
+            <Button fx:id="btnBack1" layoutX="466.0" layoutY="328.0" mnemonicParsing="false" onAction="#page1" prefHeight="26.0" prefWidth="120.0" text="Zurück" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="15.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="chapterRiddle" prefHeight="370.0" prefWidth="600.0" visible="false">
+         <children>
+            <TextField fx:id="tfRiddleAnswer" layoutX="342.0" layoutY="57.0" prefHeight="26.0" prefWidth="222.0" promptText="Hier Rätselantwort einfügen" />
+            <TextArea fx:id="tfRiddleQuestion" layoutX="29.0" layoutY="57.0" prefHeight="100.0" prefWidth="275.0" promptText="Hier Rätselfrage einfügen" />
+            <ComboBox fx:id="cbRiddleType" layoutX="342.0" layoutY="132.0" prefWidth="150.0" promptText="Rätseltyp wählen" />
+            <Label layoutX="29.0" layoutY="40.0" text="Rätselfrage" textFill="WHITE" />
+            <Label layoutX="342.0" layoutY="115.0" text="Typ" textFill="WHITE" />
+            <Label layoutX="342.0" layoutY="40.0" text="Antwort" textFill="WHITE" />
+            <TextField fx:id="tfHint1" layoutX="29.0" layoutY="195.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField fx:id="tfHint2" layoutX="29.0" layoutY="256.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField fx:id="tfHint3" layoutX="29.0" layoutY="317.0" prefHeight="25.0" prefWidth="200.0" />
+            <ComboBox fx:id="cbCost1" layoutX="250.0" layoutY="195.0" prefHeight="25.0" prefWidth="59.0" />
+            <ComboBox fx:id="cbCost2" layoutX="250.0" layoutY="256.0" prefHeight="25.0" prefWidth="59.0" />
+            <ComboBox fx:id="cbCost3" layoutX="250.0" layoutY="317.0" prefHeight="25.0" prefWidth="59.0" />
+            <Label layoutX="29.0" layoutY="177.0" text="Hinweis 1" textFill="WHITE" />
+            <Label layoutX="29.0" layoutY="239.0" text="Hinweis 2" textFill="WHITE" />
+            <Label layoutX="29.0" layoutY="299.0" text="Hinweis 3" textFill="WHITE" />
+            <Label layoutX="250.0" layoutY="177.0" text="Kosten" textFill="WHITE" />
+            <Button fx:id="btnSave" layoutX="444.0" layoutY="268.0" mnemonicParsing="false" onAction="#saveContent" prefHeight="26.0" prefWidth="120.0" text="Speichern" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="15.0" />
+            <Button fx:id="btnBack2" layoutX="444.0" layoutY="304.0" mnemonicParsing="false" onAction="#page2" prefHeight="26.0" prefWidth="120.0" text="Zurück" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="15.0" />
+            <Label fx:id="lblStatus" layoutX="391.0" layoutY="273.0" prefHeight="17.0" prefWidth="195.0" textAlignment="JUSTIFY" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
