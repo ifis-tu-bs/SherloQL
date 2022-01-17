@@ -1,5 +1,7 @@
 package de.sep.sherloql.bin;
 
+import static android.graphics.Color.argb;
+
 import android.Manifest;
 import android.app.PendingIntent;
 import android.content.Intent;
@@ -25,9 +27,6 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.games.Games;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.Geofence;
 import com.google.android.gms.location.GeofencingClient;
@@ -42,13 +41,10 @@ import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Objects;
 
 import de.sep.sherloql.R;
 import de.sep.sherloql.savestate.SaveStateHelper;
@@ -59,8 +55,6 @@ import de.sep.sherloql.story.ParseStory;
 import de.sep.sherloql.story.RiddleFragment;
 import de.sep.sherloql.story.SpecialChapter;
 import de.sep.sherloql.story.Story;
-
-import static android.graphics.Color.argb;
 
 
 /**
@@ -73,19 +67,19 @@ public class Map extends FragmentActivity implements OnMapReadyCallback, GoogleM
     private static int length;
     private static ParseStory parseStory;
     private static ArrayList<Chapter> chapterArrayList;
-    private static SaveStateHelper staticStateHelper;
-    SupportMapFragment mapFragment;
-    FusedLocationProviderClient fusedLocationProviderClient;
-    String specChap = "Spezial Kapitel";
-    private GoogleMap mMap;
+
+    private SupportMapFragment mapFragment;
+    private FusedLocationProviderClient fusedLocationProviderClient;
+    private String specChap = "Spezial Kapitel";
+    private GoogleMap map;
     private GeofencingClient geofencingClient;
     private GeofenceHelper geofenceHelper;
     private Geocoder geocoder;
     private final float GEOFENCE_RADIUS = 50;
     private final String GEOFENCE_ID = "SOME_GEOFENCE_ID";
     private final int ACCESS_LOCATION_REQUEST_CODE = 10001;
-    private final int FINE_LOCATION_ACCESS_REQUEST_CODE = 10001;
-    private final int BACKGROUND_LOCATION_ACCESS_REQUEST_CODE = 1;
+    private final int LOCATION_ACCESS_REQUEST_CODE = 10001;
+    private final int LOCATION_PERMISSION_REQUEST_CODE = 1;
     private SaveStateHelper stateHelper;
     private Button homeButton;
     //DEBUG
@@ -95,14 +89,11 @@ public class Map extends FragmentActivity implements OnMapReadyCallback, GoogleM
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         SharedPreferences sp = getSharedPreferences("sp", MODE_PRIVATE);
         boolean firstStory = sp.getBoolean("firstStory", true);
         stateHelper = new SaveStateHelper(this);
-        int chapterIndex;
-        Intent intent = getIntent();
-        chapterIndex = intent.getIntExtra("chapter", -1);
         setContentView(R.layout.activity_map);
-
 
         homeButton = findViewById(R.id.fromMap2Home);
         homeButton.setOnClickListener(new View.OnClickListener() {
@@ -112,16 +103,6 @@ public class Map extends FragmentActivity implements OnMapReadyCallback, GoogleM
                 startActivity(intent);
             }
         });
-
-
-        GoogleSignInAccount gsi_account = GoogleSignIn.getLastSignedInAccount(this);
-        if (gsi_account != null) {
-            Games.getAchievementsClient(
-                    this,
-                    Objects.requireNonNull(GoogleSignIn.getLastSignedInAccount(this)))
-                    .unlock("85292484064");
-        }
-
 
         if (parseStory == null) {
             Log.d(TAG, "map");
@@ -198,24 +179,15 @@ public class Map extends FragmentActivity implements OnMapReadyCallback, GoogleM
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
-        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        map = googleMap;
+        map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         try {
             initMarkers();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        if ((ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED)) {
-            enableUserLocation();
-            zoomToUserLocation();
-        } else {
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)) {
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, ACCESS_LOCATION_REQUEST_CODE);
-            } else {
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, FINE_LOCATION_ACCESS_REQUEST_CODE);
-            }
-        }
+        enableUserLocation();
 
         if (!stateHelper.getStorySolved(specChap)) {
             if (SpecialChapter.Professor) {
@@ -275,8 +247,8 @@ public class Map extends FragmentActivity implements OnMapReadyCallback, GoogleM
             } else {
                 marker = new MarkerOptions().position(braunschweig).title("Marker in Braunschweig").snippet(Integer.toString(i)).icon(BitmapDescriptorFactory.defaultMarker());
             }
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(braunschweig));
-            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(braunschweig, 13.0f));
+            map.moveCamera(CameraUpdateFactory.newLatLng(braunschweig));
+            map.animateCamera(CameraUpdateFactory.newLatLngZoom(braunschweig, 13.0f));
 
             if (checkArtefacts(i)) {
                 stateHelper.updateStoryUnlocked(chapterArrayList.get(i).getName(), "true");
@@ -287,14 +259,14 @@ public class Map extends FragmentActivity implements OnMapReadyCallback, GoogleM
                     Log.d(TAG, "marker hinzugefügt " + chapterArrayList.get(i).getName());
                     addGeofence(braunschweig, GEOFENCE_RADIUS);
                     drawCircle(braunschweig);
-                    mMap.addMarker(marker).setVisible(true);
+                    map.addMarker(marker).setVisible(true);
 
                 }
             }
         }
 
         Log.d(TAG, "initMarkers: " + stateHelper.getBlub());
-        mMap.setOnMarkerClickListener(this);
+        map.setOnMarkerClickListener(this);
     }
 
     public String getIcon(int index) {
@@ -335,7 +307,7 @@ public class Map extends FragmentActivity implements OnMapReadyCallback, GoogleM
         ArrayList<String> dependencies = chapterArrayList.get(index).getDependencies();
         for (int i = 0; i < dependencies.size(); i++) {
 
-            if (stateHelper.getArtefactUnlocked(dependencies.get(i)) == false) {
+            if (!stateHelper.getArtefactUnlocked(dependencies.get(i))) {
                 Log.d(TAG, "false depend " + dependencies.get(i));
                 return false;
             } else {
@@ -368,14 +340,15 @@ public class Map extends FragmentActivity implements OnMapReadyCallback, GoogleM
 
     @Override
     public boolean onMarkerClick(final Marker marker) {
-        Log.d(TAG, "onMarkerClicked before");
         if (marker.getSnippet() != null) {
-            Log.d(TAG, "onMarkerClicked");
             homeButton.setVisibility(View.INVISIBLE);
             LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
             Criteria criteria = new Criteria();
             String bestProvider = String.valueOf(locationManager.getBestProvider(criteria, true));
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.checkSelfPermission(this,
+                    Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                    && ActivityCompat.checkSelfPermission(this,
+                    Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 Log.d(TAG, "onMarkerClick: permission granted");
             }
             Location location = locationManager.getLastKnownLocation(locationManager.getBestProvider(criteria, false));
@@ -451,12 +424,6 @@ public class Map extends FragmentActivity implements OnMapReadyCallback, GoogleM
         return true;
     }
 
-    public Bitmap resizeMapIcons(String iconName, int width, int height) {
-        Bitmap imageBitmap = BitmapFactory.decodeResource(getResources(), getResources().getIdentifier(iconName, "drawable", getPackageName()));
-        Bitmap resizedBitmap = Bitmap.createScaledBitmap(imageBitmap, width, height, false);
-        return resizedBitmap;
-    }
-
     public Bitmap getResizedBitmap(String iconName, int newWidth, int newHeight) {
         Log.d(TAG, "getResizedBitmap: " + iconName);
         Bitmap bm = BitmapFactory.decodeResource(getResources(), getResources().getIdentifier(iconName, "drawable", getPackageName()));
@@ -494,91 +461,116 @@ public class Map extends FragmentActivity implements OnMapReadyCallback, GoogleM
 
     @Override
     public void onBackPressed() {
+        openLastActivity();
+        super.onBackPressed();
+    }
+
+    private void openLastActivity() {
         if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
             finish();
             startActivity(getIntent());
             getSupportFragmentManager().popBackStackImmediate();
-
         } else {
-
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
-
-            super.onBackPressed();
         }
     }
 
     protected void addGeofence(LatLng latLng, float radius) {
-
         Geofence geofence = geofenceHelper.getGeofence(GEOFENCE_ID, latLng, radius, Geofence.GEOFENCE_TRANSITION_ENTER | Geofence.GEOFENCE_TRANSITION_DWELL | Geofence.GEOFENCE_TRANSITION_EXIT);
         GeofencingRequest geofencingRequest = geofenceHelper.getGeofencingRequest(geofence);
         PendingIntent pendingIntent = geofenceHelper.getPendingIntent();
 
-        geofencingClient.addGeofences(geofencingRequest, pendingIntent).addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                Log.d(TAG, "onSuccess: Geofence Added...111111");
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                String errorMessage = geofenceHelper.getErrorString(e);
-                Log.d(TAG, "onFailure: " + errorMessage);
-            }
-        });
-
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            geofencingClient.addGeofences(geofencingRequest, pendingIntent);
+        }
     }
 
 
     private void enableUserLocation() {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-            mMap.setMyLocationEnabled(true);
-        } else {
-            //Ask for permission
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)) {
-                //We need to show user a dialog for displaying why the permission is needed and then ask for the permission...
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, FINE_LOCATION_ACCESS_REQUEST_CODE);
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
+                && ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            Log.d(TAG, "enableUserLocation: permissions granted");
+            if (map != null) {
+                Log.d(TAG, "enableUserLocation: map is not null");
+                map.setMyLocationEnabled(true);
+                zoomToUserLocation();
             } else {
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, FINE_LOCATION_ACCESS_REQUEST_CODE);
+                openLastActivity();
             }
+        } else {
+            Log.d(TAG, "enableUserLocation: permissions not granted");
+            ActivityCompat.requestPermissions(this,
+                    new String[]{
+                            Manifest.permission.ACCESS_FINE_LOCATION,
+                            Manifest.permission.ACCESS_COARSE_LOCATION},
+                    LOCATION_PERMISSION_REQUEST_CODE);
         }
     }
 
 
     private void zoomToUserLocation() {
-        Task<Location> locationTask = fusedLocationProviderClient.getLastLocation();
-        locationTask.addOnSuccessListener(new OnSuccessListener<Location>() {
-            @Override
-            public void onSuccess(Location location) {
-                LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 20));
-            }
-        });
-
+        if (ActivityCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            Task<Location> locationTask = fusedLocationProviderClient.getLastLocation();
+            locationTask.addOnSuccessListener(location -> {
+                Log.d(TAG, "zoomToUserLocation: permissions granted");
+                if(map != null || location != null){
+                    LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
+                    map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 20));
+                } else {
+                    openLastActivity();
+                }
+            });
+        }
     }
 
     @Override
+    protected void onResumeFragments() {
+        super.onResumeFragments();
+        zoomToUserLocation();
+    }
+
+
+    @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if (requestCode == FINE_LOCATION_ACCESS_REQUEST_CODE) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                //We have the permission
-                mMap.setMyLocationEnabled(true);
+        if (requestCode == LOCATION_ACCESS_REQUEST_CODE) {
+            Log.d(TAG, "onRequestPermissionsResult: correct request code");
+            if(isPermissionGranted(permissions, grantResults)) {
+                Log.d(TAG, "onRequestPermissionsResult: permissions granted");
+                enableUserLocation();
             } else {
-                //We do not have the permission..
-
-            }
-        }
-
-        if (requestCode == BACKGROUND_LOCATION_ACCESS_REQUEST_CODE) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                //We have the permission
-                Toast.makeText(this, "You can add geofences...", Toast.LENGTH_SHORT).show();
-            } else {
-                //We do not have the permission..
-                Toast.makeText(this, "Background location access is neccessary for geofences to trigger...", Toast.LENGTH_SHORT).show();
+                Log.d(TAG, "onRequestPermissionsResult: permissions not granted");
+                showMissingPermissionError();
+                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+                openLastActivity();
             }
         }
     }
+
+    /**
+     * Checks if all requested permissions are granted.
+     */
+    private boolean isPermissionGranted(String[] grantPermissions, int[] grantResults) {
+        boolean fine = false, coarse = false;
+        for (int i = 0; i < grantPermissions.length; i++) {
+            if (grantPermissions[i].equals(Manifest.permission.ACCESS_FINE_LOCATION))
+                fine = grantResults[i] == PackageManager.PERMISSION_GRANTED;
+            if (grantPermissions[i].equals(Manifest.permission.ACCESS_COARSE_LOCATION))
+                coarse = grantResults[i] == PackageManager.PERMISSION_GRANTED;
+        }
+        return (coarse && fine);
+    }
+
+    private void showMissingPermissionError() {
+        Toast.makeText(this,
+                "Exact location is required to play the game.", Toast.LENGTH_SHORT).show();
+    }
+
 
     private void drawCircle(LatLng point) {
 
@@ -601,7 +593,7 @@ public class Map extends FragmentActivity implements OnMapReadyCallback, GoogleM
         circleOptions.strokeWidth(2);
 
         // Adding the circle to the GoogleMap
-        mMap.addCircle(circleOptions);
+        map.addCircle(circleOptions);
 
     }
 }
