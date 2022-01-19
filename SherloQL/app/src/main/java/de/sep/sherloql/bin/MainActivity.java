@@ -6,6 +6,7 @@ import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -15,6 +16,7 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import de.sep.sherloql.BuildConfig;
 import de.sep.sherloql.R;
 import de.sep.sherloql.bin.HowToPlay.EngHowToPlay1;
 import de.sep.sherloql.bin.HowToPlay.HowToPlay1;
@@ -46,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
         window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         window.setStatusBarColor(Color.parseColor("#1A000000"));
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+
+/*        if(BuildConfig.DEBUG)
+            StrictMode.enableDefaults();*/
 
         dbOpenHelper = new DBOpenHelper(this);
         dbOpenHelperEn = new DBOpenHelperEn(this);

@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "29.0.3"
 
     defaultConfig {
         applicationId 'de.tubs.sherloql'
@@ -48,8 +47,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation 'com.google.android.gms:play-services-maps:17.0.0'
-    implementation 'com.google.android.gms:play-services-location:17.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.davemorrissey.labs:subsampling-scale-image-view:3.10.0'
@@ -66,5 +63,8 @@ dependencies {
     implementation "android.arch.persistence.room:runtime:1.0.0"
     implementation 'com.google.android.material:material:1.1.0'
     implementation 'org.wso2.orbit.joda-time:joda-time:2.9.4.wso2v1'
+
+    //osmdroid -> map and location features
+    implementation 'org.osmdroid:osmdroid-android:6.1.10'
 
 }
