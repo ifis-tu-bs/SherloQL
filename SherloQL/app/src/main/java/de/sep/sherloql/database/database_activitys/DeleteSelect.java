@@ -54,6 +54,10 @@ public class DeleteSelect extends AppCompatActivity implements AdapterView.OnIte
 
             @Override
             public void onClick(View v) {
+                if(result == null || result.equals("")){
+                    return;
+                }
+
                 Intent intent = new Intent(v.getContext(), ActivityQuery.class);
                 // Hier wird der JOIN-String zusammengebaut
                 intent.putExtra("selectsDelete", result);

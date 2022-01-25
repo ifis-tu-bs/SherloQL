@@ -51,6 +51,10 @@ public class DeleteGroupBy extends AppCompatActivity implements AdapterView.OnIt
 
             @Override
             public void onClick(View v) {
+                if(result == null || result.equals("")){
+                    return;
+                }
+
                 Intent intent = new Intent(v.getContext(), ActivityQuery.class);
                 // Hier wird der JOIN-String zusammengebaut
                 intent.putExtra("groupByDelete", result);
