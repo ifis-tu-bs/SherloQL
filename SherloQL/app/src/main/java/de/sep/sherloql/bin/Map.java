@@ -10,7 +10,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.graphics.drawable.BitmapDrawable;
-import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -172,15 +171,11 @@ public class Map extends FragmentActivity implements LocationListener, Marker.On
 
         copyrightOverlay.setTextSize(10);
 
-        //mapView.setTileSource(TileSourceFactory.MAPNIK);
         mapView.getZoomController().setVisibility(CustomZoomButtonsController.Visibility.SHOW_AND_FADEOUT);
         mapView.setMultiTouchControls(true);
         mapView.getOverlays().add(locationOverlay);
         mapView.getOverlays().add(copyrightOverlay);
 
-        locationOverlay.enableMyLocation();
-        locationOverlay.enableFollowLocation();
-        //locationOverlay.setDrawAccuracyEnabled(true); //default set to true
         Bitmap icon =
                 ((BitmapDrawable) mapView.getContext().getResources().getDrawable(R.drawable.location_64)).getBitmap();
         icon.setHasAlpha(true);
@@ -191,7 +186,8 @@ public class Map extends FragmentActivity implements LocationListener, Marker.On
 
     /**
      * Function animates the position on the map to the current location, if it has already been set
-     * by the location manager. Otherwise the camera moves to a default position at IZ.
+     * by the location manager. Otherwise the camera moves to a default position at IZ to load
+     * a region of the map. This prevents the map showing a light blue screen.
      */
     private void setInitialLocation(){
         GeoPoint moveTo;
@@ -282,15 +278,17 @@ public class Map extends FragmentActivity implements LocationListener, Marker.On
         try {
             if (ActivityCompat.checkSelfPermission(this,
                     Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-                lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 500L, 1f, this);
+                currentLocation = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+                lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 100L, 1f, this);
+
             }
 
         } catch (Exception ignored) {
         }
 
-        mapView.onResume(); //needed for compass, my location overlays, v6.0.0 and up
         locationOverlay.enableFollowLocation();
         locationOverlay.enableMyLocation();
+        mapView.onResume(); //needed for compass, my location overlays, v6.0.0 and up
         mapView.getController().setZoom(20.0);
 
         setInitialLocation();
@@ -455,7 +453,7 @@ public class Map extends FragmentActivity implements LocationListener, Marker.On
                     Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)
                 return false;
 
-            Location location = lm.getLastKnownLocation(lm.getBestProvider(new Criteria(), true));
+            Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
             if (location != null) {
                 double lat = location.getLatitude();
                 double lng = location.getLongitude();
@@ -463,7 +461,6 @@ public class Map extends FragmentActivity implements LocationListener, Marker.On
                 int chapterPosition = Integer.parseInt(marker.getSnippet());
                 Chapter chapter = chapterArrayList.get(chapterPosition);
                 GeoPoint current = new GeoPoint(chapter.getLatitude(), chapter.getLongitude());
-
 
                 if (getDistance(self, current) <= GEOFENCE_RADIUS) {
                     homeButton.setVisibility(View.INVISIBLE);
@@ -531,16 +528,7 @@ public class Map extends FragmentActivity implements LocationListener, Marker.On
     }
 
     public double getDistance(GeoPoint pointA, GeoPoint pointB) {
-        double distance = 0;
-        Location locationA = new Location("A");
-        locationA.setLatitude(pointA.getLatitude());
-        locationA.setLongitude(pointA.getLongitude());
-        Location locationB = new Location("B");
-        locationB.setLatitude(pointB.getLatitude());
-        locationB.setLongitude(pointB.getLongitude());
-        distance = locationA.distanceTo(locationB);
-
-        return distance;
+        return pointA.distanceToAsDouble(pointB);
     }
 
     private void openLastActivity() {
@@ -560,6 +548,7 @@ public class Map extends FragmentActivity implements LocationListener, Marker.On
         polygon.setPoints(circle);
         polygon.getFillPaint().setARGB(128,74, 137, 243);
         polygon.getOutlinePaint().setARGB(255,74,137,243);
+        polygon.getOutlinePaint().setStrokeWidth(5.0f);
         polygon.setInfoWindow(null);
         mapView.getOverlayManager().add(polygon);
     }
