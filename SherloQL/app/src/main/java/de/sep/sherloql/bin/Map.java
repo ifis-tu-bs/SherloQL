@@ -189,12 +189,20 @@ public class Map extends FragmentActivity implements LocationListener, Marker.On
         locationOverlay.setPersonIcon(icon);
     }
 
+    /**
+     * Function animates the position on the map to the current location, if it has already been set
+     * by the location manager. Otherwise the camera moves to a default position at IZ.
+     */
     private void setInitialLocation(){
-        if (currentLocation != null) {
-            controller.animateTo(new GeoPoint(
+        GeoPoint moveTo;
+        if (currentLocation == null) {
+            moveTo = new GeoPoint(52.27301811585339, 10.524890955810347);
+        } else {
+            moveTo = new GeoPoint(
                     currentLocation.getLatitude(),
-                    currentLocation.getLongitude()));
+                    currentLocation.getLongitude());
         }
+        controller.animateTo(moveTo);
     }
 
     @Override
@@ -202,6 +210,11 @@ public class Map extends FragmentActivity implements LocationListener, Marker.On
         currentLocation = location;
     }
 
+    /**
+     * Checks for each permission in the parameter array if it is already granted by the system.
+     * If not it requests the permissions again.
+     * @param permissions String[]
+     */
     private void requestPermissionsIfNecessary(String[] permissions) {
         ArrayList<String> permissionsToRequest = new ArrayList<>();
         for (String permission : permissions) {
@@ -269,7 +282,7 @@ public class Map extends FragmentActivity implements LocationListener, Marker.On
         try {
             if (ActivityCompat.checkSelfPermission(this,
                     Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-                lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 50L, 1f, this);
+                lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 500L, 1f, this);
             }
 
         } catch (Exception ignored) {
