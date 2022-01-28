@@ -560,9 +560,11 @@ public class Map extends FragmentActivity implements LocationListener, Marker.On
                     "aktivieren?")
                     .setCancelable(false)
                     .setPositiveButton("Ja",
-                            (dialog, id) -> startActivity(
-                                    new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS)))
-                    .setNegativeButton("Nein", (dialog, id) -> {dialog.cancel();openLastActivity();});
+                            (dialog, id) -> {
+                        startActivity(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+                        dialog.dismiss();
+                            })
+                    .setNegativeButton("Nein", (dialog, id) -> {dialog.dismiss();openLastActivity();});
             final AlertDialog alert = builder.create();
             alert.show();
         } else { //english
