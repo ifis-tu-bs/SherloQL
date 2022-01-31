@@ -1,16 +1,8 @@
 package de.sep.sherloql.database.database_entitys;
 
 import androidx.room.Entity;
-import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
-import org.joda.time.*;
-
-
-import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
-
-//import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Objects;
 
 @Entity

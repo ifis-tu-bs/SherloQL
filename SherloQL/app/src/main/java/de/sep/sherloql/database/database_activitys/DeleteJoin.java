@@ -53,6 +53,10 @@ public class DeleteJoin extends AppCompatActivity implements AdapterView.OnItemS
 
             @Override
             public void onClick(View v) {
+                if(result == null || result.equals("")){
+                    return;
+                }
+                
                 Intent intent = new Intent(v.getContext(), ActivityQuery.class);
                 // Hier wird der JOIN-String zusammengebaut
                 intent.putExtra("joinsDelete", result);

@@ -25,20 +25,19 @@ import de.sep.sherloql.savestate.SaveStateHelper;
  * @author MatthiasFranz, MatthiasThang, Erkan, Christian
  */
 public class ActivityJoin extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
-    private LinkedList<String> tables;
+    private LinkedList<String> possibleJoins;
 
-    DBOpenHelper dbOpenHelper;
-    DBOpenHelperEn dbOpenHelperEn;
-    Spinner selectSpinner;
-    Spinner on1Spinner;
-    Spinner on2Spinner;
+    private DBOpenHelper dbOpenHelper;
+    private DBOpenHelperEn dbOpenHelperEn;
+    private Spinner selectSpinner;
+    private Spinner on1Spinner;
+    private Spinner on2Spinner;
 
-    Button weiter;
-    TextView beschreibung1;
+    private Button buttonContinue;
+    private TextView textViewDescription;
 
-    ArrayList<String> table1;
-    LinkedList<String> values = new LinkedList<>();
-    LinkedList<String> valuesSelect;
+    ArrayList<String> queriedTables;
+    LinkedList<String> queriedTableColumns = new LinkedList<>();
     private SaveStateHelper stateHelper;
 
 
@@ -49,18 +48,26 @@ public class ActivityJoin extends AppCompatActivity implements View.OnClickListe
         dbOpenHelper = new DBOpenHelper(this);
         dbOpenHelperEn = new DBOpenHelperEn(this);
         stateHelper = new SaveStateHelper(this);
-        if (stateHelper.getLanguage() == 0) {
-            tables = dbOpenHelper.getTables();
-        } else {
-            tables = dbOpenHelperEn.getTables();
-        }
         Intent intent = getIntent();
-        table1 = intent.getStringArrayListExtra("from");
-        for (int i = 0; i < table1.size(); i++) {
+        queriedTables = intent.getStringArrayListExtra("from");
+
+        if (stateHelper.getLanguage() == 0) {
+            possibleJoins = dbOpenHelper.getTables();
+        } else {
+            possibleJoins = dbOpenHelperEn.getTables();
+        }
+
+        //prevent self joins
+        for (String str: queriedTables) {
+            possibleJoins.remove(str);
+        }
+
+        //add all possible column names into the the list
+        for (int i = 0; i < queriedTables.size(); i++) {
             if (stateHelper.getLanguage() == 0) {
-                values.addAll(dbOpenHelper.getValues(tables.get(i)));
+                queriedTableColumns.addAll(dbOpenHelper.getValues(queriedTables.get(i)));
             } else {
-                values.addAll(dbOpenHelperEn.getValues(tables.get(i)));
+                queriedTableColumns.addAll(dbOpenHelperEn.getValues(queriedTables.get(i)));
             }
         }
 
@@ -70,8 +77,8 @@ public class ActivityJoin extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initButtons(){
-        weiter = (Button) findViewById(R.id.joinWeiter);
-        weiter.setOnClickListener(new View.OnClickListener() {
+        buttonContinue = (Button) findViewById(R.id.joinWeiter);
+        buttonContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), ActivityQuery.class);
@@ -84,15 +91,15 @@ public class ActivityJoin extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        beschreibung1 = (TextView) findViewById(R.id.selectLabel);
+        textViewDescription = (TextView) findViewById(R.id.selectLabel);
 
         //deutsch oder englisch
         if (stateHelper.getLanguage() == 0) {
-            weiter.setText("weiter");
-            beschreibung1.setText("Mit welcher Tabelle möchtest du joinen? Wähle die \nTabelle und die entsprechenden Attribute aus");
+            buttonContinue.setText("weiter");
+            textViewDescription.setText("Mit welcher Tabelle möchtest du joinen? Wähle die \nTabelle und die entsprechenden Attribute aus");
         } else {
-            weiter.setText("go on");
-            beschreibung1.setText("Which table do you want to join? Select the table \nand the related columns.");
+            buttonContinue.setText("go on");
+            textViewDescription.setText("Which table do you want to join? Select the table \nand the related columns.");
         }
     }
 
@@ -103,7 +110,7 @@ public class ActivityJoin extends AppCompatActivity implements View.OnClickListe
 
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item,
-                tables);
+                possibleJoins);
         // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
@@ -113,7 +120,7 @@ public class ActivityJoin extends AppCompatActivity implements View.OnClickListe
         //  on1Spinner initialisieren
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item,
-                values);
+                queriedTableColumns);
         // Specify the layout to use when the list of choices appears
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
@@ -127,15 +134,16 @@ public class ActivityJoin extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        LinkedList<String> possibleJoinColumns;
         // Create an ArrayAdapter using the string array and a default spinner layout
         if (stateHelper.getLanguage() == 0) {
-            valuesSelect = dbOpenHelper.getValues(selectSpinner.getItemAtPosition(position).toString());
+            possibleJoinColumns = dbOpenHelper.getValues(selectSpinner.getItemAtPosition(position).toString());
         } else {
-            valuesSelect = dbOpenHelperEn.getValues(selectSpinner.getItemAtPosition(position).toString());
+            possibleJoinColumns = dbOpenHelperEn.getValues(selectSpinner.getItemAtPosition(position).toString());
         }
 
         ArrayAdapter<String> adapter3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item,
-                valuesSelect);
+                possibleJoinColumns);
         // Specify the layout to use when the list of choices appears
         adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner

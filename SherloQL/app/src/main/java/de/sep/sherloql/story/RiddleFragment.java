@@ -3,7 +3,6 @@ package de.sep.sherloql.story;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -23,11 +22,8 @@ import android.widget.Toast;
 
 import com.davemorrissey.labs.subscaleview.ImageSource;
 import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.io.Serializable;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -35,9 +31,7 @@ import de.sep.sherloql.R;
 import de.sep.sherloql.bin.Map;
 import de.sep.sherloql.bin.Pinboard;
 import de.sep.sherloql.database.database_activitys.ActivityDelete;
-import de.sep.sherloql.database.database_activitys.ActivityInsert;
 import de.sep.sherloql.database.database_activitys.ActivityQuery;
-import de.sep.sherloql.database.database_activitys.ActivityUpdate;
 import de.sep.sherloql.savestate.SaveStateHelper;
 
 /**
@@ -69,7 +63,7 @@ public class RiddleFragment extends Fragment implements View.OnClickListener, Se
     private Button pinboard;
 
     public RiddleFragment() {
-        // Required empty public constructor
+
     }
     /**
      * Use this factory method to create a new instance of
@@ -258,18 +252,18 @@ public class RiddleFragment extends Fragment implements View.OnClickListener, Se
                 if (chapter.getRiddle().getType().equals("sql") || chapter.getRiddle().getType().equals("sql-delete")) {
                     if (sHelper.getStorySolved(chapter.getName())) {
                         AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
-                        alertDialog.setTitle("Sehr gut!");
+                        alertDialog.setTitle(sHelper.getLanguage() == 0 ? "Sehr gut!": "Great!");
                         LayoutInflater factory = LayoutInflater.from(getActivity());
                         final View view = factory.inflate(R.layout.alert_dialog_raetsel, null);
                         alertDialog.setView(view);
-                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Zurück zur Karte",
+                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL,
+                                sHelper.getLanguage() == 0 ? "Weiter" : "Next",
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
-                                        dialog.dismiss();
                                         if (!chapter.getDialogueArrayAfter().isEmpty()) {
                                             DialogueFragment fragment = DialogueFragment.newInstance(chapter.getDialogueArrayAfter(), 0, chapter);
                                             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                                            transaction.replace(R.id.map, fragment).commit();
+                                            transaction.replace(R.id.activity_map_root, fragment).commit();
                                         } else {
                                             Intent intent = new Intent(v.getContext(), Map.class);
                                             startActivity(intent);
@@ -278,16 +272,19 @@ public class RiddleFragment extends Fragment implements View.OnClickListener, Se
                                 });
                         alertDialog.show();
                     } else {
-                        Toast toast = Toast.makeText(getActivity().getApplicationContext(), "Falsche Antwort!", Toast.LENGTH_SHORT);
+                        Toast toast = Toast.makeText(getActivity().getApplicationContext(),
+                                sHelper.getLanguage() == 0 ? "Falsche Antwort": "Wrong answer",
+                                Toast.LENGTH_SHORT);
                         toast.show();
                     }
                 } else {
-                    boolean mitUmlaut = chapter.getRiddle().getAnswer().toLowerCase().contains("ä") || chapter.getRiddle().getAnswer().toLowerCase().contains("ö") || chapter.getRiddle().getAnswer().toLowerCase().contains("ü") || chapter.getRiddle().getAnswer().toLowerCase().contains("ß");
-                    String answer = chapter.getRiddle().getAnswer().toLowerCase();//nice   <3
-
+                    String answer = chapter.getRiddle().getAnswer().toLowerCase();
                     if (chapter.getName().equals("Kapitel 0")) {
                         if (input.getText().toString().equals("")) {
-                            Toast toast = Toast.makeText(getActivity().getApplicationContext(), "Ungültiger Name!", Toast.LENGTH_SHORT);
+                            Toast toast = Toast.makeText(getActivity().getApplicationContext(),
+                                    sHelper.getLanguage() == 0 ? "Ungültiger Name": "Invalid " +
+                                            "name",
+                                    Toast.LENGTH_SHORT);
                             toast.show();
                         } else {
                             sHelper.updateUsername("1", input.getText().toString());
@@ -302,18 +299,18 @@ public class RiddleFragment extends Fragment implements View.OnClickListener, Se
                                 sHelper.updateArtefactUnlocked(chapter.getArtefacts().get(i), "true");
                             }
                             AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
-                            alertDialog.setTitle("Sehr gut!");
+                            alertDialog.setTitle(sHelper.getLanguage() == 0 ? "Sehr gut!": "Great!");
                             LayoutInflater factory = LayoutInflater.from(getActivity());
                             final View view = factory.inflate(R.layout.alert_dialog_raetsel, null);
                             alertDialog.setView(view);
-                            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Zurück zur Karte",
+                            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL,
+                                    sHelper.getLanguage() == 0 ? "Weiter": "Next",
                                     new DialogInterface.OnClickListener() {
                                         public void onClick(DialogInterface dialog, int which) {
-                                            dialog.dismiss();
                                             if (!chapter.getDialogueArrayAfter().isEmpty()) {
                                                 DialogueFragment fragment = DialogueFragment.newInstance(chapter.getDialogueArrayAfter(), 0, chapter);
                                                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                                                transaction.replace(R.id.map, fragment).commit();
+                                                transaction.replace(R.id.activity_map_root, fragment).commit();
                                             } else {
                                                 Intent intent = new Intent(v.getContext(), Map.class);
                                                 startActivity(intent);
@@ -327,7 +324,7 @@ public class RiddleFragment extends Fragment implements View.OnClickListener, Se
                         matcher = pattern.matcher(input.getText().toString().toLowerCase());
                         if (matcher.find()) {
                             AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
-                            alertDialog.setTitle("Sehr gut!");
+                            alertDialog.setTitle(sHelper.getLanguage() == 0 ? "Sehr gut!": "Great!");
                             LayoutInflater factory = LayoutInflater.from(getActivity());
                             final View view = factory.inflate(R.layout.alert_dialog_raetsel, null);
                             alertDialog.setView(view);
@@ -342,14 +339,14 @@ public class RiddleFragment extends Fragment implements View.OnClickListener, Se
                                 sHelper.updateArtefactUnlocked(chapter.getArtefacts().get(i), "true");
                             }
 
-                            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Zurück zur Karte",
+                            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL,
+                                    sHelper.getLanguage() == 0 ? "Weiter" : "Next",
                                     new DialogInterface.OnClickListener() {
                                         public void onClick(DialogInterface dialog, int which) {
-                                            dialog.dismiss();
                                             if (!chapter.getDialogueArrayAfter().isEmpty()) {
                                                 DialogueFragment fragment = DialogueFragment.newInstance(chapter.getDialogueArrayAfter(), 0, chapter);
                                                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                                                transaction.replace(R.id.map, fragment).commit();
+                                                transaction.replace(R.id.activity_map_root, fragment).commit();
                                             } else {
                                                 Intent intent = new Intent(v.getContext(), Map.class);
                                                 startActivity(intent);
@@ -358,7 +355,9 @@ public class RiddleFragment extends Fragment implements View.OnClickListener, Se
                                     });
                             alertDialog.show();
                         } else {
-                            Toast toast = Toast.makeText(getActivity().getApplicationContext(), "Falsche Antwort!", Toast.LENGTH_SHORT);
+                            Toast toast = Toast.makeText(getActivity().getApplicationContext(),
+                                    sHelper.getLanguage() == 0 ? "Falsche Antwort": "Wrong answer",
+                                    Toast.LENGTH_SHORT);
                             toast.show();
                         }
                     }
@@ -393,9 +392,21 @@ public class RiddleFragment extends Fragment implements View.OnClickListener, Se
                 alertDialog.setTitle("Hinweis");
                 if (i < chapter.getRiddle().getHints().size()) {
                     if (!sHelper.getHintUsed(String.valueOf(i), String.valueOf(chapter.getName()))) {
-                        alertDialog.setMessage("Du hast noch " +  (chapter.getRiddle().getHints().size() - j) +" Hinweis(e) zur Verfügung. Möchtest du ein Hinweis für " + chapter.getRiddle().getHint(i).getPrice() + " Coin(s) kaufen?");
+                        if(sHelper.getLanguage() == 0) {
+                            alertDialog.setMessage("Du hast noch " +
+                                    (chapter.getRiddle().getHints().size() - j) +" Hinweis(e) zur " +
+                                    "Verfügung. Möchtest du ein Hinweis für " +
+                                    chapter.getRiddle().getHint(i).getPrice() + " Coin(s) kaufen?");
+                        } else {
+                            alertDialog.setMessage("You still have " +
+                                    (chapter.getRiddle().getHints().size() - j) +" hint(s) " +
+                                    "available. Do you want to buy one for " +
+                                    chapter.getRiddle().getHint(i).getPrice() + " Coin(s)?");
+                        }
 
-                        alertDialog.setPositiveButton("Hinweis kaufen",
+
+                        alertDialog.setPositiveButton(sHelper.getLanguage() == 0 ? "Hinweis " +
+                                        "kaufen": "Buy hint",
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which1) {
                                         dialog.dismiss();
@@ -411,14 +422,19 @@ public class RiddleFragment extends Fragment implements View.OnClickListener, Se
                                                 i++;
                                                 j++;
                                             } else {
-                                                Toast toast = Toast.makeText(getActivity().getApplicationContext(), "Du hast nicht genügend Coins!", Toast.LENGTH_SHORT);
+                                                Toast toast = Toast.makeText(getActivity().getApplicationContext(),
+                                                        sHelper.getLanguage() == 0 ?
+                                                                "Du hast nicht genügend Coins!":
+                                                        "You have not enough Coins!",
+                                                        Toast.LENGTH_SHORT);
                                                 toast.show();
                                             }
                                         }
                                     }
                                 });
 
-                        alertDialog.setNegativeButton("Zurück",
+                        alertDialog.setNegativeButton(sHelper.getLanguage() == 0 ? "Zurück":
+                                        "Back",
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which2) {
                                         dialog.dismiss();
@@ -430,7 +446,10 @@ public class RiddleFragment extends Fragment implements View.OnClickListener, Se
 
                     }
                 } else {
-                    Toast toast = Toast.makeText(getActivity().getApplicationContext(), "Es gibt keine Hinweise mehr", Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(getActivity().getApplicationContext(),
+                            sHelper.getLanguage() == 0 ?
+                                    "Es gibt keine Hinweise mehr":
+                            "There are no hints left to buy", Toast.LENGTH_SHORT);
                     toast.show();
                 }
                 break;

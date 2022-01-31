@@ -1,18 +1,14 @@
-//client id:
-//992171811353-aap4lcvpl08ncjkmmj0l4p6b1nf9mcba.apps.googleusercontent.com
-
 apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "de.sep.sherloql"
+        applicationId 'de.tubs.sherloql'
         minSdkVersion 23
         targetSdkVersion 30
-        versionCode 3
-        versionName "1.0"
+        versionCode 6
+        versionName '1.4'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -23,6 +19,8 @@ android {
         // but continue the build even when errors are found:
         //abortOnError false
     }
+
+
 
     buildTypes {
         release {
@@ -38,6 +36,8 @@ android {
 
 }
 
+
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -47,14 +47,9 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation 'com.google.android.gms:play-services-maps:17.0.0'
-    implementation 'com.google.android.gms:play-services-location:17.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.davemorrissey.labs:subsampling-scale-image-view:3.10.0'
-    // Achievements
-    implementation 'com.google.android.gms:play-services-games:21.0.0'
-    implementation "com.google.android.gms:play-services-auth:19.0.0"
 
     // Datenbank- Dependencies
     def room_version = "2.2.5"
@@ -68,5 +63,8 @@ dependencies {
     implementation "android.arch.persistence.room:runtime:1.0.0"
     implementation 'com.google.android.material:material:1.1.0'
     implementation 'org.wso2.orbit.joda-time:joda-time:2.9.4.wso2v1'
+
+    //osmdroid -> map and location features
+    implementation 'org.osmdroid:osmdroid-android:6.1.10'
 
 }
