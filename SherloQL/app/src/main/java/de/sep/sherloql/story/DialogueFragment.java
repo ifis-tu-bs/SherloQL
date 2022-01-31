@@ -48,9 +48,9 @@ public class DialogueFragment extends Fragment implements View.OnClickListener{
     ScrollView sv;
 
 
-    public DialogueFragment() {
+/*    public DialogueFragment() {
         // Required empty public constructor
-    }
+    }*/
 
     public static DialogueFragment newInstance(ArrayList<Dialogue> dialogue, int index, Chapter chapter) {
         DialogueFragment fragment = new DialogueFragment();
@@ -144,18 +144,18 @@ public class DialogueFragment extends Fragment implements View.OnClickListener{
             Log.d(TAG, "dialoooog dialogue.size() > index ");
             DialogueFragment fragment = newInstance(dialogue, index, chapter);
             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.map, fragment).commit();
+            transaction.replace(R.id.activity_map_root, fragment).commit();
 
         }else if (beforeOrAfter == 1){
             Log.d(TAG, "dialoooog beforeOrAfter == 1 ");
 
             if (chapter.getFlag() == 2) {
-               Intent intent = new Intent(v.getContext(), Map.class);
+                Intent intent = new Intent(v.getContext(), Map.class);
                 startActivity(intent);
             } else {
                 RiddleFragment fragment = RiddleFragment.newInstance(chapter);
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.map, fragment).addToBackStack("").commit();
+                transaction.replace(R.id.activity_map_root, fragment).addToBackStack("").commit();
             }
             //}
         } else if (beforeOrAfter == 2) {

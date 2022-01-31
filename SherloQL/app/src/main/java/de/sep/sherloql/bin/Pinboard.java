@@ -9,9 +9,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.games.AchievementsClient;
-import com.google.android.gms.games.Games;
-
 import java.util.ArrayList;
 
 import de.sep.sherloql.R;

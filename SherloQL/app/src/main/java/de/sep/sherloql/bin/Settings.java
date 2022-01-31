@@ -22,9 +22,8 @@ public class Settings extends AppCompatActivity {
     TextView languageTextView;
     ImageView germanFlag;
     ImageView ukFlag;
-    Switch benachrichtigung;
     Switch tonSwitch;
-    Switch vibration;
+
     private SaveStateHelper stateHelper;
     ImageView soundOn;
     ImageView soundOff;
@@ -42,7 +41,6 @@ public class Settings extends AppCompatActivity {
             ukFlag.setAlpha(0.5f);
             germanFlag.setAlpha(1f);
             languageTextView.setText("Sprache:");
-            benachrichtigung.setText("Benachrichtigung");
             tonSwitch.setText("Ton");
             if (stateHelper.getUsername("1").equals(" ")) {
                 newUsernameTextView.setHint("Neuer Benutzername");
@@ -54,9 +52,8 @@ public class Settings extends AppCompatActivity {
             germanFlag.setAlpha(0.5f);
             ukFlag.setAlpha(1f);
             languageTextView.setText("Language:");
-            benachrichtigung.setText("Notification");
             tonSwitch.setText("Sound");
-            vibration.setText("Vibration");
+
             if (stateHelper.getUsername("1").equals(" ")) {
                 newUsernameTextView.setHint("New username");
             }
@@ -87,9 +84,9 @@ public class Settings extends AppCompatActivity {
         languageTextView = (TextView) findViewById(R.id.languageTextview);
         germanFlag = (ImageView) findViewById(R.id.germanFlag);
         ukFlag = (ImageView) findViewById(R.id.ukFlag);
-        benachrichtigung = (Switch) findViewById(R.id.switch1);
+
         tonSwitch = (Switch) findViewById(R.id.switch2);
-        vibration = (Switch) findViewById(R.id.switch3);
+
         editUsername = (ImageButton) findViewById(R.id.username_button);
         newUsernameTextView = (EditText) findViewById(R.id.username_text);
 
@@ -99,9 +96,7 @@ public class Settings extends AppCompatActivity {
                 ukFlag.setAlpha(0.5f);
                 germanFlag.setAlpha(1f);
                 languageTextView.setText("Sprache:");
-                benachrichtigung.setText("Benachrichtigung");
                 tonSwitch.setText("Ton");
-                vibration.setText("Vibration");
                 if (stateHelper.getUsername("1").equals(" ")) {
                     newUsernameTextView.setHint("Neuer Benutzername");
                 }
@@ -119,9 +114,7 @@ public class Settings extends AppCompatActivity {
                 germanFlag.setAlpha(0.5f);
                 ukFlag.setAlpha(1f);
                 languageTextView.setText("Language:");
-                benachrichtigung.setText("Notification");
                 tonSwitch.setText("Sound");
-                vibration.setText("Vibration");
                 if (stateHelper.getUsername("1").equals(" ")) {
                     newUsernameTextView.setHint("New username");
                 }

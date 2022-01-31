@@ -1,19 +1,20 @@
 package de.sep.sherloql.bin;
 
 import android.Manifest;
-import android.app.PendingIntent;
+import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.graphics.Matrix;
-import android.location.Criteria;
-import android.location.Geocoder;
+import android.graphics.drawable.BitmapDrawable;
 import android.location.Location;
+import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -25,30 +26,20 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.games.Games;
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.Geofence;
-import com.google.android.gms.location.GeofencingClient;
-import com.google.android.gms.location.GeofencingRequest;
-import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.CircleOptions;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
+import org.osmdroid.api.IMapController;
+import org.osmdroid.config.Configuration;
+import org.osmdroid.util.GeoPoint;
+import org.osmdroid.views.CustomZoomButtonsController;
+import org.osmdroid.views.MapView;
+import org.osmdroid.views.overlay.CopyrightOverlay;
+import org.osmdroid.views.overlay.Marker;
+import org.osmdroid.views.overlay.Polygon;
+import org.osmdroid.views.overlay.mylocation.GpsMyLocationProvider;
+import org.osmdroid.views.overlay.mylocation.MyLocationNewOverlay;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Objects;
+import java.util.List;
 
 import de.sep.sherloql.R;
 import de.sep.sherloql.savestate.SaveStateHelper;
@@ -60,71 +51,63 @@ import de.sep.sherloql.story.RiddleFragment;
 import de.sep.sherloql.story.SpecialChapter;
 import de.sep.sherloql.story.Story;
 
-import static android.graphics.Color.argb;
-
 
 /**
  * @author MatthiasFranz
  * @author JudyAlchaar
  */
-public class Map extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
+public class Map extends FragmentActivity implements LocationListener, Marker.OnMarkerClickListener {
     private static final String TAG = "MapsActivity";
     private static Story story;
     private static int length;
     private static ParseStory parseStory;
     private static ArrayList<Chapter> chapterArrayList;
-    private static SaveStateHelper staticStateHelper;
-    SupportMapFragment mapFragment;
-    FusedLocationProviderClient fusedLocationProviderClient;
-    String specChap = "Spezial Kapitel";
-    private GoogleMap mMap;
-    private GeofencingClient geofencingClient;
-    private GeofenceHelper geofenceHelper;
-    private Geocoder geocoder;
-    private final float GEOFENCE_RADIUS = 50;
-    private final String GEOFENCE_ID = "SOME_GEOFENCE_ID";
-    private final int ACCESS_LOCATION_REQUEST_CODE = 10001;
-    private final int FINE_LOCATION_ACCESS_REQUEST_CODE = 10001;
-    private final int BACKGROUND_LOCATION_ACCESS_REQUEST_CODE = 1;
     private SaveStateHelper stateHelper;
-    private Button homeButton;
-    //DEBUG
-    private final boolean enableFences = true;
 
+    private String specChap = "Spezial Kapitel";
+
+    private Button homeButton;
+
+    private final int REQUEST_PERMISSIONS_REQUEST_CODE = 1;
+    private final float GEOFENCE_RADIUS = 50;
+    private MapView mapView = null;
+    private MyLocationNewOverlay locationOverlay;
+    private IMapController controller;
+    private static Location currentLocation;
+    private LocationManager lm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_map);
+        requestPermissionsIfNecessary(new String[]{
+                Manifest.permission.ACCESS_FINE_LOCATION,
+                //Manifest.permission.ACCESS_COARSE_LOCATION,
+                Manifest.permission.INTERNET,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE
+        });
+
+        Context ctx = getApplicationContext();
+        Configuration.getInstance().load(ctx,
+                PreferenceManager.getDefaultSharedPreferences(ctx));
+
+
         SharedPreferences sp = getSharedPreferences("sp", MODE_PRIVATE);
         boolean firstStory = sp.getBoolean("firstStory", true);
         stateHelper = new SaveStateHelper(this);
-        int chapterIndex;
-        Intent intent = getIntent();
-        chapterIndex = intent.getIntExtra("chapter", -1);
-        setContentView(R.layout.activity_map);
 
 
         homeButton = findViewById(R.id.fromMap2Home);
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), MainActivity.class);
-                startActivity(intent);
+                openLastActivity();
             }
         });
-
-
-        GoogleSignInAccount gsi_account = GoogleSignIn.getLastSignedInAccount(this);
-        if (gsi_account != null) {
-            Games.getAchievementsClient(
-                    this,
-                    Objects.requireNonNull(GoogleSignIn.getLastSignedInAccount(this)))
-                    .unlock("85292484064");
-        }
+        mapView = findViewById(R.id.map);
 
 
         if (parseStory == null) {
-            Log.d(TAG, "map");
             parseStory = new ParseStory(this);
             story = parseStory.parse();
             length = parseStory.getItemCount();
@@ -175,48 +158,143 @@ public class Map extends FragmentActivity implements OnMapReadyCallback, GoogleM
                 editor.apply();
             }
         }
+        initializeMap();
+        initMarkers();
+        initializeActivityBackStack();
 
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
+    }
 
-        geofencingClient = LocationServices.getGeofencingClient(this);
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
-        geofenceHelper = new GeofenceHelper(this);
-        geocoder = new Geocoder(this);
+    private void initializeMap() {
+        locationOverlay = new MyLocationNewOverlay(new GpsMyLocationProvider(this), mapView);
+        CopyrightOverlay copyrightOverlay = new CopyrightOverlay(this);
+        controller = mapView.getController();
+
+        copyrightOverlay.setTextSize(10);
+
+        mapView.getZoomController().setVisibility(CustomZoomButtonsController.Visibility.SHOW_AND_FADEOUT);
+        mapView.setMultiTouchControls(true);
+        mapView.getOverlays().add(locationOverlay);
+        mapView.getOverlays().add(copyrightOverlay);
+
+        Bitmap icon =
+                ((BitmapDrawable) mapView.getContext().getResources().getDrawable(R.drawable.location_64)).getBitmap();
+        icon.setHasAlpha(true);
+        locationOverlay.setPersonHotspot((float) icon.getWidth() / 2, (float) icon.getHeight() / 2);
+        locationOverlay.setDirectionArrow(icon, icon);
+        locationOverlay.setPersonIcon(icon);
     }
 
     /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
+     * Function animates the position on the map to the current location, if it has already been set
+     * by the location manager. Otherwise the camera moves to a default position at IZ to load
+     * a region of the map. This prevents the map showing a light blue screen.
      */
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
-        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-        try {
-            initMarkers();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        if ((ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED)) {
-            enableUserLocation();
-            zoomToUserLocation();
+    private void setInitialLocation(){
+        GeoPoint moveTo;
+        if (currentLocation == null) {
+            moveTo = new GeoPoint(52.27301811585339, 10.524890955810347);
         } else {
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)) {
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, ACCESS_LOCATION_REQUEST_CODE);
-            } else {
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, FINE_LOCATION_ACCESS_REQUEST_CODE);
+            moveTo = new GeoPoint(
+                    currentLocation.getLatitude(),
+                    currentLocation.getLongitude());
+        }
+        controller.animateTo(moveTo);
+    }
+
+    @Override
+    public void onLocationChanged(@NonNull Location location) {
+        currentLocation = location;
+    }
+
+    /**
+     * Checks for each permission in the parameter array if it is already granted by the system.
+     * If not it requests the permissions again.
+     * @param permissions String[]
+     */
+    private void requestPermissionsIfNecessary(String[] permissions) {
+        ArrayList<String> permissionsToRequest = new ArrayList<>();
+        for (String permission : permissions) {
+            if (ContextCompat.checkSelfPermission(this, permission)
+                    != PackageManager.PERMISSION_GRANTED) {
+                // Permission is not granted
+                permissionsToRequest.add(permission);
             }
         }
+        if (permissionsToRequest.size() > 0) {
+            ActivityCompat.requestPermissions(
+                    this,
+                    permissionsToRequest.toArray(new String[0]),
+                    REQUEST_PERMISSIONS_REQUEST_CODE);
+        }
+    }
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        ArrayList<String> permissionsToRequest = new ArrayList<>();
+        for (int i = 0; i < grantResults.length; i++) {
+            if(ActivityCompat.checkSelfPermission(this, permissions[i])
+                    != PackageManager.PERMISSION_GRANTED)
+                permissionsToRequest.add(permissions[i]);
+        }
+        if (permissionsToRequest.size() > 0) {
+            ActivityCompat.requestPermissions(
+                    this,
+                    permissionsToRequest.toArray(new String[0]),
+                    REQUEST_PERMISSIONS_REQUEST_CODE);
+        }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        try {
+            lm.removeUpdates(this);
+        } catch (Exception ignored) {
+        }
+
+        locationOverlay.disableFollowLocation();
+        locationOverlay.disableMyLocation();
+        mapView.onPause();  //needed for compass, my location overlays, v6.0.0 and up
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        requestPermissionsIfNecessary(new String[]{
+                Manifest.permission.ACCESS_FINE_LOCATION,
+                //Manifest.permission.ACCESS_COARSE_LOCATION,
+                Manifest.permission.INTERNET,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE
+        });
+
+        lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
+        //check if gps is enabled. If not open a dialog to activate it.
+        if (!lm.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+            buildAlertMessageNoGps();
+        }
+
+        try {
+            if (ActivityCompat.checkSelfPermission(this,
+                    Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                currentLocation = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+                lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 100L, 1f, this);
+
+            }
+
+        } catch (Exception ignored) {
+        }
+
+        locationOverlay.enableFollowLocation();
+        locationOverlay.enableMyLocation();
+        mapView.onResume(); //needed for compass, my location overlays, v6.0.0 and up
+        mapView.getController().setZoom(20.0);
+
+        setInitialLocation();
+    }
+
+    private void initializeActivityBackStack() {
         if (!stateHelper.getStorySolved(specChap)) {
             if (SpecialChapter.Professor) {
                 homeButton.setVisibility(View.INVISIBLE);
@@ -224,8 +302,8 @@ public class Map extends FragmentActivity implements OnMapReadyCallback, GoogleM
                 Chapter chapter1 = chapterArrayList.get(18);
                 ArrayList<Dialogue> dialogue = chapter1.getDialogueArrayBefore();
                 DialogueFragment fragment = DialogueFragment.newInstance(dialogue, 0, chapter1);
-                FragmentTransaction transaction1 = getSupportFragmentManager().beginTransaction();
-                transaction1.replace(R.id.map, fragment).addToBackStack("").commit();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.activity_map_root, fragment).addToBackStack("").commit();
             }
             if (SpecialChapter.Psycho) {
                 homeButton.setVisibility(View.INVISIBLE);
@@ -233,8 +311,8 @@ public class Map extends FragmentActivity implements OnMapReadyCallback, GoogleM
                 Chapter chapter1 = chapterArrayList.get(19);
                 ArrayList<Dialogue> dialogue = chapter1.getDialogueArrayBefore();
                 DialogueFragment fragment = DialogueFragment.newInstance(dialogue, 0, chapter1);
-                FragmentTransaction transaction1 = getSupportFragmentManager().beginTransaction();
-                transaction1.replace(R.id.map, fragment).addToBackStack("").commit();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.activity_map_root, fragment).addToBackStack("").commit();
             }
             if (SpecialChapter.Henrik) {
                 homeButton.setVisibility(View.INVISIBLE);
@@ -242,8 +320,8 @@ public class Map extends FragmentActivity implements OnMapReadyCallback, GoogleM
                 Chapter chapter1 = chapterArrayList.get(20);
                 ArrayList<Dialogue> dialogue = chapter1.getDialogueArrayBefore();
                 DialogueFragment fragment = DialogueFragment.newInstance(dialogue, 0, chapter1);
-                FragmentTransaction transaction1 = getSupportFragmentManager().beginTransaction();
-                transaction1.replace(R.id.map, fragment).addToBackStack("").commit();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.activity_map_root, fragment).addToBackStack("").commit();
             }
             if (SpecialChapter.Viktoria) {
                 homeButton.setVisibility(View.INVISIBLE);
@@ -251,8 +329,8 @@ public class Map extends FragmentActivity implements OnMapReadyCallback, GoogleM
                 Chapter chapter1 = chapterArrayList.get(21);
                 ArrayList<Dialogue> dialogue = chapter1.getDialogueArrayBefore();
                 DialogueFragment fragment = DialogueFragment.newInstance(dialogue, 0, chapter1);
-                FragmentTransaction transaction1 = getSupportFragmentManager().beginTransaction();
-                transaction1.replace(R.id.map, fragment).addToBackStack("").commit();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.activity_map_root, fragment).addToBackStack("").commit();
             }
             if (SpecialChapter.Moriarty) {
                 homeButton.setVisibility(View.INVISIBLE);
@@ -260,23 +338,26 @@ public class Map extends FragmentActivity implements OnMapReadyCallback, GoogleM
                 Chapter chapter1 = chapterArrayList.get(22);
                 ArrayList<Dialogue> dialogue = chapter1.getDialogueArrayBefore();
                 DialogueFragment fragment = DialogueFragment.newInstance(dialogue, 0, chapter1);
-                FragmentTransaction transaction1 = getSupportFragmentManager().beginTransaction();
-                transaction1.replace(R.id.map, fragment).addToBackStack("").commit();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.activity_map_root, fragment).addToBackStack("").commit();
             }
         }
     }
 
     public void initMarkers() {
         for (int i = 0; i < length; i++) {
-            LatLng braunschweig = new LatLng(chapterArrayList.get(i).getLatitude(), chapterArrayList.get(i).getLongitude());
-            MarkerOptions marker;
+            GeoPoint point = new GeoPoint(chapterArrayList.get(i).getLatitude(),
+                    chapterArrayList.get(i).getLongitude());
+            Marker marker = new Marker(mapView);
+            marker.setPosition(point);
+            marker.setSnippet(Integer.toString(i));
             if (getResources().getIdentifier(getIcon(i), "drawable", getPackageName()) != 0) {
-                marker = new MarkerOptions().position(braunschweig).title("Marker in Braunschweig").snippet(Integer.toString(i)).icon(BitmapDescriptorFactory.fromBitmap(getResizedBitmap(getIcon(i), 200, 200)));
+                marker.setIcon(new BitmapDrawable(getResources(),
+                        getResizedBitmap(getIcon(i), 200, 200)));
             } else {
-                marker = new MarkerOptions().position(braunschweig).title("Marker in Braunschweig").snippet(Integer.toString(i)).icon(BitmapDescriptorFactory.defaultMarker());
+                marker.setDefaultIcon();
             }
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(braunschweig));
-            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(braunschweig, 13.0f));
+
 
             if (checkArtefacts(i)) {
                 stateHelper.updateStoryUnlocked(chapterArrayList.get(i).getName(), "true");
@@ -285,16 +366,15 @@ public class Map extends FragmentActivity implements OnMapReadyCallback, GoogleM
             if (!checkTTL(i)) {
                 if (stateHelper.getStoryUnlocked(chapterArrayList.get(i).getName()) && !stateHelper.getStorySolved(chapterArrayList.get(i).getName())) {
                     Log.d(TAG, "marker hinzugefügt " + chapterArrayList.get(i).getName());
-                    addGeofence(braunschweig, GEOFENCE_RADIUS);
-                    drawCircle(braunschweig);
-                    mMap.addMarker(marker).setVisible(true);
-
+                    marker.setOnMarkerClickListener(this);
+                    drawCircle(point);
+                    mapView.getOverlayManager().add(marker);
+                    mapView.invalidate();
                 }
             }
         }
 
         Log.d(TAG, "initMarkers: " + stateHelper.getBlub());
-        mMap.setOnMarkerClickListener(this);
     }
 
     public String getIcon(int index) {
@@ -331,11 +411,10 @@ public class Map extends FragmentActivity implements OnMapReadyCallback, GoogleM
     }
 
     public boolean checkArtefacts(int index) {
-        Log.d(TAG, "checkArtefacts");
         ArrayList<String> dependencies = chapterArrayList.get(index).getDependencies();
         for (int i = 0; i < dependencies.size(); i++) {
 
-            if (stateHelper.getArtefactUnlocked(dependencies.get(i)) == false) {
+            if (!stateHelper.getArtefactUnlocked(dependencies.get(i))) {
                 Log.d(TAG, "false depend " + dependencies.get(i));
                 return false;
             } else {
@@ -367,94 +446,63 @@ public class Map extends FragmentActivity implements OnMapReadyCallback, GoogleM
     }
 
     @Override
-    public boolean onMarkerClick(final Marker marker) {
-        Log.d(TAG, "onMarkerClicked before");
+    public boolean onMarkerClick(Marker marker, MapView mapView) {
         if (marker.getSnippet() != null) {
-            Log.d(TAG, "onMarkerClicked");
-            homeButton.setVisibility(View.INVISIBLE);
-            LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-            Criteria criteria = new Criteria();
-            String bestProvider = String.valueOf(locationManager.getBestProvider(criteria, true));
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                Log.d(TAG, "onMarkerClick: permission granted");
-            }
-            Location location = locationManager.getLastKnownLocation(locationManager.getBestProvider(criteria, false));
+
+            if(ActivityCompat.checkSelfPermission(this,
+                    Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)
+                return false;
+
+            Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
             if (location != null) {
                 double lat = location.getLatitude();
                 double lng = location.getLongitude();
-                LatLng self = new LatLng(lat, lng);
+                GeoPoint self = new GeoPoint(lat, lng);
                 int chapterPosition = Integer.parseInt(marker.getSnippet());
                 Chapter chapter = chapterArrayList.get(chapterPosition);
-                LatLng current = new LatLng(chapter.getLatitude(), chapter.getLongitude());
+                GeoPoint current = new GeoPoint(chapter.getLatitude(), chapter.getLongitude());
 
-                // fences are enabled
-                if (enableFences) {
-                    if (getDistance(self, current) <= GEOFENCE_RADIUS) {
-                        if (chapterPosition == 17) {
-                            Log.d(TAG, "onMarkerClick: die if clause funktioniert bei onmarkerclick");
-                            SpecialChapter chapFrag = SpecialChapter.getInstance();
-                            if (chapFrag.isChapterFinished()) {
-                                return true;
-                            }
-                            Log.d(TAG, "onMarkerClick: 4");
-                            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                            Log.d(TAG, "onMarkerClick: 3");
-                            transaction.replace(R.id.map, chapFrag).addToBackStack("wtf").commit();
-                            Log.d(TAG, "onMarkerClick: 1");
-
-                        } else {
-                            if (!stateHelper.getStorySolved(chapter.getName())) {
-                                ArrayList<Dialogue> dialogue = chapter.getDialogueArrayBefore();
-                                Log.d(TAG, "dialoooog Map: " + dialogue.size());
-                                // prüfen ob es ein Dialogue gibt.
-                                if (dialogue != null) {
-                                    DialogueFragment fragment = DialogueFragment.newInstance(dialogue, 0, chapter);
-                                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                                    transaction.replace(R.id.map, fragment).addToBackStack("").commit();
-                                } else {
-                                    RiddleFragment fragment = RiddleFragment.newInstance(chapter);
-                                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                                    transaction.replace(R.id.map, fragment).addToBackStack("").commit();
-                                }
-                            }
-                        }
-                    } else {
-                        Toast.makeText(this, "Bitte erst den Standort erreichen", Toast.LENGTH_SHORT).show();
-                        Log.d(TAG, "distance: " + getDistance(self, current));
-                    }
-                } else {
+                if (getDistance(self, current) <= GEOFENCE_RADIUS) {
+                    homeButton.setVisibility(View.INVISIBLE);
                     if (chapterPosition == 17) {
                         Log.d(TAG, "onMarkerClick: die if clause funktioniert bei onmarkerclick");
                         SpecialChapter chapFrag = SpecialChapter.getInstance();
+                        if (chapFrag.isChapterFinished()) {
+                            return true;
+                        }
                         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                        transaction.replace(R.id.map, chapFrag).addToBackStack("wtf").commit();
+                        transaction.replace(R.id.activity_map_root, chapFrag).addToBackStack("").commit();
 
                     } else {
                         if (!stateHelper.getStorySolved(chapter.getName())) {
                             ArrayList<Dialogue> dialogue = chapter.getDialogueArrayBefore();
+                            Log.d(TAG, "dialog Map: " + dialogue.size());
                             // prüfen ob es ein Dialogue gibt.
                             if (dialogue != null) {
                                 DialogueFragment fragment = DialogueFragment.newInstance(dialogue, 0, chapter);
                                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                                transaction.replace(R.id.map, fragment).addToBackStack("").commit();
+                                transaction.replace(R.id.activity_map_root, fragment).addToBackStack("").commit();
                             } else {
                                 RiddleFragment fragment = RiddleFragment.newInstance(chapter);
                                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                                transaction.replace(R.id.map, fragment).addToBackStack("").commit();
+                                transaction.replace(R.id.activity_map_root, fragment).addToBackStack("").commit();
                             }
                         }
                     }
-                }
+                } else {
+                    if(stateHelper.getLanguage() == 0) {
+                        Toast.makeText(this, "Bitte erst den Standort erreichen",
+                                Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(this,"Please reach the location first",
+                                Toast.LENGTH_SHORT).show();
+                    }
 
+                    Log.d(TAG, "distance: " + getDistance(self, current));
+                }
             }
         }
         return true;
-    }
-
-    public Bitmap resizeMapIcons(String iconName, int width, int height) {
-        Bitmap imageBitmap = BitmapFactory.decodeResource(getResources(), getResources().getIdentifier(iconName, "drawable", getPackageName()));
-        Bitmap resizedBitmap = Bitmap.createScaledBitmap(imageBitmap, width, height, false);
-        return resizedBitmap;
     }
 
     public Bitmap getResizedBitmap(String iconName, int newWidth, int newHeight) {
@@ -479,129 +527,62 @@ public class Map extends FragmentActivity implements OnMapReadyCallback, GoogleM
         return resizedBitmap;
     }
 
-    public double getDistance(LatLng LatLng1, LatLng LatLng2) {
-        double distance = 0;
-        Location locationA = new Location("A");
-        locationA.setLatitude(LatLng1.latitude);
-        locationA.setLongitude(LatLng1.longitude);
-        Location locationB = new Location("B");
-        locationB.setLatitude(LatLng2.latitude);
-        locationB.setLongitude(LatLng2.longitude);
-        distance = locationA.distanceTo(locationB);
-
-        return distance;
+    public double getDistance(GeoPoint pointA, GeoPoint pointB) {
+        return pointA.distanceToAsDouble(pointB);
     }
 
-    @Override
-    public void onBackPressed() {
+    private void openLastActivity() {
         if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
             finish();
             startActivity(getIntent());
             getSupportFragmentManager().popBackStackImmediate();
-
-        } else {
-
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-
-            super.onBackPressed();
+            return;
         }
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
-    protected void addGeofence(LatLng latLng, float radius) {
-
-        Geofence geofence = geofenceHelper.getGeofence(GEOFENCE_ID, latLng, radius, Geofence.GEOFENCE_TRANSITION_ENTER | Geofence.GEOFENCE_TRANSITION_DWELL | Geofence.GEOFENCE_TRANSITION_EXIT);
-        GeofencingRequest geofencingRequest = geofenceHelper.getGeofencingRequest(geofence);
-        PendingIntent pendingIntent = geofenceHelper.getPendingIntent();
-
-        geofencingClient.addGeofences(geofencingRequest, pendingIntent).addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                Log.d(TAG, "onSuccess: Geofence Added...111111");
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                String errorMessage = geofenceHelper.getErrorString(e);
-                Log.d(TAG, "onFailure: " + errorMessage);
-            }
-        });
-
+    private void drawCircle(GeoPoint point) {
+        List<GeoPoint> circle = Polygon.pointsAsCircle(point, GEOFENCE_RADIUS);
+        Polygon polygon = new Polygon(mapView);
+        polygon.setPoints(circle);
+        polygon.getFillPaint().setARGB(128,74, 137, 243);
+        polygon.getOutlinePaint().setARGB(255,74,137,243);
+        polygon.getOutlinePaint().setStrokeWidth(5.0f);
+        polygon.setInfoWindow(null);
+        mapView.getOverlayManager().add(polygon);
     }
 
-
-    private void enableUserLocation() {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-            mMap.setMyLocationEnabled(true);
-        } else {
-            //Ask for permission
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)) {
-                //We need to show user a dialog for displaying why the permission is needed and then ask for the permission...
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, FINE_LOCATION_ACCESS_REQUEST_CODE);
-            } else {
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, FINE_LOCATION_ACCESS_REQUEST_CODE);
-            }
+    private void buildAlertMessageNoGps() {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        if(stateHelper.getLanguage() == 0) { //deutsch
+            builder.setMessage("Dein Standort scheint deaktiviert zu sein, möchtest Du es " +
+                    "aktivieren?")
+                    .setCancelable(false)
+                    .setPositiveButton("Ja",
+                            (dialog, id) -> {
+                        startActivity(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+                        dialog.dismiss();
+                            })
+                    .setNegativeButton("Nein", (dialog, id) -> {dialog.dismiss();openLastActivity();});
+            final AlertDialog alert = builder.create();
+            alert.show();
+        } else { //english
+            builder.setMessage("Your GPS seems to be disabled, do you want to enable it?")
+                    .setCancelable(false)
+                    .setPositiveButton("Yes", (dialog, id) -> startActivity(
+                            new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS)))
+                    .setNegativeButton("No", (dialog, id) -> {dialog.cancel();openLastActivity();});
+            final AlertDialog alert = builder.create();
+            alert.show();
         }
-    }
 
-
-    private void zoomToUserLocation() {
-        Task<Location> locationTask = fusedLocationProviderClient.getLastLocation();
-        locationTask.addOnSuccessListener(new OnSuccessListener<Location>() {
-            @Override
-            public void onSuccess(Location location) {
-                LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 20));
-            }
-        });
 
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if (requestCode == FINE_LOCATION_ACCESS_REQUEST_CODE) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                //We have the permission
-                mMap.setMyLocationEnabled(true);
-            } else {
-                //We do not have the permission..
-
-            }
-        }
-
-        if (requestCode == BACKGROUND_LOCATION_ACCESS_REQUEST_CODE) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                //We have the permission
-                Toast.makeText(this, "You can add geofences...", Toast.LENGTH_SHORT).show();
-            } else {
-                //We do not have the permission..
-                Toast.makeText(this, "Background location access is neccessary for geofences to trigger...", Toast.LENGTH_SHORT).show();
-            }
-        }
-    }
-
-    private void drawCircle(LatLng point) {
-
-        // Instantiating CircleOptions to draw a circle around the marker
-        CircleOptions circleOptions = new CircleOptions();
-
-        // Specifying the center of the circle
-        circleOptions.center(point);
-
-        // Radius of the circle
-        circleOptions.radius(GEOFENCE_RADIUS);
-
-        // Border color of the circle
-        circleOptions.strokeColor(Color.WHITE);
-
-        // Fill color of the circle
-        circleOptions.fillColor(argb(130, 135, 163, 214));
-
-        // Border width of the circle
-        circleOptions.strokeWidth(2);
-
-        // Adding the circle to the GoogleMap
-        mMap.addCircle(circleOptions);
-
+    public void onBackPressed() {
+        openLastActivity();
+        super.onBackPressed();
     }
 }

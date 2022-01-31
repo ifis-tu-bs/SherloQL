@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.renderscript.Sampler;
 import android.util.Log;
 
 import java.util.ArrayList;
@@ -513,96 +514,102 @@ public class SaveStateHelper extends SQLiteOpenHelper {
 
     public int getLanguage() {
         SQLiteDatabase db = this.getWritableDatabase();
+        int value = 0;
         Cursor res = db.rawQuery("SELECT " + LANGUAGE_COLUMN_SELECTION + " FROM " + TABLE_LANGUAGE  + " WHERE " + LANGUAGE_COLUMN_LANG + " = '" + "1" + "'", null);
         if (res.moveToFirst()) {
-            return Integer.parseInt(res.getString(0));
+             value = Integer.parseInt(res.getString(0));
         }
-        return 0;
+        res.close();
+        return value;
     }
 
     public int getSound() {
         SQLiteDatabase db = this.getWritableDatabase();
+        int value = 0;
         Cursor res = db.rawQuery("SELECT " + SOUND_COLUMN_SELECTION + " FROM " + TABLE_SOUND  + " WHERE " + SOUND_COLUMN_ID + " = '" + "1" + "'", null);
         if (res.moveToFirst()) {
-            return Integer.parseInt(res.getString(0));
+            value = Integer.parseInt(res.getString(0));
         }
-        return 0;
+        res.close();
+        return value;
     }
 
     public int getSQL() {
         SQLiteDatabase db = this.getWritableDatabase();
+        int value = 0;
         Cursor res = db.rawQuery("SELECT " + SQL_COLUMN_select + " FROM " + TABLE_SQL  + " WHERE " + SQL_COLUMN_SQL + " = '" + "1" + "'", null);
         if (res.moveToFirst()) {
-            return Integer.parseInt(res.getString(0));
+            value = Integer.parseInt(res.getString(0));
         }
-        return 0;
+        res.close();
+        return value;
     }
 
     public boolean getStoryUnlocked(String riddle) {
         SQLiteDatabase db = this.getWritableDatabase();
+        boolean value = false;
         Cursor res = db.rawQuery("SELECT " + STORY_COLUMN_UNLOCKED + " FROM " + TABLE_STORY + " WHERE " + STORY_COLUMN_RIDDLE + " = '" + riddle + "'", null);
         if (res.moveToFirst()) {
             if (res.getString(0).equals("true")) {
-                return true;
-            } else {
-                return false;
+                value = true;
             }
         }
-        return false;
+        res.close();
+        return value;
     }
 
     public boolean getStorySolved(String riddle) {
         SQLiteDatabase db = this.getWritableDatabase();
+        boolean value = false;
         Cursor res = db.rawQuery("SELECT " + STORY_COLUMN_SOLVED + " FROM " + TABLE_STORY + " WHERE " + STORY_COLUMN_RIDDLE + " = '" + riddle + "'", null);
         if (res.moveToFirst()) {
             if (res.getString(0).equals("true")) {
-                return true;
-            } else {
-                return false;
+                value = true;
             }
         }
-        return false;
+        res.close();
+        return value;
     }
 
     public boolean getArtefactUnlocked(String name) {
         SQLiteDatabase db = this.getWritableDatabase();
+        boolean value = false;
         Cursor res = db.rawQuery("SELECT " + ARTEFACTS_COLUMN_UNLOCKED + " FROM " + TABLE_ARTEFACTS + " WHERE " + ARTEFACTS_COLUMN_NAME + " = '" + name + "'", null);
         if (res.moveToFirst()) {
             if (res.getString(0).equals("true")) {
-                return true;
-            } else {
-                return false;
+                value = true;
             }
         }
-        return false;
+        res.close();
+        return value;
     }
 
     public boolean checkStoryUnlocked(String riddle) {
         SQLiteDatabase db = this.getWritableDatabase();
+        boolean value = false;
         Cursor res = db.rawQuery("SELECT " + STORY_COLUMN_UNLOCKED + " FROM " + TABLE_STORY + " WHERE " + STORY_COLUMN_RIDDLE + " = '" + riddle + "'", null);
         if (res.moveToFirst()) {
-            if (res.getString(0).equals(null)) {
-                return true;
-            } else {
-                return false;
+            if (res.getString(0).equals("")) {
+                value = true;
             }
         }
-        return false;
+        res.close();
+        return value;
     }
 
     public boolean getHintUsed(String id, String chapter) {
         SQLiteDatabase db = this.getWritableDatabase();
+        boolean value = false;
         Cursor res = db.rawQuery("SELECT " + HINT_COLUMN_USED + " FROM " + TABLE_HINTS + " WHERE " + HINT_COLUMN_ID + " = '" + id + "'" + " AND " + HINT_COLUMN_CHAPTER + " = '" + chapter + "'", null);
 
         if (res.moveToFirst()) {
             if (res.getString(0).equals("true")) {
-                return true;
-            } else {
-                return false;
+                value = true;
             }
         }
-        return false;
-        }
+        res.close();
+        return value;
+    }
 
     public int getBlub() {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -611,139 +618,147 @@ public class SaveStateHelper extends SQLiteOpenHelper {
         while (res.moveToNext()) {
             i++;
         }
-
+        res.close();
         return i;
     }
 
     public boolean getRBAllgemeinesSolved(String riddle) {
         SQLiteDatabase db = this.getWritableDatabase();
+        boolean value = false;
         Cursor res = db.rawQuery("SELECT " + RBALLGEMEINES_COLUMN_SOLVED + " FROM " + TABLE_RBALLGEMEINES + " WHERE " + RBALLGEMEINES_COLUMN_RIDDLE + " = '" + riddle + "'", null);
         if (res.moveToFirst()) {
             if (res.getString(0).equals("true")) {
-                return true;
-            } else {
-                return false;
+                value = true;
             }
         }
-        return false;
+        res.close();
+        return value;
     }
 
 
     public boolean getRBBraunschweigSolved(String riddle) {
         SQLiteDatabase db = this.getWritableDatabase();
+        boolean value = false;
         Cursor res = db.rawQuery("SELECT " + RBBRAUNSCHWEIG_COLUMN_SOLVED + " FROM " + TABLE_RBBRAUNSCHWEIG + " WHERE " + RBBRAUNSCHWEIG_COLUMN_RIDDLE + " = '" + riddle + "'", null);
         if (res.moveToFirst()) {
             if (res.getString(0).equals("true")) {
-                return true;
-            } else {
-                return false;
+                value = true;
             }
         }
-        return false;
+        res.close();
+        return value;
     }
 
     public boolean getRBGeographieSolved(String riddle) {
         SQLiteDatabase db = this.getWritableDatabase();
+        boolean value = false;
         Cursor res = db.rawQuery("SELECT " + RBGEOGRAPHIE_COLUMN_SOLVED + " FROM " + TABLE_RBGEOGRAPHIE + " WHERE " + RBGEOGRAPHIE_COLUMN_RIDDLE + " = '" + riddle + "'", null);
         if (res.moveToFirst()) {
             if (res.getString(0).equals("true")) {
-                return true;
-            } else {
-                return false;
+                value = true;
             }
         }
-        return false;
+        res.close();
+        return value;
     }
 
     public boolean getRBInformatikSolved(String riddle) {
         SQLiteDatabase db = this.getWritableDatabase();
+        boolean value = false;
         Cursor res = db.rawQuery("SELECT " + RBINFORMATIK_COLUMN_SOLVED + " FROM " + TABLE_RBINFORMATIK + " WHERE " + RBINFORMATIK_COLUMN_RIDDLE + " = '" + riddle + "'", null);
         if (res.moveToFirst()) {
             if (res.getString(0).equals("true")) {
-                return true;
-            } else {
-                return false;
+                value = true;
             }
         }
-        return false;
+        res.close();
+        return value;
     }
 
     public boolean getRBLogikSolved(String riddle) {
         SQLiteDatabase db = this.getWritableDatabase();
+        boolean value = false;
         Cursor res = db.rawQuery("SELECT " + RBLOGIK_COLUMN_SOLVED + " FROM " + TABLE_RBLOGIK + " WHERE " + RBLOGIK_COLUMN_RIDDLE + " = '" + riddle + "'", null);
         if (res.moveToFirst()) {
             if (res.getString(0).equals("true")) {
-                return true;
-            } else {
-                return false;
+                value = true;
             }
         }
-        return false;
+        res.close();
+        return value;
     }
 
     public boolean getRBMathematikSolved(String riddle) {
         SQLiteDatabase db = this.getWritableDatabase();
+        boolean value = false;
         Cursor res = db.rawQuery("SELECT " + RBMATHEMATIK_COLUMN_SOLVED + " FROM " + TABLE_RBMATHEMATIK + " WHERE " + RBMATHEMATIK_COLUMN_RIDDLE + " = '" + riddle + "'", null);
         if (res.moveToFirst()) {
             if (res.getString(0).equals("true")) {
-                return true;
-            } else {
-                return false;
+                value = true;
             }
         }
-        return false;
+        res.close();
+        return value;
     }
 
     public boolean getRBSpracheSolved(String riddle) {
         SQLiteDatabase db = this.getWritableDatabase();
+        boolean value = false;
         Cursor res = db.rawQuery("SELECT " + RBSPRACHE_COLUMN_SOLVED + " FROM " + TABLE_RBSPRACHE + " WHERE " + RBSPRACHE_COLUMN_RIDDLE + " = '" + riddle + "'", null);
         if (res.moveToFirst()) {
             if (res.getString(0).equals("true")) {
-                return true;
-            } else {
-                return false;
+                value = true;
             }
         }
-        return false;
+        res.close();
+        return value;
     }
 
 
 
     public int getCoins(String coin) {
         SQLiteDatabase db = this.getWritableDatabase();
+        int value = 0;
         Cursor res = db.rawQuery("SELECT " + COINS_COLUMN_AMOUNT + " FROM " + TABLE_COINS  + " WHERE " + COINS_COLUMN_COINS + " = '" + coin + "'", null);
         if (res.moveToFirst()) {
-            return Integer.parseInt(res.getString(0));
+            value = Integer.parseInt(res.getString(0));
         }
-        return 0;
+        res.close();
+        return value;
     }
 
     public int getCurrentAnswer(String name) {
         SQLiteDatabase db = this.getWritableDatabase();
+        int value = 0;
         Cursor res = db.rawQuery("SELECT " + CURRENT_COLUMN_ANSWER + " FROM " + TABLE_CURRENT  + " WHERE " + CURRENT_COLUMN_NAME + " = '" + name + "'", null);
         if (res.moveToFirst()) {
-            return Integer.parseInt(res.getString(0));
+            value = Integer.parseInt(res.getString(0));
         }
-        return 0;
+        res.close();
+        return value;
     }
 
     public String getAnswer(String name) {
         ArrayList<String> ans = new ArrayList<>();
         SQLiteDatabase db = this.getWritableDatabase();
+        String value = "";
         Cursor res = db.rawQuery("SELECT " + STORY_COLUMN_ANSWER + " FROM " + TABLE_STORY + " WHERE " + STORY_COLUMN_RIDDLE + " = '" + name + "'", null);
         while (res.moveToNext()) {
-            return res.getString(0);
+            value = res.getString(0);
         }
-        return "";
+        res.close();
+        return value;
     }
 
     public String getChapterName(String answer) {
         SQLiteDatabase db = this.getWritableDatabase();
+        String value = "";
         Cursor res = db.rawQuery("SELECT " + CURRENT_COLUMN_NAME + " FROM " + TABLE_CURRENT  + " WHERE " + CURRENT_COLUMN_ANSWER + " = '" + answer + "'", null);
         if (res.moveToFirst()) {
-            return res.getString(0);
+            value = res.getString(0);
         }
-        return "";
+        res.close();
+        return value;
     }
 
     public ArrayList<String> getArtefacts(String chapter) {
@@ -753,6 +768,7 @@ public class SaveStateHelper extends SQLiteOpenHelper {
         while (res.moveToNext()) {
             artefacts.add(res.getString(0));
         }
+        res.close();
         return artefacts;
     }
 
@@ -763,6 +779,7 @@ public class SaveStateHelper extends SQLiteOpenHelper {
         while (res.moveToNext()) {
             artefacts.add(res.getString(0));
         }
+        res.close();
         return artefacts;
     }
 
@@ -774,24 +791,26 @@ public class SaveStateHelper extends SQLiteOpenHelper {
 
     public String getUsername(String user) {
         SQLiteDatabase db = this.getWritableDatabase();
+        String value = "";
         Cursor res = db.rawQuery("SELECT " + USERNAME_COLUMN_NAME + " FROM " + TABLE_USERNAME  + " WHERE " + USERNAME_COLUMN_USER + " = '" + user + "'", null);
         if (res.moveToFirst()) {
-            return res.getString(0);
+            value = res.getString(0);
         }
-        return "";
+        res.close();
+        return value;
     }
 
     public boolean getLocation(String id) {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor coolCursor = db.rawQuery("SELECT " + LOCATION_COLUMN_ENTERED + " FROM " + TABLE_LOCATION + " WHERE " + LOCATION_COLUMN_ID + " = '" + id + "'", null);
-        if (coolCursor.moveToFirst()) {
-            if (coolCursor.getString(0).equals("true")) {
-                return true;
-            } else {
-                return false;
+        boolean value = false;
+        Cursor res = db.rawQuery("SELECT " + LOCATION_COLUMN_ENTERED + " FROM " + TABLE_LOCATION + " WHERE " + LOCATION_COLUMN_ID + " = '" + id + "'", null);
+        if (res.moveToFirst()) {
+            if (res.getString(0).equals("true")) {
+                value = true;
             }
         }
-        return false;
+        res.close();
+        return value;
     }
     public void updateCurrentChapter(String id, String current) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -801,10 +820,12 @@ public class SaveStateHelper extends SQLiteOpenHelper {
     }
     public String getCurrentChapter() {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor coolCursor = db.rawQuery("SELECT " + CURRENT_COLUMN_NAME + " FROM " + TABLE_CURRENT, null);
-        if (coolCursor.moveToFirst()) {
-            return coolCursor.getString(0);
+        String value = "";
+        Cursor res = db.rawQuery("SELECT " + CURRENT_COLUMN_NAME + " FROM " + TABLE_CURRENT, null);
+        if (res.moveToFirst()) {
+            value = res.getString(0);
         }
-        return "";
+        res.close();
+        return value;
     }
 }
